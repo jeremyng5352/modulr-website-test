@@ -20,6 +20,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PressComponent } from './pages/press/press.component';
+import { AboutComponent } from './pages/about/about.component';
 export class MyHammerConfig extends HammerGestureConfig {
 
 }
@@ -33,7 +34,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     ContactComponent,
     ContactFormComponent,
     FooterComponent,
-    PressComponent
+    PressComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

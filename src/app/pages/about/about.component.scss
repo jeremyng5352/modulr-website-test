@@ -1,0 +1,242 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+@import '../../sass/reset';
+@import '../../sass/base';
+.about-main-container {
+    width: 100vw;
+    color: $theme-font-white;
+    font-family: $theme-font-type-roboto-light;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    line-height: $theme-mobile-content-line-height;
+    font-size: $mobile-font-standard-size;
+    font-weight: 300;
+    .about-container-content {
+        width: 100%;
+        height: auto;
+        padding: 0 $mobile-horizontal-padding 0 $mobile-horizontal-padding;
+        .first {
+            margin-top: $mobile-vertical-margin-yellow * 3;
+        }
+        h2 {
+            width: 100%;
+            font-family: $theme-font-type-roboto;
+            font-size: $mobile-font-standard-title-size;
+            text-transform: uppercase;
+            margin-top: $mobile-title-top-margin;
+            margin-bottom: $mobile-title-bottom-margin;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        content {
+            font-weight: 300;
+            line-height: $theme-mobile-content-line-height;
+        }
+    }
+    .last {
+        margin-bottom: $mobile-vertical-margin-yellow;
+    }
+    .team {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .team-member {
+                width: 45%;
+                height: auto;
+                @include column-center;
+                justify-content: flex-start;
+                text-align: center;
+                margin-bottom: 2vh;
+                .member-name {
+                    font-weight: 400;
+                }
+                .member-image {
+                    width: 30vw;
+                    height: 30vw;
+                    background: white;
+                    background-size: contain;
+                }
+                $suffix: '_smiley';
+                .khoi {
+                    background-image: url('/assets/images/team_photos/khoi#{$suffix}.jpg') !important;
+                }
+                .andrea {
+                    background-image: url('/assets/images/team_photos/andy.jpg') !important;
+                }
+                .julia {
+                    background-image: url('/assets/images/team_photos/julia#{$suffix}.jpg') !important;
+                }
+                .jeremy {
+                    background-image: url('/assets/images/team_photos/jeremy.jpg') !important;
+                }
+                .kim {
+                    background-image: url('/assets/images/team_photos/kim#{$suffix}.jpg') !important;
+                }
+                .member-role {
+                    line-height: 100%;
+                }
+            }
+        }
+    }
+    .advisors {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .advisor-member {
+                width: 45%;
+                height: auto;
+                @include column-center;
+                justify-content: flex-start;
+                text-align: center;
+                margin-bottom: 2vh;
+                .advisor-name {
+                    height: auto;
+                    font-weight: 400;
+                    @include row-center;
+                }
+                .advisor-image {
+                    width: 30vw;
+                    height: 30vw;
+                    background: white;
+                    background-size: cover !important;
+                }
+                .derek {
+                    background-image: url('/assets/images/advisors/derek.png') !important;
+                }
+                .armin {
+                    background-image: url('/assets/images/advisors/armin.png') !important;
+                }
+                .brett {
+                    background-image: url('/assets/images/advisors/brett.png') !important;
+                }
+                .sylvain {
+                    background-image: url('/assets/images/advisors/sylvain.png') !important;
+                }
+                .advisor-role {
+                    line-height: 100%;
+                }
+            }
+        }
+    }
+    .oursupporters {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        .supporter {
+            height: 15vh;
+            @include row-center;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .unearthed {
+            width: 60%;
+        }
+        .origin {
+            width: 30%;
+        }
+        .ilab {
+            width: 35%;
+        }
+    }
+}
+
+@include media(tablet) {
+    .about-main-container {
+        line-height: $theme-tablet-content-line-height;
+        font-size: $tablet-font-standard-size;
+        .about-container-content {
+            padding: 0 $tablet-horizontal-padding 0 $tablet-horizontal-padding;
+            margin-bottom: $tablet-vertical-margin-skin;
+            .first {
+                margin-top: $tablet-vertical-margin-pink * 1.5;
+            }
+            h2 {
+                font-size: $tablet-font-standard-title-size;
+                line-height: $theme-tablet-title-line-height;
+                letter-spacing: $theme-tablet-title-letter-spacing;
+                margin-top: 0;
+                margin-bottom: $tablet-vertical-margin-purple;
+            }
+            content {
+                line-height: $theme-tablet-content-line-height;
+            }
+        }
+        .last {
+            margin-bottom: $tablet-vertical-margin-pink;
+        }
+        .team {
+            content {
+                .team-member {
+                    width: 30%;
+                    align-items: flex-start;
+                    margin-bottom: $tablet-vertical-about-margin-green;
+                    margin-right: 2vw;
+                    .member-name {
+                        line-height: 100%;
+                        margin: $tablet-vertical-margin-blue 0;
+                    }
+                    .member-image {
+                        width: 20vw;
+                        height: 20vw;
+                    }
+                    .member-role {
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+        .advisors {
+            content {
+                .advisor-member {
+                    width: 22.5%;
+                    align-items: flex-start;
+                    text-align: left;
+                    .advisor-name {
+                        width: 15vw;
+                        line-height: 100%;
+                        margin: $tablet-vertical-margin-blue 0;
+                        text-align: left;
+                        justify-content: flex-start !important;
+                    }
+                    .advisor-image {
+                        width: 15vw;
+                        height: 15vw;
+                        background: white;
+                    }
+                    .advisor-role {
+                        width: 15vw;
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+        .oursupporters {
+            .unearthed {
+                width: 25%;
+            }
+            .origin {
+                width: 35%;
+            }
+            .ilab {
+                width: 15%;
+            }
+        }
+    }
+}
