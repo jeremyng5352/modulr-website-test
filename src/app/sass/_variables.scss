@@ -1,0 +1,46 @@
+///////////////////////
+// New Style Guide
+// Color Guide
+$theme-font-white: #f5f5f5;
+$theme-font-grey: #414141;
+$theme-font-black: #000;
+$theme-background-black: #0b0b0b;
+$theme-background-green: #21554A;
+// Font Guide 
+$theme-font-type-nunito: 'Nunito Sans',
+sans-serif;
+$theme-font-type-montserrat: 'Montserrat',
+sans-serif;
+$theme-font-type-roboto: 'Roboto Condensed',
+sans-serif;
+$theme-font-type-roboto-light: 'Roboto',
+sans-serif;
+// Structure Guide
+$header-height: 10vh;
+$main-container-height: 100vh;
+//// Mobile Version
+$theme-mobile-content-line-height: 200%;
+$mobile-horizontal-padding: 10vw;
+$mobile-first-title-top-margin: 2vh; // yellow label
+$mobile-title-top-margin: 7vh; // red label
+$mobile-title-bottom-margin: 3vh; // green label
+$mobile-vertical-margin-pink: 1vh;
+$mobile-vertical-margin-purple: 0.5vh;
+$mobile-vertical-margin-yellow: 5vh;
+$mobile-font-standard-size: 0.9rem;
+$mobile-font-standard-title-size: 1.2rem;
+//// Tablet Version
+$theme-tablet-title-line-height: 140%;
+$theme-tablet-title-letter-spacing: 3.5px;
+$theme-tablet-content-line-height: 170%;
+$tablet-horizontal-padding: 10vw;
+$tablet-vertical-margin-1: 3vh;
+$tablet-vertical-margin-pink: 13vh;
+$tablet-vertical-margin-purple: 5vh;
+$tablet-vertical-margin-skin: 20vh;
+$tablet-vertical-margin-blue: 2vh;
+$tablet-vertical-margin-green: 3.5vh;
+$tablet-vertical-about-margin-green: 7vh;
+$tablet-vertical-margin-yellow: 1.5vh;
+$tablet-font-standard-size: 1.2rem;
+$tablet-font-standard-title-size: 1.8rem;

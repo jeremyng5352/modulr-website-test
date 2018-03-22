@@ -1,0 +1,42 @@
+// for something like buttons 
+ .btn {
+    background: blue;
+    color: red;
+    font-size: 12pt;
+    width: 20vw;
+    height: 20vh;
+    text-decoration: underline;
+}
+
+
+// Example one for assigning values to different class
+//
+$color-btn-names: 'default', 'hot', 'cool';
+$color-btn-values: $color-main, $red, $blue;
+
+@each $name in $color-btn-names{
+    // This one is basically a counting function which counts the length of ...-names
+    $i: index($color-btn-names, $name);
+    
+    // This mean $name = 'some' -> .btn-some
+    .btn-#{$name}{
+        @extend .btn;
+        background: nth($color-btn-values, $i);
+    }
+}
+
+// Example two for assigning values to different class
+//
+$color-btns: (
+	default: $color-main,
+	hot: $red,
+	cool: $blue,
+	awesome: $purple
+);
+
+@each $key, $value in $color-btns {
+	.btn-#{$key} {
+		@extend .btn;
+		background-color: $value;
+	}
+}

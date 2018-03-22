@@ -1,0 +1,27 @@
+@import '_variables';
+@import '_mixins';
+// For putting all the values for the main elements 
+p {
+    margin-top: 2.5vh;
+}
+
+p:first-of-type {
+    margin: 0;
+}
+
+.mobile {
+    display: block;
+}
+
+.desktop {
+    display: none;
+}
+
+@include media(tablet) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}
