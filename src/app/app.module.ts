@@ -22,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PressComponent } from './pages/press/press.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
+import { LandingComponent } from './pages/landing/landing.component';
 export class MyHammerConfig extends HammerGestureConfig {
 
 }
@@ -37,7 +38,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     FooterComponent,
     PressComponent,
     AboutComponent,
-    SolutionsComponent
+    SolutionsComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
