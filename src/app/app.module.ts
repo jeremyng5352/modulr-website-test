@@ -21,6 +21,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { FooterComponent } from './components/footer/footer.component';
 import { PressComponent } from './pages/press/press.component';
 import { AboutComponent } from './pages/about/about.component';
+import { SolutionsComponent } from './pages/solutions/solutions.component';
 export class MyHammerConfig extends HammerGestureConfig {
 
 }
@@ -35,7 +36,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     ContactFormComponent,
     FooterComponent,
     PressComponent,
-    AboutComponent
+    AboutComponent,
+    SolutionsComponent
   ],
   imports: [
     BrowserModule,

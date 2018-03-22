@@ -7,6 +7,7 @@ import { WelcomeComponent } from '../pages/welcome/welcome.component';
 import { ContactComponent } from '../pages/contact/contact.component';
 import { PressComponent } from '../pages/press/press.component';
 import { AboutComponent } from '../pages/about/about.component';
+import { SolutionsComponent } from '../pages/solutions/solutions.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
@@ -15,7 +16,7 @@ const routes: Routes = [
     path: 'welcome', component: WelcomeComponent,
     children: [
       //   { path: 'landingpage', component: PageLandingComponent },
-      //   { path: 'solutionpage', component: PageSolutionComponent, },
+        { path: 'solutionpage', component: SolutionsComponent, },
         { path: 'aboutpage', component: AboutComponent, data: { preload: true } },
       { path: 'presspage', component: PressComponent, data: { preload: true } },
       { path: 'contactpage', component: ContactComponent },
