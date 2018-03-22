@@ -1,0 +1,53 @@
+<section class="all-modals" (click)="hideModal()" *ngIf="isModalShown" [@slideInAnimation]="enter">
+</section>
+<div class="header-main-container">
+    <div class="header-main-container-content">
+        <div class="header-icon" [ngClass]="{'grey-font': !isDropdown,'black-font': isDropdown}" routerLink="/welcome/landing">
+            <img src="assets/images/modulr/modulr_white.png" alt="modulr logo"> &nbsp;
+            <span>MODULR TECH</span>
+        </div>
+        <div class="header-navigation-bar">
+            <button class="mobile" [ngClass]="{'grey-font': !isDropdown,'black-font': isDropdown}" (click)="isDropdown = !isDropdown" (click)="isModalShown = !isModalShown">
+                    menu
+                </button>
+        </div>
+        <section (click)="isDropdown = !isDropdown" (click)="isModalShown = !isModalShown" class="header-navigation-container mobile" *ngIf="isDropdown" [@slideInAnimation]="enter">
+            <div class="header-navigation-content">
+                <nav routerLink="/welcome/landingpage"> Home </nav>
+                <nav routerLink="/welcome/solutionpage"> solutions</nav>
+                <nav routerLink="/welcome/aboutpage"> about </nav>
+                <nav routerLink="/welcome/presspage"> press </nav>
+                <a href="https://medium.com/@modulr">
+                    <nav>blog</nav>
+                </a>
+                <nav routerLink="/welcome/contactpage"> contact</nav>
+            </div>
+            <div class="header-navigation-social-container">
+                <div class="social-icons" (click)="$event.stopPropagation()">
+                    <nav><a href="https://twitter.com/ModulrAU" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></nav>
+                    <nav><a href="https://www.facebook.com/Modulrtech/" target="_blank"><i class="fab fa-facebook-square"></i></a></nav>
+                    <nav><a href="https://www.linkedin.com/company/18195994/" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></nav>
+                    <nav><a href="https://medium.com/@modulrtech" target="_blank"><i class="fab fa-medium-m" aria-hidden="true"></i></a></nav>
+                </div>
+                <div class="social-content">Privacy Policy</div>
+                <div class="social-content">Modulr copyright stuff and whatnot</div>
+            </div>
+        </section>
+        <section class="header-navigation-container desktop">
+            <div class="header-navigation-content">
+                <nav routerLink="/welcome/landingpage" (click)="goTo('landingpage')"> Home </nav>
+                <nav routerLink="/welcome/solutionpage" (click)="goTo('solutionpage')"> Solutions </nav>
+                <nav routerLink="/welcome/aboutpage" (click)="goTo('aboutpage')"> about </nav>
+                <nav routerLink="/welcome/presspage" (click)="goTo('presspage')"> press </nav>
+                <nav>
+                    <a href="https://medium.com/@modulrtech" target="_blank">
+                            blog
+                        </a>
+                </nav>
+                <nav routerLink="/welcome/contactpage" (click)="goTo('contactpage')"> contact</nav>
+                <div class="active-link" [@activeHeader]="activeHeader"><span>{{activeText}}</span></div>
+            </div>
+        </section>
+    </div>
+
+</div>

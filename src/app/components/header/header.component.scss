@@ -1,0 +1,196 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+@import '../../sass/reset';
+@import '../../sass/base';
+.grey-font {
+    color: $theme-font-white;
+}
+
+.black-font {
+    color: $theme-font-black;
+}
+
+section.all-modals {
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.92);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    @include column-center();
+}
+
+// mobile
+.header-main-container {
+    a {
+        text-decoration: none;
+    }
+    width: 100vw;
+    height: $header-height;
+    color: $theme-font-white;
+    font-family: $theme-font-type-roboto-light;
+    display: flex;
+    align-items: flex-end;
+    .header-main-container-content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 $mobile-horizontal-padding;
+        .header-icon {
+            display: flex;
+            justify-content: flex-start;
+            z-index: 1;
+            cursor: pointer;
+            width: auto;
+            display: flex;
+            text-transform: uppercase;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            vertical-align: middle;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            font-family: $theme-font-type-montserrat;
+            font-weight: 300;
+            img {
+                height: 6vh;
+            }
+        }
+        .header-navigation-bar {
+            z-index: 10;
+            button {
+                font-weight: 300;
+                text-transform: uppercase;
+                background: transparent;
+                border: 0px;
+            }
+        }
+        .header-navigation-container {
+            height: 100%;
+            width: 100vw;
+            text-align: center;
+            color: $theme-font-black;
+            z-index: 11;
+            $header-navigation-content-height: 75vh;
+            $header-navigation-social-container: 100vh - $header-navigation-content-height;
+            font-weight: 100;
+            .header-navigation-content {
+                width: 100vw;
+                height: $header-navigation-content-height;
+                @include column-center;
+                justify-content: flex-end;
+                nav {
+                    text-transform: uppercase;
+                    font-size: 1.4rem;
+                    margin-bottom: 3vh;
+                    &:nth-child(6) {
+                        margin-bottom: 10vh;
+                    }
+                }
+            }
+            .header-navigation-social-container {
+                width: 100vw;
+                height: $header-navigation-social-container;
+                @include column-center;
+                .social-icons {
+                    width: 65%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 3vh 0 5vh 0;
+                    nav {
+                        font-size: 1.6rem;
+                        &:nth-child(1) {
+                            margin-left: 0;
+                        }
+                    }
+                }
+                .social-content {
+                    margin-bottom: 1.5vh;
+                }
+            }
+        }
+    }
+}
+
+@include media(tablet) {
+    a {
+        letter-spacing: 3px;
+    }
+    .header-main-container {
+        .header-main-container-content {
+            align-items: flex-end;
+            padding: 0 5vw;
+            .header-icon {
+                width: 30vw;
+                nav {
+                    font-size: 1.2rem;
+                    letter-spacing: 3px;
+                    font-family: $theme-font-type-montserrat;
+                    font-weight: 300;
+                    img {
+                        height: 5vh;
+                    }
+                }
+            }
+            .header-navigation-container {
+                width: 60vw;
+                padding: 0 0 0 0;
+                color: white;
+                z-index: 1;
+                position: relative;
+                .header-navigation-content {
+                    position: relative;
+                    height: $header-height;
+                    width: 100%;
+                    @include row-center;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    // justify-content: flex-end;
+                    $tablet-nav-margin-bottom: 2vh;
+                    nav {
+                        @include column-center();
+                        width: 16.6%;
+                        font-size: 0.9rem;
+                        @media (min-width: 768px) and (orientation: portrait) {
+                            font-size: 0.7rem;
+                        }
+                        text-transform: uppercase;
+                        display: block;
+                        margin: 0 0 $tablet-nav-margin-bottom 0;
+                        font-weight: 300;
+                        cursor: pointer;
+                        letter-spacing: 3px;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        &:nth-child(6) {
+                            margin-bottom: $tablet-nav-margin-bottom;
+                        }
+                    }
+                    .active-link {
+                        position: absolute;
+                        bottom: 10%;
+                        left: 0;
+                        width: 16.6%;
+                        height: 1px;
+                        @include column-center;
+                        &:focus {
+                            outline: 0;
+                        }
+                        span {
+                            width: fit-content;
+                            color: transparent;
+                            display: block;
+                            border-bottom: white solid 2px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

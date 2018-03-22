@@ -15,6 +15,7 @@ import { LoaderService } from './services/loader.service';
 
 import 'hammerjs';
 import 'hammer-timejs';
+import { HeaderComponent } from './components/header/header.component';
 export class MyHammerConfig extends HammerGestureConfig {
 
 }
@@ -23,7 +24,8 @@ export class MyHammerConfig extends HammerGestureConfig {
   declarations: [
     AppComponent,
     WelcomeComponent,
-    MouseWheelDirective
+    MouseWheelDirective,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
