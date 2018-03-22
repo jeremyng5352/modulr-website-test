@@ -68,10 +68,10 @@ export class HeaderComponent implements OnInit {
   goTo(page: string) {
     this.activeText = page;
     if (this.activeText === '') {
-      this.activeText = 'home';
+      this.activeText = 'homepage';
     }
     switch (this.activeText) {
-      case 'home':
+      case 'homepage':
         this.activeHeader = 'one';
         break;
       case 'solutionpage':

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import * as THREE from 'three';
 import * as TWEEN from '@tweenjs/tween.js';
@@ -28,9 +28,6 @@ let lastMove = Date.now();
   ]
 })
 export class WelcomeComponent implements OnInit {
-  @HostListener('window:resize', ['$event'])
-  @HostListener('mousemove', ['$event'])
-  @HostListener('window:keyup', ['$event'])
 
   state = 'show';
   container;
@@ -42,6 +39,10 @@ export class WelcomeComponent implements OnInit {
   renderer;
   sunLight;
   model;
+
+  @HostListener('window:resize', ['$event'])
+  @HostListener('mousemove', ['$event'])
+  @HostListener('window:keyup', ['$event'])
 
   onResize(event) {
     this.setup3DVariables();
@@ -86,7 +87,6 @@ export class WelcomeComponent implements OnInit {
 
   constructor(
     private loaderService: LoaderService,
-    private element: ElementRef,
     private router: Router
   ) {
     component = this;

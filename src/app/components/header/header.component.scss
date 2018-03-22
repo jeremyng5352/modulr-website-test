@@ -127,6 +127,8 @@ section.all-modals {
             padding: 0 5vw;
             .header-icon {
                 width: 30vw;
+                justify-content: flex-start;
+                z-index: 1;
                 nav {
                     font-size: 1.2rem;
                     letter-spacing: 3px;
@@ -149,8 +151,6 @@ section.all-modals {
                     width: 100%;
                     @include row-center;
                     align-items: flex-end;
-                    justify-content: space-between;
-                    // justify-content: flex-end;
                     $tablet-nav-margin-bottom: 2vh;
                     nav {
                         @include column-center();
