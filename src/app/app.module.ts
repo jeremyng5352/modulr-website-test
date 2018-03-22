@@ -16,6 +16,8 @@ import { LoaderService } from './services/loader.service';
 import 'hammerjs';
 import 'hammer-timejs';
 import { HeaderComponent } from './components/header/header.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 export class MyHammerConfig extends HammerGestureConfig {
 
 }
@@ -25,7 +27,9 @@ export class MyHammerConfig extends HammerGestureConfig {
     AppComponent,
     WelcomeComponent,
     MouseWheelDirective,
-    HeaderComponent
+    HeaderComponent,
+    ContactComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
