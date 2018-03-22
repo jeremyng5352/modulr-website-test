@@ -1,0 +1,5 @@
+<div class="main-container" (mousemove)='onMouseMove($event)' (window:keyup)="keyEvent($event)" (mousewheel)="scrollEvent()">
+    <section id="modulr-logo-background" (window:resize)="onResize($event)"></section>
+    <!-- <app-header [@scrollAnimation]="state"></app-header> -->
+    <router-outlet></router-outlet>
+</div>

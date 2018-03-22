@@ -1,0 +1,19 @@
+.main-container {
+    position: relative;
+    #modulr-logo-background {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        $innerColour: #353535;
+        $outerColour: #0b0b0b;
+        background: radial-gradient( circle, $innerColour, $outerColour);
+    }
+    app-header {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+}
