@@ -23,6 +23,7 @@ import { PressComponent } from './pages/press/press.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { LandingComponent } from './pages/landing/landing.component';
+import { HexagonPaginationComponent } from './components/hexagon-pagination/hexagon-pagination.component';
 export class MyHammerConfig extends HammerGestureConfig {
 
 }
@@ -39,7 +40,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     PressComponent,
     AboutComponent,
     SolutionsComponent,
-    LandingComponent
+    LandingComponent,
+    HexagonPaginationComponent
   ],
   imports: [
     BrowserModule,
