@@ -1,0 +1,77 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+@import '../../sass/reset';
+@import '../../sass/base';
+.contact-main-container {
+    width: 100vw;
+    color: $theme-font-white;
+    font-family: $theme-font-type-roboto-light;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    line-height: $theme-mobile-content-line-height;
+    font-size: $mobile-font-standard-size;
+    font-weight: 300;
+    .contact-container-content {
+        width: 100%;
+        height: auto;
+        padding: 0 $mobile-horizontal-padding 0 $mobile-horizontal-padding;
+        .first {
+            margin-top: $mobile-vertical-margin-yellow * 3;
+        }
+        h2 {
+            width: 100%;
+            font-family: $theme-font-type-roboto;
+            font-size: $mobile-font-standard-title-size;
+            text-transform: uppercase;
+            margin-top: $mobile-title-top-margin;
+            margin-bottom: $mobile-title-bottom-margin;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: $mobile-title-bottom-margin;
+            font-weight: 300;
+            line-height: $theme-mobile-content-line-height;
+            .contact {
+                margin-top: 0;
+            }
+            address {
+                text-decoration: underline;
+            }
+        }
+        p {
+            margin-top: 3vh;
+        }
+    }
+    .last {
+        margin-bottom: $mobile-vertical-margin-yellow;
+    }
+}
+
+@include media(tablet) {
+    .contact-main-container {
+        line-height: $theme-tablet-content-line-height;
+        font-size: $tablet-font-standard-size;
+        .contact-container-content {
+            padding: 0 $tablet-horizontal-padding 0 $tablet-horizontal-padding;
+            .first {
+                margin-top: $tablet-vertical-margin-pink * 1.5;
+            }
+            h2 {
+                font-size: $tablet-font-standard-title-size;
+            }
+            content {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: $tablet-vertical-margin-green;
+            }
+        }
+        .last {
+            margin-bottom: $tablet-vertical-margin-pink;
+        }
+    }
+}
