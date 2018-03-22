@@ -5,6 +5,7 @@ import { AppCustomPreloader } from '../app-custom-preloader';
 import { CommonModule } from '@angular/common';
 import { WelcomeComponent } from '../pages/welcome/welcome.component';
 import { ContactComponent } from '../pages/contact/contact.component';
+import { PressComponent } from '../pages/press/press.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
@@ -14,8 +15,8 @@ const routes: Routes = [
     children: [
       //   { path: 'landingpage', component: PageLandingComponent },
       //   { path: 'solutionpage', component: PageSolutionComponent, },
-      //   { path: 'presspage', component: PagePressComponent, data: { preload: true } },
       //   { path: 'aboutpage', component: PageAboutComponent, data: { preload: true } },
+      { path: 'presspage', component: PressComponent, data: { preload: true } },
       { path: 'contactpage', component: ContactComponent },
     ]
   },
