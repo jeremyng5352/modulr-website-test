@@ -137,9 +137,10 @@ $gray: #bbbbbb;
             flex-wrap: wrap;
             justify-content: space-between !important;
             select {
-                padding: 0 0.5vw $tablet-vertical-margin-blue 0.5vw;
+                padding: 0 0.5vw $tablet-vertical-margin-blue 0.5vw !important;
                 width: 45%;
                 margin-bottom: $tablet-vertical-margin-green;
+                font-size: 12pt;
             }
             .form-input {
                 width: 45%;
@@ -148,11 +149,15 @@ $gray: #bbbbbb;
                     box-sizing: border-box;
                     padding: 0 0.5vw $tablet-vertical-margin-blue 0.5vw;
                     text-align: left;
+                    font-size: 12pt;
                 }
                 small {
                     font-size: 0.7rem;
                     color: red;
                 }
+            }
+            textarea {
+                font-size: 12pt;
             }
             #submit-button {
                 width: 20vw;

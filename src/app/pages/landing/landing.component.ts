@@ -43,6 +43,7 @@ import { fadeAnimation } from '../../animations';
   ]
 })
 export class LandingComponent implements OnInit {
+
   isPageSix = false;
   footerTitle = 'What we do';
   // For the pagination

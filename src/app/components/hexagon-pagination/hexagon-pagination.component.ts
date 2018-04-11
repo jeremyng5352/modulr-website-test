@@ -209,7 +209,6 @@ export class HexagonPaginationComponent implements OnInit {
       .attr('stroke', 'url(#gradient)')
       .attr('stroke-width', 3.5)
       .attr('fill', 'none');
-
     const totalLength = (<any>hexagon).node().getTotalLength();
 
     hexagon
@@ -251,8 +250,6 @@ export class HexagonPaginationComponent implements OnInit {
 
   setupCordinateForDiagonalLine() {
     this.diagonalLineData = [
-      // { 'x': this.diagonalLineContainerWidth + 5, 'y': 0 - 5},
-      // { 'x': 0 + 5 , 'y': this.diagonalLineContainerHeight - 5},
       { 'x': this.diagonalLineContainerWidth - this.diagonalLineMargin.horizontal, 'y': this.diagonalLineMargin.vertical },
       { 'x': this.diagonalLineMargin.horizontal, 'y': this.diagonalLineContainerHeight - this.diagonalLineMargin.vertical }
     ];
@@ -267,22 +264,16 @@ export class HexagonPaginationComponent implements OnInit {
   }
 
   redrawActiveLine() {
-    // Draw the lines
     const lineGenerator = this.d3.line()
       .x((d: any) => d.x)
       .y((d: any) => d.y);
     const hexagon = this.hexagonSVG.select('path#active')
       .attr('d', lineGenerator(<any>this.hexagonData));
-
-    // HANDLE ANIMATION
-    // Total length of the hexagonal path
     const totalLength = (<any>hexagon).node().getTotalLength();
-    // Control the animation
     const dashOffset: number = totalLength;
     let startDashOffset: number = totalLength;
     let endDashOffset = 0;
 
-    // Check the previous page to get the offsets
     if (this.previousPage < this.currentPage) {
       startDashOffset = totalLength / 6 * (6 - this.previousPage);
       endDashOffset = totalLength / 6 * (6 - this.currentPage);

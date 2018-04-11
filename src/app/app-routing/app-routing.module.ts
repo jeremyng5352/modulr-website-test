@@ -11,7 +11,6 @@ import { SolutionsComponent } from '../pages/solutions/solutions.component';
 import { LandingComponent } from '../pages/landing/landing.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
   { path: '', redirectTo: '/welcome/landingpage', pathMatch: 'full' },
   {
     path: 'welcome', component: WelcomeComponent,
