@@ -8,7 +8,7 @@ import {
   transition
 } from '@angular/animations';
 import * as Hammer from 'hammerjs';
-import { fadeAnimation, titleStaggerAnimation } from '../../animations';
+import { fadeAnimation, titleStaggerAnimation, titleHighlightAnimation } from '../../animations';
 
 @Component({
   selector: 'app-landing',
@@ -17,6 +17,7 @@ import { fadeAnimation, titleStaggerAnimation } from '../../animations';
   animations: [
     fadeAnimation,
     titleStaggerAnimation,
+    titleHighlightAnimation,
     trigger('boxState', [
       state('middle', style({
         display: 'box',

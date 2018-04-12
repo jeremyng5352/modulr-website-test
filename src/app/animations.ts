@@ -125,25 +125,25 @@ export const titleStaggerAnimation =
         ])
     ]);
 
-// export const titleHighlightAnimation =
-//     trigger('titleHighlightAnimation', [
-//         state('void',
-//             style({
-//                 color: '#f5f5f5'
-//             })
-//         ),
-//         state('*',
-//             style({
-//                 color: '#69C7C2'
-//             })
-//         ),
-//         transition(':enter', [
-//             animate('650ms 2000ms ease-in-out', style({
-//                 opacity: 1,
-//                 color: '#69C7C2',
-//             })),
-//             style({
-//                 opacity: 0,
-//             }),
-//         ]),
-//     ]);
+export const titleHighlightAnimation =
+    trigger('titleHighlightAnimation', [
+        state('void',
+            style({
+                color: '#f5f5f5'
+            })
+        ),
+        state('*',
+            style({
+                color: '#69C7C2'
+            })
+        ),
+        transition(':enter', [
+            animate('650ms 2000ms ease-in-out', style({
+                opacity: 1,
+                color: '#69C7C2',
+            })),
+            style({
+                opacity: 0,
+            }),
+        ]),
+    ]);
