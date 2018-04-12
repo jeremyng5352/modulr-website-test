@@ -7,7 +7,7 @@
             <nav>MODULR TECH</nav>
         </div>
         <div class="header-navigation-bar">
-            <button class="mobile" [ngClass]="{'grey-font': !isDropdown,'black-font': isDropdown, 'filter': needFilter == true}" (click)="isDropdown = !isDropdown" (click)="isModalShown = !isModalShown">
+            <button class="mobile" [ngClass]="{'grey-font': isDropdown, 'filter': needFilter == true}" (click)="isDropdown = !isDropdown" (click)="isModalShown = !isModalShown">
                     menu
                 </button>
         </div>

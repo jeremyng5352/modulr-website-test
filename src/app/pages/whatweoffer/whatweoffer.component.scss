@@ -13,7 +13,8 @@
     font-size: $tablet-font-standard-size;
     font-weight: 300;
     text-transform: uppercase;
-    position: relative;
+    top: 0;
+    left: 0;
     @include column-center;
     .main-title-container {
         position: absolute;
@@ -22,14 +23,43 @@
         text-transform: uppercase;
         letter-spacing: 17.66px;
         font-size: 100px;
-        @include row-center;
         font-weight: bold;
+        .main-title {
+            @include row-center;
+            list-style-type: none;
+            width: 100vw;
+            height: 100vh;
+            li {
+                margin-right: 10px;
+            }
+        }
     }
     .what-we-offer-content {
         position: absolute;
         width: 100vw;
-        min-height: 100vh;
+        height: 100vh;
         background: white;
         color: $theme-font-grey;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .what-we-offer-description {
+            width: 100vw;
+            height: 100vh;
+            display: none;
+        }
+        .what-we-offer-article {
+            width: 100vw;
+            height: 100vh;
+            @include row-center;
+            .article-text {
+                height: 100%;
+                width: 50%;
+            }
+            .article-video {
+                height: 100%;
+                width: 50%;
+                background: #999;
+            }
+        }
     }
 }

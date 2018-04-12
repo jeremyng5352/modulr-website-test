@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
+import { titleStaggerAnimation, containerSlideUpAnimation } from '../../animations';
 import {
   trigger,
   state,
@@ -11,21 +12,8 @@ import {
   templateUrl: './whatweoffer.component.html',
   styleUrls: ['./whatweoffer.component.scss'],
   animations: [
-    trigger('containerState', [
-      state('top', style({
-        transform: 'translateY(-100%)',
-        display: 'none',
-        opacity: 0
-      })),
-      state('middle', style({
-        transform: 'translateY(0%)'
-      })),
-      state('bottom', style({
-        transform: 'translateY(100%)',
-      })),
-      transition('middle => top', animate('600ms ease-in-out')),
-      transition('bottom => middle', animate('600ms ease-in-out')),
-    ])
+    titleStaggerAnimation,
+    containerSlideUpAnimation
   ]
 })
 export class WhatweofferComponent implements OnInit {
@@ -39,9 +27,9 @@ export class WhatweofferComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.scrollUp();
-    }, 2000);
+    // setTimeout(() => {
+    this.scrollUp();
+    // }, 2000);
   }
 
   scrollUp() {

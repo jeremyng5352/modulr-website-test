@@ -17,6 +17,10 @@ p:first-of-type {
     display: none;
 }
 
+.title-spacing {
+    width: 40px;
+}
+
 @include media(tablet) {
     .mobile {
         display: none;

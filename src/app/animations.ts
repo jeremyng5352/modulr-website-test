@@ -41,30 +41,43 @@ export const fadeAnimation =
             })
         ),
         transition(':enter', [
-            // styles at start of transition
             style({
                 opacity: 0,
                 transform: 'translateY(5%)'
             }),
-            // animation and styles at end of transition
             animate('650ms ease-in-out', style({
                 opacity: 1,
                 transform: 'translateY(0%)'
             }))
         ]),
         transition(':leave', [
-            // styles at start of transition
             style({
                 opacity: 1
             }),
-            // animation and styles at end of transition
             animate('650ms ease-in-out', style({
                 opacity: 0
             }))
         ]),
     ]);
 
-export const menuStaggerAnimation =
+export const containerSlideUpAnimation =
+    trigger('containerState', [
+        state('top', style({
+            transform: 'translateY(-100%)',
+            display: 'none',
+            opacity: 0
+        })),
+        state('middle', style({
+            transform: 'translateY(0%)'
+        })),
+        state('bottom', style({
+            transform: 'translateY(100%)',
+        })),
+        transition('middle => top', animate('600ms ease-in-out')),
+        transition('bottom => middle', animate('600ms ease-in-out')),
+    ]);
+
+    export const menuStaggerAnimation =
     trigger('menuStaggerAnimation', [
         transition(':enter', [
             query('nav', style({
@@ -94,4 +107,19 @@ export const menuStaggerAnimation =
         ])
     ]);
 
-
+export const titleStaggerAnimation =
+    trigger('titleStaggerAnimation', [
+        transition(':enter', [
+            query('li', style({
+                transform: 'translateY(-100%)',
+                opacity: 0,
+            })),
+            query('li',
+                stagger('50ms', [
+                    animate('1000ms', style({
+                        transform: 'translateX(0)',
+                        opacity: 1
+                    }))
+                ]))
+        ])
+    ]);
