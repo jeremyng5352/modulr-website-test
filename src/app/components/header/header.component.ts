@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
-import { slideInDownAnimation } from '../../animations';
+import { slideInDownAnimation, menuStaggerAnimation, fadeAnimation } from '../../animations';
 import {
   trigger,
   state,
@@ -35,7 +35,9 @@ import {
       })),
       transition('* => *', animate('400ms ease-in-out'))
     ]),
-    slideInDownAnimation
+    slideInDownAnimation,
+    menuStaggerAnimation,
+    fadeAnimation
   ]
 })
 export class HeaderComponent implements OnInit {

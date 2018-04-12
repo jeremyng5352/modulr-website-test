@@ -1,7 +1,7 @@
-import { animate, AnimationEntryMetadata, state, style, transition, trigger } from '@angular/core';
+import { trigger, state, style, transition, animate, query, stagger } from '@angular/animations';
 
 // Component transition animations
-export const slideInDownAnimation: AnimationEntryMetadata =
+export const slideInDownAnimation =
     trigger('slideInAnimation', [
         state('*',
             style({
@@ -29,90 +29,7 @@ export const slideInDownAnimation: AnimationEntryMetadata =
         ])
     ]);
 
-// Animations for page-stats nundah
-export const pageStatsAnimation: AnimationEntryMetadata =
-    trigger('pageStatsAnimation', [
-        state('*',
-            style({
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                opacity: 1,
-                transform: 'translateX(0)'
-            })
-        ),
-        transition(':enter', [
-            style({
-                opacity: 0,
-                transform: 'translateY(100%)'
-            }),
-            animate('0.8s')
-        ]),
-        transition(':leave', [
-            animate('0.8s', style({
-                opacity: 1,
-                transform: 'translateX(-100%)'
-            }))
-        ])
-    ]);
-
-// Component transition animations
-export const slideInRightAnimation: AnimationEntryMetadata =
-    trigger('slideInRightAnimation', [
-        state('*',
-            style({
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                opacity: 1,
-                transform: 'translateX(0)'
-            })
-        ),
-        transition(':enter', [
-            style({
-                opacity: 1,
-                transform: 'translateX(100%)'
-            }),
-            animate('0.8s')
-        ]),
-        transition(':leave', [
-            animate('0.8s', style({
-                opacity: 1,
-                transform: 'translateX(-100%)'
-            }))
-        ])
-    ]);
-
-export const fadeOutAnimation: AnimationEntryMetadata =
-    trigger('fadeOutAnimation', [
-        state('*',
-            style({
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                opacity: 1
-            })
-        ),
-        // route 'enter' transition
-        transition(':leave', [
-            // styles at start of transition
-            style({
-                opacity: 1
-            }),
-            // animation and styles at end of transition
-            animate('.3s', style({
-                opacity: 0
-            }))
-        ]),
-    ]);
-
-export const fadeAnimation: AnimationEntryMetadata =
+export const fadeAnimation =
     trigger('fadeAnimation', [
         state('*',
             style({
@@ -145,6 +62,36 @@ export const fadeAnimation: AnimationEntryMetadata =
                 opacity: 0
             }))
         ]),
+    ]);
+
+export const menuStaggerAnimation =
+    trigger('menuStaggerAnimation', [
+        transition(':enter', [
+            query('nav', style({
+                transform: 'translateX(10%)',
+                opacity: 0
+            })),
+            query('nav',
+                stagger('50ms', [
+                    animate('300ms', style({
+                        transform: 'translateX(0)',
+                        opacity: 1
+                    }))
+                ]))
+        ]),
+        transition(':leave', [
+            query('nav', style({
+                transform: 'translateX(0%)',
+                opacity: 1
+            })),
+            query('nav',
+                stagger('50ms', [
+                    animate('300ms', style({
+                        transform: 'translateX(10%)',
+                        opacity: 0
+                    }))
+                ]))
+        ])
     ]);
 
 

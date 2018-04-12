@@ -31,7 +31,7 @@ section.all-modals {
     width: 100vw;
     height: $header-height;
     color: $theme-font-white;
-    font-family: $theme-font-type-roboto-light;
+    font-family: $theme-font-type-open-sans;
     display: flex;
     align-items: flex-end;
     .header-main-container-content {
@@ -123,71 +123,159 @@ section.all-modals {
     }
     .header-main-container {
         .header-main-container-content {
-            align-items: flex-end;
+            height: auto;
             padding: 0 5vw;
             .header-icon {
                 width: 30vw;
+                height: 100%;
                 justify-content: flex-start;
+                align-items: center;
                 z-index: 1;
                 nav {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     letter-spacing: 3px;
-                    font-family: $theme-font-type-montserrat;
                     font-weight: 300;
-                    img {
-                        height: 5vh;
-                    }
+                }
+                img {
+                    height: 4vh;
                 }
             }
             .header-navigation-container {
                 width: 60vw;
+                height: 100%;
                 padding: 0 0 0 0;
                 color: white;
                 z-index: 1;
                 position: relative;
+                @include row-center;
+                align-items: flex-end;
                 .header-navigation-content {
                     position: relative;
-                    height: $header-height;
                     width: 100%;
+                    height: auto;
                     @include row-center;
-                    align-items: flex-end;
-                    $tablet-nav-margin-bottom: 2vh;
-                    nav {
-                        @include column-center();
-                        width: 16.6%;
-                        font-size: 0.9rem;
-                        @media (min-width: 768px) and (orientation: portrait) {
-                            font-size: 0.7rem;
-                        }
-                        text-transform: uppercase;
-                        display: block;
-                        margin: 0 0 $tablet-nav-margin-bottom 0;
-                        font-weight: 300;
-                        cursor: pointer;
-                        letter-spacing: 3px;
-                        &:first-child {
-                            margin-left: 0;
-                        }
-                        &:nth-child(6) {
-                            margin-bottom: $tablet-nav-margin-bottom;
+                    align-items: center;
+                    justify-content: flex-end;
+                    // $tablet-nav-margin-bottom: 2vh;
+                    $tablet-nav-margin-bottom: 0vh;
+                    $navigation-tab-size: 17%;
+                    div {
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+                        @include row-center;
+                        align-items: center;
+                        justify-content: space-around;
+                        // $tablet-nav-margin-bottom: 2vh;
+                        $tablet-nav-margin-bottom: 0vh;
+                        $navigation-tab-size: 17%;
+                        nav {
+                            @include column-center();
+                            // width: $navigation-tab-size;
+                            width: auto;
+                            text-transform: uppercase;
+                            font-family: $theme-font-type-montserrat;
+                            font-size: 0.8rem;
+                            font-weight: 300;
+                            letter-spacing: 3px;
+                            @media (min-width: 768px) and (orientation: portrait) {
+                                font-size: 0.7rem;
+                            }
+                            display: block;
+                            margin: 0 0 $tablet-nav-margin-bottom 0;
+                            cursor: pointer;
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                            &:nth-child(6) {
+                                margin-bottom: $tablet-nav-margin-bottom;
+                            }
                         }
                     }
-                    .active-link {
-                        position: absolute;
-                        bottom: 10%;
+                    // .active-link {
+                    //     position: absolute;
+                    //     bottom: 10%;
+                    //     left: 0;
+                    //     width: $navigation-tab-size;
+                    //     height: 1px;
+                    //     @include column-center;
+                    //     &:focus {
+                    //         outline: 0;
+                    //     }
+                    //     span {
+                    //         width: fit-content;
+                    //         color: transparent;
+                    //         display: block;
+                    //         border-bottom: white solid 2px !important;
+                    //     }
+                    // }
+                    .navigation-btn {
+                        font-family: $theme-font-type-roboto-light;
+                        font-weight: 100;
+                        text-transform: uppercase;
+                        z-index: 10;
+                        outline: none;
+                        border: none;
+                        height: 6vh;
+                        position: relative;
+                        @include row-center;
+                        color: white;
+                        font-size: 9pt;
+                        background: transparent;
+                        width: auto;
+                        cursor: pointer;
+                        $hamburgerColor: white;
+                        $hamburgerSize: 2px;
+                        .hamburger {
+                            width: 25px;
+                            height: $hamburgerSize;
+                            background: $hamburgerColor;
+                            position: relative;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                            transition: 0.3s;
+                            &.dark {
+                                background: white;
+                                &:before,
+                                &:after {
+                                    background: white;
+                                }
+                            }
+                        }
+                        .hamburger:before,
+                        .hamburger:after {
+                            content: '';
+                            position: absolute;
+                            height: $hamburgerSize;
+                            background: $hamburgerColor;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                            transition: 0.3s;
+                            left: 0;
+                        }
+                        .hamburger:before {
+                            top: -7pt;
+                            width: 100%;
+                        }
+                        .hamburger:after {
+                            top: 7pt;
+                            width: 100%;
+                        }
+                    }
+                    .active .hamburger {
+                        background: rgba(0, 0, 0, 0);
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+                        color: transparent;
+                    }
+                    .active .hamburger:before {
+                        transform: rotate(45deg);
+                        width: 120%;
                         left: 0;
-                        width: 16.6%;
-                        height: 1px;
-                        @include column-center;
-                        &:focus {
-                            outline: 0;
-                        }
-                        span {
-                            width: fit-content;
-                            color: transparent;
-                            display: block;
-                            border-bottom: white solid 2px !important;
-                        }
+                        top: 0;
+                    }
+                    .active .hamburger:after {
+                        transform: rotate(135deg);
+                        width: 120%;
+                        top: 0;
+                        left: 0%;
                     }
                 }
             }
