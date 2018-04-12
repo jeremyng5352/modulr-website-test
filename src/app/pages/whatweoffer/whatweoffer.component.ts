@@ -22,9 +22,9 @@ export class WhatweofferComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // // setTimeout(() => {
-    // this.scrollUp();
-    // // }, 2000);
+    // setTimeout(() => {
+    this.scrollUp();
+    // }, 2000);
   }
 
   scrollUp() {

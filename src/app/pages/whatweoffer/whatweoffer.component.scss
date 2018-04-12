@@ -5,14 +5,12 @@
 .what-we-offer-container {
     width: 100vw;
     height: 100vh;
-    color: $theme-font-white;
+    color: #1D1D1D;
     font-family: $theme-font-type-roboto;
     overflow-y: scroll;
     overflow-x: hidden;
-    line-height: $theme-mobile-content-line-height;
-    font-size: $tablet-font-standard-size;
+    font-size: $tablet-font-body-size;
     font-weight: 300;
-    text-transform: uppercase;
     top: 0;
     left: 0;
     @include column-center;
@@ -22,7 +20,7 @@
         height: 100vh;
         text-transform: uppercase;
         letter-spacing: 17.66px;
-        font-size: 100px;
+        font-size: $tablet-font-hero-size;
         font-weight: bold;
         .main-title {
             @include row-center;
@@ -45,7 +43,13 @@
         .what-we-offer-description {
             width: 100vw;
             height: 100vh;
-            display: none;
+            @include column-center;
+            align-items: flex-start;
+            padding: 0 $tablet-horizontal-padding-light-green;
+            // display: none;
+            content {
+                width: 60%;
+            }
         }
         .what-we-offer-article {
             width: 100vw;
@@ -62,4 +66,20 @@
             }
         }
     }
+}
+
+h1 {
+    font-family: $theme-font-type-roboto-condensed;
+    font-size: $tablet-font-h1-size;
+    margin-bottom: $tablet-vertical-margin-light-blue;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 7.5px;
+}
+
+content {
+    font-size: $tablet-font-h4-size;
+    letter-spacing: 2.68px;
+    line-height: 25px;
 }

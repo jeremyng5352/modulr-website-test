@@ -9,11 +9,9 @@ $theme-background-green: #21554A;
 // Font Guide 
 $theme-font-type-montserrat: 'Montserrat',
 sans-serif;
-$theme-font-type-open-sans: 'Open Sans',
+$theme-font-type-roboto-condensed: 'Roboto Condensed',
 sans-serif;
-$theme-font-type-roboto: 'Roboto Condensed',
-sans-serif;
-$theme-font-type-roboto-light: 'Roboto',
+$theme-font-type-roboto: 'Roboto',
 sans-serif;
 // Structure Guide
 $header-height: 10vh;
@@ -44,3 +42,13 @@ $tablet-vertical-about-margin-green: 7vh;
 $tablet-vertical-margin-yellow: 1.5vh;
 $tablet-font-standard-size: 1.2rem;
 $tablet-font-standard-title-size: 1.8rem;
+////////////////////////////////
+// new variables
+// font-size
+$tablet-font-hero-size: 100px;
+$tablet-font-h1-size: 70px;
+$tablet-font-h4-size: 16px;
+$tablet-font-body-size: 14px;
+// margin and padding
+$tablet-horizontal-padding-light-green: 10vw;
+$tablet-vertical-margin-light-blue: 2.5vh;
