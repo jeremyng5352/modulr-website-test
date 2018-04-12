@@ -2,7 +2,7 @@
 @import '_mixins';
 // For putting all the values for the main elements 
 p {
-    margin-top: 2.5vh;
+    margin-top: $tablet-vertical-margin-light-blue;
 }
 
 p:first-of-type {

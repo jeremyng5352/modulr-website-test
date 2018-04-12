@@ -138,7 +138,7 @@ export const titleHighlightAnimation =
             })
         ),
         transition(':enter', [
-            animate('650ms 2000ms ease-in-out', style({
+            animate('650ms 1500ms ease-in-out', style({
                 opacity: 1,
                 color: '#69C7C2',
             })),
