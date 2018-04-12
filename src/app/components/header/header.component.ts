@@ -49,6 +49,7 @@ export class HeaderComponent implements OnInit {
   isDropdown = false;
   isModalShown = false;
   menu = false;
+  needFilter = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -57,14 +58,25 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    const url = this.router.url.slice(9);
-    this.goTo(url);
+    const slicedURL = this.router.url.slice(9);
+    this.navigationTabStyling(slicedURL);
+    this.goTo(slicedURL);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         const page = event.url.slice(9);
         this.goTo(page);
       }
     });
+  }
+
+  navigationTabStyling(url: string) {
+    if (url === 'whatweofferpage') {
+      setTimeout(() => {
+        this.needFilter = true;
+      }, 2400);
+    } else {
+      this.needFilter = false;
+    }
   }
 
   goTo(page: string) {

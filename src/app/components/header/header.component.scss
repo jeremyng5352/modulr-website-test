@@ -131,6 +131,7 @@ section.all-modals {
                 justify-content: flex-start;
                 align-items: center;
                 z-index: 1;
+                // filter: invert(100%);
                 nav {
                     font-size: 1rem;
                     letter-spacing: 3px;
@@ -149,7 +150,7 @@ section.all-modals {
                 position: relative;
                 @include row-center;
                 align-items: flex-end;
-                mix-blend-mode: difference;
+                // filter: invert(100%);
                 .header-navigation-content {
                     position: relative;
                     width: 100%;
@@ -282,4 +283,8 @@ section.all-modals {
             }
         }
     }
+}
+
+.filter {
+    filter: invert(100%);
 }
