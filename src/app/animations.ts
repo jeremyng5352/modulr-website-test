@@ -77,7 +77,7 @@ export const containerSlideUpAnimation =
         transition('bottom => middle', animate('600ms ease-in-out')),
     ]);
 
-    export const menuStaggerAnimation =
+export const menuStaggerAnimation =
     trigger('menuStaggerAnimation', [
         transition(':enter', [
             query('nav', style({
@@ -109,17 +109,52 @@ export const containerSlideUpAnimation =
 
 export const titleStaggerAnimation =
     trigger('titleStaggerAnimation', [
+        state('void',
+            style({
+                color: '#f5f5f5'
+            })
+        ),
+        state('*',
+            style({
+                color: '#69C7C2'
+            })
+        ),
         transition(':enter', [
             query('li', style({
-                transform: 'translateY(-100%)',
+                transform: 'translateY(-150%)',
                 opacity: 0,
+                color: '#a5a5a5'
             })),
             query('li',
                 stagger('50ms', [
-                    animate('1000ms', style({
+                    animate('1500ms', style({
                         transform: 'translateX(0)',
-                        opacity: 1
+                        opacity: 1,
+                        color: '#69C7C2'
                     }))
                 ]))
         ])
     ]);
+
+// export const titleHighlightAnimation =
+//     trigger('titleHighlightAnimation', [
+//         state('void',
+//             style({
+//                 color: '#f5f5f5'
+//             })
+//         ),
+//         state('*',
+//             style({
+//                 color: '#69C7C2'
+//             })
+//         ),
+//         transition(':enter', [
+//             animate('650ms 2000ms ease-in-out', style({
+//                 opacity: 1,
+//                 color: '#69C7C2',
+//             })),
+//             style({
+//                 opacity: 0,
+//             }),
+//         ]),
+//     ]);

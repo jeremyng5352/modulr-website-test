@@ -1,19 +1,14 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { titleStaggerAnimation, containerSlideUpAnimation } from '../../animations';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+// import { titleStaggerAnimation, containerSlideUpAnimation, titleHighlightAnimation } from '../../animations';
 @Component({
   selector: 'app-whatweoffer',
   templateUrl: './whatweoffer.component.html',
   styleUrls: ['./whatweoffer.component.scss'],
   animations: [
     titleStaggerAnimation,
-    containerSlideUpAnimation
+    containerSlideUpAnimation,
+    // titleHighlightAnimation
   ]
 })
 export class WhatweofferComponent implements OnInit {
@@ -27,9 +22,9 @@ export class WhatweofferComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // setTimeout(() => {
-    this.scrollUp();
-    // }, 2000);
+    // // setTimeout(() => {
+    // this.scrollUp();
+    // // }, 2000);
   }
 
   scrollUp() {
