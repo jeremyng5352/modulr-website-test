@@ -1,0 +1,35 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+@import '../../sass/reset';
+@import '../../sass/base';
+.what-we-offer-container {
+    width: 100vw;
+    height: 100vh;
+    color: $theme-font-white;
+    font-family: $theme-font-type-roboto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    line-height: $theme-mobile-content-line-height;
+    font-size: $tablet-font-standard-size;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative;
+    @include column-center;
+    .main-title-container {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        text-transform: uppercase;
+        letter-spacing: 17.66px;
+        font-size: 100px;
+        @include row-center;
+        font-weight: bold;
+    }
+    .what-we-offer-content {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        color: $theme-font-grey;
+    }
+}

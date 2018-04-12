@@ -149,6 +149,7 @@ section.all-modals {
                 position: relative;
                 @include row-center;
                 align-items: flex-end;
+                mix-blend-mode: difference;
                 .header-navigation-content {
                     position: relative;
                     width: 100%;

@@ -35,9 +35,10 @@
         </section>
         <section class="header-navigation-container desktop">
             <div class="header-navigation-content">
-                <div *ngIf="menu" [@menuStaggerAnimation]="true">
+                <div *ngIf="menu" [@menuStaggerAnimation]="true" (click)="toggleMenu()">
                     <nav routerLink="/welcome/landingpage" (click)="goTo('landingpage')"> Home </nav>
-                    <nav routerLink="/welcome/solutionpage" (click)="goTo('solutionpage')"> What We Offer </nav>
+                    <nav routerLink="/welcome/whatweofferpage"> What We Offer </nav>
+                    <!-- <nav routerLink="/welcome/solutionpage" (click)="goTo('solutionpage')"> What We Offer </nav> -->
                     <nav routerLink="/welcome/aboutpage" (click)="goTo('aboutpage')"> about </nav>
                     <nav>
                         <a href="https://medium.com/@modulrtech" target="_blank">
