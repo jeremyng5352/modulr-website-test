@@ -111,7 +111,7 @@ export const titleStaggerAnimation =
     trigger('titleStaggerAnimation', [
         transition(':enter', [
             query('li', style({
-                transform: 'translateY(-150%)',
+                transform: 'translateY(-100%)',
                 opacity: 0,
                 color: '#a5a5a5'
             })),
