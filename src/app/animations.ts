@@ -109,16 +109,6 @@ export const menuStaggerAnimation =
 
 export const titleStaggerAnimation =
     trigger('titleStaggerAnimation', [
-        state('void',
-            style({
-                color: '#f5f5f5'
-            })
-        ),
-        state('*',
-            style({
-                color: '#69C7C2'
-            })
-        ),
         transition(':enter', [
             query('li', style({
                 transform: 'translateY(-150%)',
@@ -127,10 +117,9 @@ export const titleStaggerAnimation =
             })),
             query('li',
                 stagger('50ms', [
-                    animate('1500ms', style({
+                    animate('1000ms', style({
                         transform: 'translateX(0)',
                         opacity: 1,
-                        color: '#69C7C2'
                     }))
                 ]))
         ])

@@ -1,8 +1,10 @@
 <section class="landing-main-container" mouseWheel (mouseWheelUp)="scrollDown()" (mouseWheelDown)="scrollUp()">
     <div class="landing-main-container-content oneliner" [@boxState]='states.box1'>
-        <content>
-            Modulr Tech is a data solutions company based in Brisbane, working closely with businesses across the natural resources industry to transform their big data challenges into real-time, actionable insights.
-        </content>
+        <div class="main-title">
+            <h1>
+                We Transform Data to Actionable Insights
+            </h1>
+        </div>
     </div>
     <div class="landing-main-container-content ourvision" [@boxState]='states.box2'>
         <div class="title" style="color: white">
@@ -14,10 +16,7 @@
     <div class="landing-main-container-content oursolution" [@boxState]='states.box3'>
         <div class="title" style="color: white">
             <div class="desktop" style="color: white;">&#9644; &nbsp;</div>{{footerTitle}}</div>
-        <!-- <content class="mockup"></content> -->
         <content>
-            <!-- Confidently optimise drilling performance with real-time performance feedback and actionable insights -->
-            <!-- Our work is inspired by a true understanding of data transformation and a hunger to develop seamless software systems.  -->
             We are driven by a desire for innovation and a vision to create the perfect combination of analytics and design. We tailor all of our products to suit specific needs and focuses. No two projects are the same, allowing for our entrepreneurial spirit and
             keen eyes for detail to create the most cutting-edge and solutions.
         </content>
@@ -57,18 +56,5 @@
         <div class="title" style="color: white">
             <div class="desktop" style="color: white;">&#9644; &nbsp;</div>{{footerTitle}}</div>
         <app-contact-form></app-contact-form>
-    </div>
-    <div class="pagination-hexagon">
-        <app-hexagon-pagination [currentPage]="currentPage"></app-hexagon-pagination>
-    </div>
-    <div class="paginator desktop">
-
-        <div class="paginator-content">
-            <div *ngIf="!isPageSix" style="height: fit-content">Scroll</div>
-            <div *ngIf="isPageSix" style="cursor: pointer;height: fit-content" (click)="backToTop()">
-                Back to The Top
-            </div>
-        </div>
-        <div class="paginator-line"></div>
     </div>
 </section>

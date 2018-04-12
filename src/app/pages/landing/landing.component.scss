@@ -6,7 +6,7 @@
     width: 100vw;
     height: $main-container-height;
     color: $theme-font-white;
-    font-family: $theme-font-type-roboto-light;
+    font-family: $theme-font-type-open-sans;
     overflow-y: scroll;
     overflow-x: hidden;
     line-height: $theme-mobile-content-line-height;
@@ -129,7 +129,7 @@
         display: flex;
         align-items: center;
         font-size: 3.5vh;
-        font-family: $theme-font-type-roboto;
+        font-family: $theme-font-type-open-sans;
         margin-bottom: $mobile-title-bottom-margin;
     }
     .pagination-hexagon {
@@ -154,12 +154,15 @@
         line-height: $theme-mobile-content-line-height;
         font-size: 1.2rem;
         .landing-main-container-content {
-            padding: 0 $mobile-horizontal-padding;
-            content {
-                padding: 0 5vw;
-                text-align: center;
-                font-weight: 300;
-                letter-spacing: 3.5px;
+            position: absolute;
+            font-weight: bold;
+            text-align: center;
+            h1 {
+                height: auto;
+                text-transform: uppercase;
+                font-size: 60px;
+                letter-spacing: 7.5px;
+                line-height: 150%;
             }
         }
         .press {
@@ -226,7 +229,7 @@
         }
         .title {
             font-size: 1.3rem;
-            font-family: $theme-font-type-roboto;
+            font-family: $theme-font-type-open-sans;
             font-weight: 600 !important;
             letter-spacing: 3.5px;
         }

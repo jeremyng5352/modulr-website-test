@@ -8,7 +8,7 @@ import {
   transition
 } from '@angular/animations';
 import * as Hammer from 'hammerjs';
-import { fadeAnimation } from '../../animations';
+import { fadeAnimation, titleStaggerAnimation } from '../../animations';
 
 @Component({
   selector: 'app-landing',
@@ -16,6 +16,7 @@ import { fadeAnimation } from '../../animations';
   styleUrls: ['./landing.component.scss'],
   animations: [
     fadeAnimation,
+    titleStaggerAnimation,
     trigger('boxState', [
       state('middle', style({
         display: 'box',
@@ -69,7 +70,7 @@ export class LandingComponent implements OnInit {
   model;
   isScrolling = false;
 
-  @HostBinding('@fadeAnimation') routeAnimation = true;
+  // @HostBinding('@fadeAnimation') routeAnimation = true;
   @HostBinding('style.position') position = 'relative';
   @HostBinding('style.display') display = 'block';
 
