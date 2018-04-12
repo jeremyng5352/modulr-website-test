@@ -59,18 +59,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     const slicedURL = this.router.url.slice(9);
+    this.navigationTabStyling(slicedURL);
     this.goTo(slicedURL);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         const page = event.url.slice(9);
         this.goTo(page);
+        this.navigationTabStyling(page);
       }
     });
-  }
-
-  ngOnChanges() {
-    const url = this.router.url.slice(9);
-    this.navigationTabStyling(url);
   }
 
   navigationTabStyling(url: string) {

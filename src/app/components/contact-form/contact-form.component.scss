@@ -7,7 +7,7 @@ $gray: #bbbbbb;
     width: 100%;
     height: auto;
     margin-top: $mobile-title-top-margin/2;
-    font-family: $theme-font-type-roboto-light !important;
+    font-family: $theme-font-type-roboto !important;
     font-size: $mobile-font-standard-size;
     font-weight: 300;
     .contact-form {
@@ -28,9 +28,9 @@ $gray: #bbbbbb;
             border-bottom: white solid 1px !important;
             background: transparent !important;
             color: white;
-            font-family: $theme-font-type-roboto-light !important;
+            font-family: $theme-font-type-roboto !important;
             option {
-                font-family: $theme-font-type-roboto-light !important;
+                font-family: $theme-font-type-roboto !important;
                 background: white !important;
                 color: black;
                 width: 100%;
@@ -41,7 +41,7 @@ $gray: #bbbbbb;
             width: 100%;
             margin-bottom: 3vh;
             input[type=text] {
-                font-family: $theme-font-type-roboto-light !important;
+                font-family: $theme-font-type-roboto !important;
                 box-sizing: border-box;
                 padding: 0 0.5vw 1.5vh 0.5vw;
                 text-align: left;
@@ -86,7 +86,7 @@ $gray: #bbbbbb;
             font: {
                 size: 0.8rem;
                 weight: 200;
-                family: $theme-font-type-roboto-light;
+                family: $theme-font-type-roboto;
             }
             transition: all 0.25s ease;
             &:active {
@@ -196,28 +196,28 @@ $gray: #bbbbbb;
 }
 
 ::-webkit-input-placeholder {
-    font-family: $theme-font-type-roboto-light !important;
+    font-family: $theme-font-type-roboto !important;
     /* Chrome/Opera/Safari */
     font-weight: 300;
     color: white;
 }
 
  ::-moz-placeholder {
-    font-family: $theme-font-type-roboto-light !important;
+    font-family: $theme-font-type-roboto !important;
     /* Firefox 19+ */
     font-weight: 300;
     color: white;
 }
 
  :-ms-input-placeholder {
-    font-family: $theme-font-type-roboto-light !important;
+    font-family: $theme-font-type-roboto !important;
     /* IE 10+ */
     font-weight: 300;
     color: white;
 }
 
  :-moz-placeholder {
-    font-family: $theme-font-type-roboto-light !important;
+    font-family: $theme-font-type-roboto !important;
     /* Firefox 18- */
     font-weight: 300;
     color: white;

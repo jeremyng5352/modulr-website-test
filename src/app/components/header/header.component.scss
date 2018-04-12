@@ -31,7 +31,7 @@ section.all-modals {
     width: 100vw;
     height: $header-height;
     color: $theme-font-white;
-    font-family: $theme-font-type-open-sans;
+    font-family: $theme-font-type-roboto;
     display: flex;
     align-items: flex-end;
     .header-main-container-content {
@@ -177,7 +177,7 @@ section.all-modals {
                             // width: $navigation-tab-size;
                             width: auto;
                             text-transform: uppercase;
-                            font-family: $theme-font-type-montserrat;
+                            font-family: $theme-font-type-roboto;
                             font-size: 0.8rem;
                             font-weight: 300;
                             letter-spacing: 3px;
@@ -213,7 +213,7 @@ section.all-modals {
                     //     }
                     // }
                     .navigation-btn {
-                        font-family: $theme-font-type-roboto-light;
+                        font-family: $theme-font-type-roboto;
                         font-weight: 100;
                         text-transform: uppercase;
                         z-index: 10;
