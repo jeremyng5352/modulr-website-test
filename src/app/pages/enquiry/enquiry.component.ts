@@ -1,13 +1,19 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Http, RequestOptions, Headers } from '@angular/http';
+import { Location } from '@angular/common';
+import { enquiryPageAnimation } from '../../animations';
 @Component({
   selector: 'app-enquiry',
   templateUrl: './enquiry.component.html',
-  styleUrls: ['./enquiry.component.scss']
+  styleUrls: ['./enquiry.component.scss'],
+  animations: [
+    enquiryPageAnimation
+  ]
 })
 export class EnquiryComponent implements OnInit {
   @HostBinding('style.position') position = 'relative';
+  @HostBinding('@enquiryPageAnimation') routeAnimation = true;
   @HostBinding('style.display') display = 'block';
   activatedSubmit = false;
   formSubmitted = false;
@@ -27,6 +33,7 @@ export class EnquiryComponent implements OnInit {
   constructor(
     private http: Http,
     private formBuilder: FormBuilder,
+    private location: Location
   ) {
     this.buildForm();
   }
@@ -105,4 +112,7 @@ export class EnquiryComponent implements OnInit {
     }, 1250);
   }
 
+  backToPreviousPage() {
+    this.location.back();
+  }
 }
