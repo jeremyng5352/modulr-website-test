@@ -2,148 +2,146 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
-.what-we-offer-container {
-    width: 100vw;
-    height: 100vh;
-    color: #1D1D1D;
-    font-family: $theme-font-type-roboto;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    font-size: $tablet-font-body-size;
-    font-weight: 300;
-    top: 0;
-    left: 0;
-    @include column-center;
-    .main-title-container {
-        position: absolute;
+@include media(tablet) {
+    .what-we-offer-container {
         width: 100vw;
         height: 100vh;
-        text-transform: uppercase;
-        letter-spacing: 17.66px;
-        font-size: $tablet-font-hero-size;
-        font-weight: bold;
-        .main-title {
-            @include row-center;
-            list-style-type: none;
-            width: 100vw;
-            height: 100vh;
-            li {
-                margin-right: 10px;
-            }
-        }
-    }
-    .what-we-offer-content {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        background: white;
-        color: $theme-font-grey;
+        color: #1D1D1D;
+        font-family: $theme-font-type-roboto;
         overflow-y: scroll;
         overflow-x: hidden;
-        .what-we-offer-description {
+        font-size: $tablet-font-body-size;
+        font-weight: 300;
+        top: 0;
+        left: 0;
+        @include column-center;
+        .main-title-container {
+            position: absolute;
             width: 100vw;
             height: 100vh;
-            @include column-center;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding: 0 $tablet-horizontal-padding-light-green;
-            display: none;
-            h1 {
-                margin-top: 40vh;
-            }
-            content {
-                width: 60%;
+            text-transform: uppercase;
+            letter-spacing: 17.66px;
+            font-size: $tablet-font-hero-size;
+            font-weight: bold;
+            .main-title {
+                @include row-center;
+                list-style-type: none;
+                width: 100vw;
+                height: 100vh;
+                li {
+                    margin-right: 10px;
+                }
             }
         }
-        .what-we-offer-article {
+        .what-we-offer-content {
+            position: absolute;
             width: 100vw;
             height: 100vh;
-            @include row-center;
-            display: none;
-            .article-text {
-                height: 100%;
-                width: 50%;
-                padding: 0 $tablet-horizontal-padding-light-green;
+            background: white;
+            color: $theme-font-grey;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            .what-we-offer-description {
+                width: 100vw;
+                height: 100vh;
                 @include column-center;
+                justify-content: flex-start;
                 align-items: flex-start;
-                justify-content: flex-end;
-                img.article-image {
-                    max-width: 5vw;
-                    max-height: 10vh;
+                padding: 0 $tablet-horizontal-padding-light-green;
+                // display: none;
+                h1 {
+                    margin-top: 40vh;
                 }
-                .aritcle-quote {
-                    font-style: italic;
-                    color: #818181;
-                    font-weight: 100;
-                }
-                .article-quote-author {
-                    font-size: $tablet-font-body-size - 2px;
-                    font-weight: bold;
-                    letter-spacing: 1.5px;
-                }
-                .article-action {
-                    width: 100%;
-                    margin-top: 15vh;
-                    margin-bottom: $tablet-vertical-margin-light-pink;
-                    text-transform: uppercase;
-                    @include row-center;
-                    justify-content: space-between;
+                content {
+                    width: 60%;
                 }
             }
-            .article-video {
-                height: 100%;
-                width: 50%;
-                background: #999;
+            .what-we-offer-article {
+                width: 100vw;
+                height: 100vh;
+                @include row-center;
+                // display: none;
+                .article-text {
+                    height: 100%;
+                    width: 50%;
+                    padding: 0 $tablet-horizontal-padding-light-green;
+                    @include column-center;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    img.article-image {
+                        max-width: 5vw;
+                        max-height: 10vh;
+                    }
+                    .aritcle-quote {
+                        font-style: italic;
+                        color: #818181;
+                        font-weight: 100;
+                    }
+                    .article-quote-author {
+                        font-size: $tablet-font-body-size - 2px;
+                        font-weight: bold;
+                        letter-spacing: 1.5px;
+                    }
+                    .article-action {
+                        width: 100%;
+                        margin-top: 15vh;
+                        margin-bottom: $tablet-vertical-margin-light-pink;
+                        text-transform: uppercase;
+                        @include row-center;
+                        justify-content: space-between;
+                    }
+                }
+                .article-video {
+                    height: 100%;
+                    width: 50%;
+                    background: #999;
+                }
             }
-        }
-        .what-we-offer-overview {
-            margin-top: $tablet-vertical-margin-sky-blue;
-            width: 100vw;
-            height: 100vh;
-            padding: 0 $tablet-horizontal-padding-light-green;
-            content {
-                width: 55%;
-                ul {
-                    li {
-                        margin-left: 45%;
-                        margin-bottom: 10px;
-                        letter-spacing: 2.68px;
-                        &:nth-child(1) {
-                            margin-top: $tablet-vertical-margin-light-yellow*2;
+            .what-we-offer-overview {
+                margin-top: $tablet-vertical-margin-sky-blue;
+                width: 100vw;
+                height: 100vh;
+                padding: 0 $tablet-horizontal-padding-light-green;
+                content {
+                    width: 55%;
+                    ul {
+                        li {
+                            margin-left: 45%;
+                            margin-bottom: 10px;
+                            letter-spacing: 2.68px;
+                            &:nth-child(1) {
+                                margin-top: $tablet-vertical-margin-light-yellow*2;
+                            }
                         }
                     }
                 }
             }
         }
     }
-}
-
-h1 {
-    font-family: $theme-font-type-roboto-condensed;
-    font-size: $tablet-font-h1-size;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 7.5px;
-    margin-bottom: $tablet-vertical-margin-light-blue;
-}
-
-h2 {
-    text-transform: uppercase;
-    font-family: $theme-font-type-roboto-condensed;
-    font-size: $tablet-font-h2-size;
-    font-weight: bold;
-    letter-spacing: 6px;
-    margin-bottom: $tablet-vertical-margin-light-yellow;
-}
-
-h4 {
-    font-size: $tablet-font-h4-size;
-    letter-spacing: 3px;
-    margin-bottom: $tablet-vertical-margin-light-yellow;
-}
-
-content {
-    font-size: $tablet-font-body-size;
-    letter-spacing: 2.68px;
-    line-height: 22.5px;
+    h1 {
+        font-family: $theme-font-type-roboto-condensed;
+        font-size: $tablet-font-h1-size;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 7.5px;
+        margin-bottom: $tablet-vertical-margin-dark-blue;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-family: $theme-font-type-roboto-condensed;
+        font-size: $tablet-font-h2-size;
+        font-weight: bold;
+        letter-spacing: 6px;
+        margin-bottom: $tablet-vertical-margin-light-yellow;
+    }
+    h4 {
+        font-size: $tablet-font-h4-size;
+        letter-spacing: 3px;
+        margin-bottom: $tablet-vertical-margin-light-yellow;
+    }
+    content {
+        font-size: $tablet-font-body-size;
+        letter-spacing: 2.68px;
+        line-height: 22.5px;
+    }
 }
