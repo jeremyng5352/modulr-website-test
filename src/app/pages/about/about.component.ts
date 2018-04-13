@@ -4,7 +4,9 @@ import { titleStaggerAnimation, containerSlideUpAnimation } from '../../animatio
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
-  animations: [containerSlideUpAnimation]
+  animations: [
+    containerSlideUpAnimation,
+  titleStaggerAnimation]
 })
 export class AboutComponent implements OnInit {
   @HostBinding('style.position') position = 'relative';
@@ -17,9 +19,9 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
+    // setTimeout(() => {
       this.scrollUp();
-    }, 2000);
+    // }, 2000);
   }
 
   scrollUp() {
