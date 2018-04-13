@@ -1,6 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { titleStaggerAnimation, containerSlideUpAnimation } from '../../animations';
-// import { titleStaggerAnimation, containerSlideUpAnimation, titleHighlightAnimation } from '../../animations';
 @Component({
   selector: 'app-whatweoffer',
   templateUrl: './whatweoffer.component.html',

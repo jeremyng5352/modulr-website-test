@@ -73,7 +73,7 @@ export class HeaderComponent implements OnInit {
   }
 
   navigationTabStyling(url: string) {
-    if (url === 'whatweofferpage') {
+    if (url === 'whatweofferpage' || url === 'aboutpage' ) {
       setTimeout(() => {
         this.needFilter = true;
       }, 2400);

@@ -2,241 +2,147 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
-.about-main-container {
-    width: 100vw;
-    color: $theme-font-white;
-    font-family: $theme-font-type-roboto;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    line-height: $theme-mobile-content-line-height;
-    font-size: $mobile-font-standard-size;
-    font-weight: 300;
-    .about-container-content {
-        width: 100%;
-        height: auto;
-        padding: 0 $mobile-horizontal-padding 0 $mobile-horizontal-padding;
-        .first {
-            margin-top: $mobile-vertical-margin-yellow * 3;
-        }
-        h2 {
-            width: 100%;
-            font-family: $theme-font-type-roboto;
-            font-size: $mobile-font-standard-title-size;
-            text-transform: uppercase;
-            margin-top: $mobile-title-top-margin;
-            margin-bottom: $mobile-title-bottom-margin;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-        content {
-            font-weight: 300;
-            line-height: $theme-mobile-content-line-height;
-        }
-    }
-    .last {
-        margin-bottom: $mobile-vertical-margin-yellow;
-    }
-    .team {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            .team-member {
-                width: 45%;
-                height: auto;
-                @include column-center;
-                justify-content: flex-start;
-                text-align: center;
-                margin-bottom: 2vh;
-                .member-name {
-                    font-weight: 400;
-                }
-                .member-image {
-                    width: 30vw;
-                    height: 30vw;
-                    background: white;
-                    background-size: contain;
-                }
-                $suffix: '_smiley';
-                .khoi {
-                    background-image: url('/assets/images/team_photos/khoi#{$suffix}.jpg') !important;
-                }
-                .andrea {
-                    background-image: url('/assets/images/team_photos/andy.jpg') !important;
-                }
-                .julia {
-                    background-image: url('/assets/images/team_photos/julia#{$suffix}.jpg') !important;
-                }
-                .jeremy {
-                    background-image: url('/assets/images/team_photos/jeremy.jpg') !important;
-                }
-                .kim {
-                    background-image: url('/assets/images/team_photos/kim#{$suffix}.jpg') !important;
-                }
-                .member-role {
-                    line-height: 100%;
-                }
-            }
-        }
-    }
-    .advisors {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            .advisor-member {
-                width: 45%;
-                height: auto;
-                @include column-center;
-                justify-content: flex-start;
-                text-align: center;
-                margin-bottom: 2vh;
-                .advisor-name {
-                    height: auto;
-                    font-weight: 400;
-                    @include row-center;
-                }
-                .advisor-image {
-                    width: 30vw;
-                    height: 30vw;
-                    background: white;
-                    background-size: cover !important;
-                }
-                .derek {
-                    background-image: url('/assets/images/advisors/derek.png') !important;
-                }
-                .armin {
-                    background-image: url('/assets/images/advisors/armin.png') !important;
-                }
-                .brett {
-                    background-image: url('/assets/images/advisors/brett.png') !important;
-                }
-                .sylvain {
-                    background-image: url('/assets/images/advisors/sylvain.png') !important;
-                }
-                .advisor-role {
-                    line-height: 100%;
-                }
-            }
-        }
-    }
-    .oursupporters {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: center;
-        .supporter {
-            height: 15vh;
-            @include row-center;
-            img {
-                max-width: 100%;
-                max-height: 100%;
-            }
-        }
-        .unearthed {
-            width: 60%;
-        }
-        .origin {
-            width: 30%;
-        }
-        .ilab {
-            width: 35%;
-        }
-    }
-}
-
 @include media(tablet) {
-    .about-main-container {
-        line-height: $theme-tablet-content-line-height;
-        font-size: $tablet-font-standard-size;
-        .about-container-content {
-            padding: 0 $tablet-horizontal-padding 0 $tablet-horizontal-padding;
-            margin-bottom: $tablet-vertical-margin-skin;
-            .first {
-                margin-top: $tablet-vertical-margin-pink * 1.5;
-            }
-            h2 {
-                font-size: $tablet-font-standard-title-size;
-                line-height: $theme-tablet-title-line-height;
-                letter-spacing: $theme-tablet-title-letter-spacing;
-                margin-top: 0;
-                margin-bottom: $tablet-vertical-margin-purple;
-            }
-            content {
-                line-height: $theme-tablet-content-line-height;
+    .what-we-offer-container {
+        width: 100vw;
+        height: 100vh;
+        color: $theme-font-grey;
+        font-family: $theme-font-type-roboto;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        font-size: $tablet-font-body-size;
+        font-weight: 300;
+        top: 0;
+        left: 0;
+        @include column-center;
+        .main-title-container {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            text-transform: uppercase;
+            letter-spacing: 17.66px;
+            font-size: $tablet-font-hero-size;
+            font-weight: bold;
+            .main-title {
+                @include row-center;
+                list-style-type: none;
+                width: 100vw;
+                height: 100vh;
+                li {
+                    margin-right: 10px;
+                    color: $theme-font-white;
+                }
             }
         }
-        .last {
-            margin-bottom: $tablet-vertical-margin-pink;
-        }
-        .team {
-            content {
-                .team-member {
-                    width: 30%;
+        .what-we-offer-content {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            color: $theme-font-grey;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            .what-we-offer-description {
+                width: 100vw;
+                height: 100vh;
+                @include column-center;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 0 $tablet-horizontal-padding-light-green;
+                // display: none;
+                h1 {
+                    margin-top: 35vh;
+                }
+                content {
+                    width: 50%;
+                }
+            }
+            .what-we-offer-article {
+                width: 100vw;
+                height: 100vh;
+                @include row-center;
+                // display: none;
+                .article-text {
+                    height: 100%;
+                    width: 50%;
+                    padding: 0 $tablet-horizontal-padding-light-green;
+                    @include column-center;
                     align-items: flex-start;
-                    margin-bottom: $tablet-vertical-about-margin-green;
-                    margin-right: 2vw;
-                    .member-name {
-                        line-height: 100%;
-                        margin: $tablet-vertical-margin-blue 0;
+                    justify-content: flex-end;
+                    img.article-image {
+                        max-width: 5vw;
+                        max-height: 10vh;
                     }
-                    .member-image {
-                        width: 20vw;
-                        height: 20vw;
+                    .aritcle-quote {
+                        font-style: italic;
+                        color: #818181;
+                        font-weight: 100;
                     }
-                    .member-role {
-                        line-height: 100%;
+                    .article-quote-author {
+                        font-size: $tablet-font-body-size - 2px;
+                        font-weight: bold;
+                        letter-spacing: 1.5px;
+                    }
+                    .article-action {
+                        width: 100%;
+                        margin-top: 15vh;
+                        margin-bottom: $tablet-vertical-margin-light-pink;
+                        text-transform: uppercase;
+                        @include row-center;
+                        justify-content: space-between;
+                    }
+                }
+                .article-video {
+                    height: 100%;
+                    width: 50%;
+                    background: #999;
+                }
+            }
+            .what-we-offer-overview {
+                margin: $tablet-vertical-margin-sky-blue 0;
+                width: 100vw;
+                height: auto;
+                padding: 0 $tablet-horizontal-padding-light-green;
+                content {
+                    width: 55%;
+                    ul {
+                        li {
+                            margin-left: 45%;
+                            margin-bottom: 10px;
+                            letter-spacing: 2.68px;
+                            &:nth-child(1) {
+                                margin-top: $tablet-vertical-margin-light-yellow*2;
+                            }
+                        }
                     }
                 }
             }
         }
-        .advisors {
-            content {
-                .advisor-member {
-                    width: 22.5%;
-                    align-items: flex-start;
-                    text-align: left;
-                    .advisor-name {
-                        width: 15vw;
-                        line-height: 100%;
-                        margin: $tablet-vertical-margin-blue 0;
-                        text-align: left;
-                        justify-content: flex-start !important;
-                    }
-                    .advisor-image {
-                        width: 15vw;
-                        height: 15vw;
-                        background: white;
-                    }
-                    .advisor-role {
-                        width: 15vw;
-                        line-height: 100%;
-                    }
-                }
-            }
-        }
-        .oursupporters {
-            .unearthed {
-                width: 25%;
-            }
-            .origin {
-                width: 35%;
-            }
-            .ilab {
-                width: 15%;
-            }
-        }
+    }
+    h1 {
+        font-family: $theme-font-type-roboto-condensed;
+        font-size: $tablet-font-h1-size;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 7.5px;
+        margin-bottom: $tablet-vertical-margin-dark-blue;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-family: $theme-font-type-roboto-condensed;
+        font-size: $tablet-font-h2-size;
+        font-weight: bold;
+        letter-spacing: 6px;
+        margin-bottom: $tablet-vertical-margin-light-yellow;
+    }
+    h4 {
+        font-size: $tablet-font-h4-size;
+        letter-spacing: 3px;
+        margin-bottom: $tablet-vertical-margin-light-yellow;
+    }
+    content {
+        font-size: $tablet-font-body-size;
+        letter-spacing: 2.68px;
+        line-height: 22.5px;
     }
 }
