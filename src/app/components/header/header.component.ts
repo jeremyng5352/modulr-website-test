@@ -65,6 +65,7 @@ export class HeaderComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         const page = event.url.slice(9);
         this.toggleMenu();
+        this.menu = false;
         this.goTo(page);
         this.navigationTabStyling(page);
       }
