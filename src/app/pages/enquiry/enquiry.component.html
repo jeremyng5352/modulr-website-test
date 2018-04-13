@@ -1,0 +1,44 @@
+<section class="enquiry-main-container">
+    <div class="enquiry-content">
+        <span class="back-button">&#8592; BACK</span>
+        <h1>Send us a message</h1>
+        <!-- <form action=""></form> -->
+        <form id="enquiryForm" [formGroup]="contactForm">
+            <div class="form-input name">
+                <input type="text" name="Name" placeholder="*Name" formControlName="contactName">
+                <small *ngIf="!contactForm.controls.contactName.valid && contactForm.controls.contactName.dirty">
+                      Name is required (minimum 5 characters).
+                  </small>
+            </div>
+            <select name="interest" class="interest" formControlName="contactInterest">
+                <option [ngValue]="null">*Interested in</option>
+                <option *ngFor="let interest of allInterests" [ngValue]="interest">{{interest}}</option>
+            </select>
+            <div class="form-input email">
+                <input type="text" name="Email" placeholder="*Email" formControlName="contactEmail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                <small *ngIf="!contactForm.controls.contactEmail.valid && contactForm.controls.contactEmail.dirty">
+                    Invalid email format
+                </small>
+            </div>
+            <div class="form-input company">
+                <input type="text" id="company" name="company" placeholder="*Company" formControlName="contactCompany">
+                <small *ngIf="!contactForm.controls.contactCompany.valid && contactForm.controls.contactCompany.dirty">
+                    Company is required (minimum 5 characters).
+                </small>
+            </div>
+            <textarea class="message" rows="4" name="Message" placeholder="*Message" form="enquiryForm" formControlName="contactMessage"></textarea>
+            <div class="submit">
+                <button id="submit-button" [disabled]="!contactForm.valid" (click)="onSubmitForm()">
+                <!-- <button id="submit-button" [disabled]="!contactForm.valid" [ngClass]="{'activated-submit': activatedSubmit,'form-submitted': formSubmitted, 'form-submitted-failed': submittedFailed}" (click)="onSubmitForm()"> -->
+                    <!-- <div *ngIf="formSubmitted">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div *ngIf="submittedFailed">
+                        <i class="fas fa-times"></i>
+                    </div> -->
+                </button>
+            </div>
+
+        </form>
+    </div>
+</section>

@@ -1,0 +1,172 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+@import '../../sass/reset';
+@import '../../sass/base';
+@include media(tablet) {
+    .enquiry-main-container {
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        color: $theme-font-grey;
+        padding: $tablet-vertical-margin-dark-green $tablet-horizontal-padding-light-red;
+        font-family: $theme-font-type-roboto;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        font-size: $tablet-font-body-size;
+        font-weight: 100;
+        @include column-center;
+        align-items: flex-start;
+        justify-content: space-between;
+        .enquiry-content {
+            width: 100%;
+            margin-top: $tablet-vertical-margin-sky-blue;
+            padding-left: $tablet-horizontal-padding-light-green/2;
+            .back-button {
+                font-weight: bold;
+                font-size: $tablet-font-h4-size;
+                cursor: pointer;
+            }
+            h1 {
+                color: $theme-font-pink;
+                margin-top: 1.5vh;
+                margin-bottom: $tablet-vertical-margin-orange;
+            }
+            form {
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: 22.5% 22.5%;
+                grid-template-rows: auto;
+                grid-column-gap: $tablet-horizontal-padding-light-green;
+                grid-row-gap: 2vh;
+                grid-template-areas: "name interest" "email company" "message message" "submit submit";
+                .form-input {
+                    width: 100%;
+                    margin-bottom: 3vh;
+                    input[type=text] {
+                        width: 100%;
+                        text-align: left;
+                        border: none;
+                        border-bottom: 1px solid $theme-font-grey;
+                        padding: 0 0 7.5px 0;
+                        font-size: 16px;
+                        color: #666;
+                        font-weight: 100;
+                    }
+                    small {
+                        font-size: 0.7rem;
+                        font-weight: bold;
+                        color: red;
+                    }
+                }
+                .name {
+                    grid-area: name;
+                }
+                .interest {
+                    grid-area: interest;
+                }
+                select {
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 50%;
+                    border: none !important;
+                    border-bottom: 1px solid $theme-font-grey !important;
+                    -webkit-appearance: none;
+                    border-radius: 0px !important;
+                    font-size: 16px;
+                    font-weight: 100;
+                    option {
+                        color: black;
+                        width: 100%;
+                        font-size: 16px;
+                    }
+                }
+                .email {
+                    grid-area: email;
+                }
+                .company {
+                    grid-area: company;
+                }
+                .message {
+                    grid-area: message;
+                    font-weight: 100;
+                    width: 100%;
+                    text-align: left;
+                    border: none;
+                    border-bottom: 1px solid $theme-font-grey;
+                    padding: 0 0 7.5px 0;
+                    font-size: 16px;
+                    color: #666;
+                }
+                .submit {
+                    grid-area: submit;
+                    width: 100%;
+                    @include row-center;
+                    #submit-button {
+                        margin-top: $tablet-vertical-margin-dark-blue;
+                        outline: none;
+                        height: 4.5vh;
+                        text-align: center;
+                        width: 20%;
+                        border: 1px solid $theme-font-grey;
+                        color: $theme-font-grey;
+                        letter-spacing: 1px;
+                        text-shadow: 0;
+                        opacity: 0.6;
+                        cursor: pointer;
+                        font: {
+                            size: 16px;
+                            weight: bold;
+                            family: $theme-font-type-roboto;
+                        }
+                        transition: all 0.25s ease;
+                        &:active {
+                            letter-spacing: 2px;
+                        }
+                        &:after {
+                            content: "Submit";
+                            font-weight: bold;
+                        }
+                        &:valid {
+                            opacity: 1;
+                        }
+                    }
+                    // .activated-submit {
+                    //     height: 4.5vh !important;
+                    //     width: 4.5vh !important;
+                    //     border-color: $theme-background-green !important;
+                    //     border-width: 3px !important;
+                    //     font-size: 0 !important;
+                    //     border-left-color: white !important;
+                    //     background: transparent !important;
+                    //     animation: rotating 2s 0.25s linear infinite;
+                    //     &:after {
+                    //         content: "" !important;
+                    //     }
+                    // }
+                    // .form-submitted {
+                    //     font-size: 1rem !important;
+                    //     &::after {
+                    //         content: "" !important;
+                    //     }
+                    // }
+                    // .form-submitted-failed {
+                    //     background: red !important;
+                    //     font-size: 1rem !important;
+                    //     &::after {
+                    //         content: "" !important;
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+    h1 {
+        font-family: $theme-font-type-roboto-condensed;
+        font-size: $tablet-font-h1-size;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 7.5px;
+        margin-bottom: $tablet-vertical-margin-dark-blue;
+    }
+}

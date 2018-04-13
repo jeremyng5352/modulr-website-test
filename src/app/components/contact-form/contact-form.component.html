@@ -1,9 +1,9 @@
 <div class="form-main-container">
     <form id="enquiryForm" class="contact-form" [formGroup]="contactForm">
         <select name="interest" formControlName="contactInterest">
-    <option [ngValue]="null">Interested in</option>
-    <option *ngFor="let interest of allInterests" [ngValue]="interest">{{interest}}</option>
-  </select>
+            <option [ngValue]="null">Interested in</option>
+            <option *ngFor="let interest of allInterests" [ngValue]="interest">{{interest}}</option>
+        </select>
         <div class="form-input">
             <input type="text" id="company" name="company" placeholder="Company" formControlName="contactCompany">
             <small *ngIf="!contactForm.controls.contactCompany.valid && contactForm.controls.contactCompany.dirty">
@@ -30,7 +30,7 @@
           </div>
           <div *ngIf="submittedFailed">
               <i class="fas fa-times"></i>
-      </div>
+          </div>
       </button>
     </form>
 </div>

@@ -25,6 +25,7 @@ import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { HexagonPaginationComponent } from './components/hexagon-pagination/hexagon-pagination.component';
 import { WhatweofferComponent } from './pages/whatweoffer/whatweoffer.component';
+import { EnquiryComponent } from './pages/enquiry/enquiry.component';
 export class MyHammerConfig extends HammerGestureConfig {
 
 }
@@ -43,7 +44,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     SolutionsComponent,
     LandingComponent,
     HexagonPaginationComponent,
-    WhatweofferComponent
+    WhatweofferComponent,
+    EnquiryComponent
   ],
   imports: [
     BrowserModule,

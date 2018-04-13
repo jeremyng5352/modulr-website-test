@@ -10,6 +10,7 @@ import { AboutComponent } from '../pages/about/about.component';
 import { SolutionsComponent } from '../pages/solutions/solutions.component';
 import { LandingComponent } from '../pages/landing/landing.component';
 import { WhatweofferComponent } from '../pages/whatweoffer/whatweoffer.component';
+import { EnquiryComponent } from '../pages/enquiry/enquiry.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome/landingpage', pathMatch: 'full' },
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: 'presspage', component: PressComponent, data: { preload: true } },
       { path: 'contactpage', component: ContactComponent },
       { path: 'whatweofferpage', component: WhatweofferComponent },
+      { path: 'enquirypage', component: EnquiryComponent },
     ]
   },
 ];
