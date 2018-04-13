@@ -287,4 +287,9 @@ section.all-modals {
 
 .filter {
     filter: invert(100%);
+    // opacity: 0.5;
+    transition: 0.3s;
+    &:hover {
+        opacity: 1;
+    }
 }

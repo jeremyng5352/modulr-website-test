@@ -57,6 +57,7 @@
                     @include column-center;
                     align-items: flex-start;
                     .name {
+                        font-family: $theme-font-type-roboto-condensed;
                         text-transform: uppercase;
                         font-size: $tablet-font-h4-size;
                         font-weight: bold;
