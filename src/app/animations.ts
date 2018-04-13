@@ -153,3 +153,34 @@ export const titleHighlightAnimation =
             }),
         ]),
     ]);
+
+export const enquiryPageAnimation =
+    trigger('enquiryPageAnimation', [
+        state('*',
+            style({
+                position: 'relative',
+                top: 0,
+                right: 0,
+                bottom: 0,
+                opacity: 1
+            })
+        ),
+        transition(':enter', [
+            style({
+                transform: 'translateX(100%)'
+            }),
+            animate('650ms ease-in-out', style({
+                opacity: 1,
+                transform: 'translateY(0%)'
+            }))
+        ]),
+        transition(':leave', [
+            style({
+                opacity: 1,
+                transform: 'translateX(0%)'
+            }),
+            animate('650ms ease-in-out', style({
+                transform: 'translateX(100%)'
+            }))
+        ]),
+    ]);

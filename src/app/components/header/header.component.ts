@@ -64,6 +64,7 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         const page = event.url.slice(9);
+        this.toggleMenu();
         this.goTo(page);
         this.navigationTabStyling(page);
       }
