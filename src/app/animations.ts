@@ -72,6 +72,7 @@ export const containerSlideUpAnimation =
         })),
         state('bottom', style({
             transform: 'translateY(100%)',
+            display: 'none'
         })),
         transition('middle => top', animate('600ms ease-in-out')),
         transition('bottom => middle', animate('600ms ease-in-out')),

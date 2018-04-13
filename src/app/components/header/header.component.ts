@@ -75,6 +75,8 @@ export class HeaderComponent implements OnInit {
       setTimeout(() => {
         this.needFilter = true;
       }, 2400);
+    } else if (url === 'enquirypage') {
+      this.needFilter = true;
     } else {
       this.needFilter = false;
     }

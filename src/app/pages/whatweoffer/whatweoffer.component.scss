@@ -6,7 +6,7 @@
     .what-we-offer-container {
         width: 100vw;
         height: 100vh;
-        color: #1D1D1D;
+        color: $theme-font-grey;
         font-family: $theme-font-type-roboto;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -98,9 +98,9 @@
                 }
             }
             .what-we-offer-overview {
-                margin-top: $tablet-vertical-margin-sky-blue;
+                margin: $tablet-vertical-margin-sky-blue 0;
                 width: 100vw;
-                height: 100vh;
+                height: auto;
                 padding: 0 $tablet-horizontal-padding-light-green;
                 content {
                     width: 55%;
