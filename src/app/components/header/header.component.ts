@@ -65,14 +65,15 @@ export class HeaderComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         const page = event.url.slice(9);
         this.toggleMenu();
+        this.navigationTabStyling(page);
         this.menu = false;
         this.goTo(page);
-        this.navigationTabStyling(page);
       }
     });
   }
 
   navigationTabStyling(url: string) {
+    this.needFilter = false;
     if (url === 'whatweofferpage' || url === 'aboutpage' ) {
       setTimeout(() => {
         this.needFilter = true;
