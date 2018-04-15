@@ -1,4 +1,4 @@
-<!-- <section class="about-container">
+<section class="about-container">
     <section class="main-title-container" [@containerState]='states.container1'>
         <div class="main-title" [@titleStaggerAnimation]="true">
             <li>A</li>
@@ -22,9 +22,9 @@
         </div>
         <div class="about-team ">
             <div class="team-description ">
-                <h2>
+                <h1>
                     Our Team
-                </h2>
+                </h1>
                 <content>
                     <p>
                         As a team of business analysts, user experience designers, and software developers, we bring diverse knowledge and skills to our work. We value quality and…...
@@ -59,21 +59,21 @@
             <div class="article-video"></div>
         </div>
         <div class="about-news">
-            <h2>In the news</h2>
+            <h1>In the news</h1>
             <div class="news-articles">
-                <div class="news">
+                <div class="news" *ngFor="let article of newsArticles">
                     <div class="news-image">
-                        <img src="assets/images/press/unearthed-logo-300.png" alt="unearthed logo">
+                        <img src={{article.imgURL}} alt={{article.imgALT}}>
                     </div>
                     <div class="news-title">
-                        Komatsu and Unearthed unveil four tech innovators to watch out in 2018
+                        {{article.title}}
                     </div>
                     <div class="news-date">
-                        1 March 2018
+                        {{article.date}}
                     </div>
                 </div>
             </div>
         </div>
     </section>
-</section> -->
+</section>
 <app-footer></app-footer>

@@ -1,5 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { titleStaggerAnimation, containerSlideUpAnimation } from '../../animations';
+import { NEWSARTICLE } from '../../class/NewsArticle';
+import { newsArticle } from '../../data/news-articles';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -11,7 +13,7 @@ import { titleStaggerAnimation, containerSlideUpAnimation } from '../../animatio
 export class AboutComponent implements OnInit {
   @HostBinding('style.position') position = 'relative';
   @HostBinding('style.display') display = 'block';
-
+  newsArticles: NEWSARTICLE[] = newsArticle;
   states = {
     container1: 'middle',
     container2: 'bottom',
@@ -19,9 +21,9 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // setTimeout(() => {
+    setTimeout(() => {
       this.scrollUp();
-    // }, 2000);
+    }, 2000);
   }
 
   scrollUp() {

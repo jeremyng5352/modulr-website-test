@@ -43,13 +43,13 @@
             overflow-y: scroll;
             overflow-x: hidden;
             .about-description {
+                // display: none;
                 width: 100vw;
                 height: 100vh;
                 @include column-center;
                 justify-content: flex-start;
                 align-items: flex-start;
                 padding: 0 $tablet-horizontal-padding-light-green;
-                display: none;
                 h1 {
                     margin-top: 35vh;
                 }
@@ -58,10 +58,10 @@
                 }
             }
             .about-team {
+                // display: none;
                 width: 100vw;
                 height: 100vh;
                 @include row-center;
-                display: none;
                 .team-description {
                     height: 100%;
                     width: 50%;
@@ -95,18 +95,19 @@
                 }
             }
             .about-news {
+                // display: none; 
                 margin: $tablet-vertical-margin-sky-blue 0;
                 width: 100vw;
                 height: auto;
                 padding: 0 $tablet-horizontal-padding-light-green;
-                display: none;
                 .news-articles {
                     width: 100%;
                     height: auto;
                     display: grid;
-                    grid-template-columns: 17.5vw 17.5vw 17.5vw 17.5vw;
-                    $news-height: 17.5vw;
-                    grid-column-gap: 3.3vw;
+                    grid-template-columns: 17.8vw 17.8vw 17.8vw 17.8vw;
+                    grid-row-gap: 3vw;
+                    $news-height: 17.8vw;
+                    grid-column-gap: 3vw;
                     .news {
                         width: 100%;
                         height: $news-height;
