@@ -2,105 +2,63 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
-.main-container {
-    a {
-        text-decoration: none;
-    }
-    width: 100vw;
-    height: auto;
-    @include column-center;
+.footer-container {
+    margin-top: 20vh;
     background: white;
-    align-items: center;
-    padding: 3vh 0;
+    width: 100vw;
+    padding: $tablet-vertical-margin-dark-green $tablet-horizontal-padding-light-red/2 0 $tablet-horizontal-padding-light-red/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
     font-family: $theme-font-type-roboto;
-    color: $theme-font-black !important;
-    .footer-navigation-social-container {
-        width: 100vw;
-        height: auto;
-        @include column-center;
-        .logo {
+    grid-template-areas: "policy newsletter logo social-media" ". . copyright .";
+    align-items: center;
+    letter-spacing: 2.68px;
+    .policy {
+        grid-area: policy;
+        font-size: $tablet-font-h4-size;
+        font-weight: 100;
+    }
+    .newsletter {
+        grid-area: newsletter;
+        font-size: $tablet-font-body-size;
+        text-decoration: underline;
+    }
+    .branding {
+        grid-area: logo;
+        .header-icon {
+            display: flex;
+            justify-content: flex-start;
+            z-index: 10;
             cursor: pointer;
-            font-size: 1.2rem;
+            width: auto;
+            display: flex;
+            text-transform: uppercase;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            vertical-align: middle;
+            font-size: $tablet-font-h3-size;
             letter-spacing: 3px;
             font-family: $theme-font-type-montserrat;
-            font-weight: 500;
-            margin-bottom: $mobile-title-bottom-margin;
-            display: flex;
-            align-items: center;
+            font-weight: 300;
             img {
-                max-width: 50%;
-                max-height: 7vh;
+                height: 4vh;
             }
-        }
-        .footer-navigation-content {
-            width: 100vw;
-            @include column-center;
-            justify-content: flex-end;
-            nav {
-                text-transform: uppercase;
-                font-size: 0.8rem;
-                margin-bottom: 3vh;
-                @include row-center;
-            }
-        }
-        .social-icons {
-            width: 45%;
-            display: flex;
-            justify-content: space-between;
-            margin: 3vh 0;
-            nav {
-                font-size: 1.4rem;
-                &:nth-child(1) {
-                    margin-left: 0;
-                }
-            }
-        }
-        .social-content {
-            margin-bottom: 1.5vh;
-            font-size: 0.6rem;
         }
     }
-}
-
-@include media(tablet) {
-    a {
-        &:hover {
-            text-decoration: underline;
+    .social-media {
+        grid-area: social-media;
+        @include row-center;
+        justify-content: flex-end;
+        nav {
+            font-size: 22px;
+            margin-left: 30px;
         }
     }
-    .main-container {
-        padding: 7.5vh 0;
-        .footer-navigation-social-container {
-            .logo {
-                font-size: 1.4rem;
-                margin-bottom: $tablet-vertical-margin-purple;
-            }
-            .footer-navigation-content {
-                width: 55vw;
-                @include row-center;
-                justify-content: space-around;
-                margin-bottom: $tablet-vertical-margin-green;
-                nav {
-                    font-size: 1.1rem;
-                    margin-bottom: 0;
-                    cursor: pointer;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-            .social-icons {
-                width: 30%;
-                height: auto;
-                margin: 3vh 0 0 0;
-                nav {
-                    font-size: 1.7rem;
-                    margin-bottom: $tablet-vertical-margin-green;
-                }
-            }
-            .social-content {
-                font-size: 1rem;
-            }
-        }
+    .copyright {
+        grid-area: copyright;
+        @include row-center;
+        font-size: 10px;
+        margin-top: 20px;
     }
 }
