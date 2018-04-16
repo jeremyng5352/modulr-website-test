@@ -14,12 +14,12 @@
     letter-spacing: 2.68px;
     .policy {
         grid-area: policy;
-        font-size: $tablet-font-h4-size;
+        font-size: $tablet-font-body-size;
         font-weight: 100;
     }
     .newsletter {
         grid-area: newsletter;
-        font-size: $tablet-font-body-size;
+        font-size: $tablet-font-h4-size;
         text-decoration: underline;
     }
     .branding {

@@ -10,7 +10,7 @@
         font-family: $theme-font-type-roboto;
         overflow-y: scroll;
         overflow-x: hidden;
-        font-size: $tablet-font-body-size;
+        font-size: $tablet-font-h4-size;
         font-weight: 300;
         top: 0;
         left: 0;
@@ -54,7 +54,7 @@
                     margin-top: 35vh;
                 }
                 content {
-                    width: 50%;
+                    width: 60%;
                 }
             }
             .about-team {
@@ -75,7 +75,7 @@
                         width: 100%;
                         .member {
                             display: flex;
-                            font-size: $tablet-font-h4-size;
+                            font-size: $tablet-font-body-size;
                             margin-bottom: 15px;
                             .name {
                                 font-family: $theme-font-type-roboto-condensed;
@@ -125,7 +125,7 @@
                         .news-title {
                             height: 7.5vw;
                             text-align: center;
-                            font-size: $tablet-font-body-size;
+                            font-size: $tablet-font-h4-size;
                             @include row-center;
                         }
                         .news-date {
@@ -161,7 +161,6 @@
         margin-bottom: $tablet-vertical-margin-light-yellow;
     }
     content {
-        font-size: $tablet-font-body-size;
         letter-spacing: 2.68px;
         line-height: 22.5px;
     }

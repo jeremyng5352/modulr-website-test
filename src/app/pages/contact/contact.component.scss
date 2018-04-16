@@ -7,6 +7,7 @@
         width: 100vw;
         height: 100vh;
         background: url("/assets/images/modulr/modulr-base.png") no-repeat center;
+        background-size: cover;
         z-index: 0;
         position: absolute;
         top: 0;
@@ -23,7 +24,7 @@
         font-family: $theme-font-type-roboto;
         overflow-y: scroll;
         overflow-x: hidden;
-        font-size: $tablet-font-body-size;
+        font-size: $tablet-font-h4-size;
         font-weight: 100;
         @include column-center;
         align-items: flex-start;
@@ -59,12 +60,12 @@
                     .name {
                         font-family: $theme-font-type-roboto-condensed;
                         text-transform: uppercase;
-                        font-size: $tablet-font-h4-size;
+                        font-size: $tablet-font-body-size;
                         font-weight: bold;
                     }
                     .email {
                         color: $theme-font-pink;
-                        font-size: $tablet-font-h4-size - 2px;
+                        font-size: $tablet-font-h4-size;
                     }
                 }
             }

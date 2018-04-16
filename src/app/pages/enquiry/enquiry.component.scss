@@ -12,7 +12,7 @@
         font-family: $theme-font-type-roboto;
         overflow-y: scroll;
         overflow-x: hidden;
-        font-size: $tablet-font-body-size;
+        font-size: $tablet-font-h4-size;
         font-weight: 100;
         @include column-center;
         align-items: flex-start;
@@ -23,7 +23,7 @@
             padding-left: $tablet-horizontal-padding-light-green/2;
             .back-button {
                 font-weight: bold;
-                font-size: $tablet-font-h4-size;
+                font-size: $tablet-font-body-size;
                 cursor: pointer;
             }
             h1 {
@@ -49,7 +49,7 @@
                         border: none;
                         border-bottom: 1px solid $theme-font-grey;
                         padding: 0 0 7.5px 0;
-                        font-size: 16px;
+                        font-size: $tablet-font-h4-size;
                         color: #666;
                         font-weight: 100;
                     }
@@ -73,12 +73,12 @@
                     border-bottom: 1px solid $theme-font-grey !important;
                     -webkit-appearance: none;
                     border-radius: 0px !important;
-                    font-size: 16px;
+                    font-size: $tablet-font-h4-size;
                     font-weight: 100;
                     option {
                         color: black;
                         width: 100%;
-                        font-size: 16px;
+                        font-size: $tablet-font-h4-size;
                     }
                 }
                 .email {
@@ -95,7 +95,7 @@
                     border: none;
                     border-bottom: 1px solid $theme-font-grey;
                     padding: 0 0 7.5px 0;
-                    font-size: 16px;
+                    font-size: $tablet-font-h4-size;
                     color: #666;
                 }
                 .submit {
@@ -115,7 +115,7 @@
                         opacity: 0.6;
                         cursor: pointer;
                         font: {
-                            size: 16px;
+                            size: $tablet-font-h4-size;
                             weight: bold;
                             family: $theme-font-type-roboto;
                         }
