@@ -184,3 +184,36 @@ export const enquiryPageAnimation =
             }))
         ]),
     ]);
+
+
+export const newsletterSlideInAnimation =
+    trigger('newsletterSlideInAnimation', [
+        state('*',
+            style({
+                position: 'fixed',
+                left: '1vw',
+                bottom: 0,
+                opacity: 1
+            })
+        ),
+        transition(':enter', [
+            style({
+                opacity: 0,
+                transform: 'translateY(100%)'
+            }),
+            animate('650ms 2000ms ease-in-out', style({
+                opacity: 1,
+                transform: 'translateY(0%)'
+            }))
+        ]),
+        transition(':leave', [
+            style({
+                opacity: 1,
+                transform: 'translateY(0%)'
+            }),
+            animate('650ms ease-in-out', style({
+                opacity: 0,
+                transform: 'translateY(100%)'
+            }))
+        ]),
+    ]);

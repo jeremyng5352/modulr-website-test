@@ -1,0 +1,94 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+@import '../../sass/reset';
+@import '../../sass/base';
+.newsletter-container {
+    width: 30vw;
+    height: 30vh;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    left: 1vw;
+    z-index: 15;
+    @include column-center;
+    justify-content: flex-start;
+    padding: $tablet-vertical-margin-dark-blue;
+    font-family: $theme-font-type-roboto;
+    border: rgba(200, 200, 200, 0.7) solid 0.5px;
+    line-height: 30px;
+    letter-spacing: 2.68px;
+    .newsletter-header {
+        text-transform: uppercase;
+        @include row-center;
+        align-items: flex-start;
+        .title {
+            font-size: 22px;
+            width: 75%;
+        }
+        .close-button {
+            font-size: 12px;
+            width: 25%;
+            display: flex;
+            justify-content: flex-end;
+            cursor: pointer;
+        }
+    }
+    .subscription-form {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        .form-input {
+            width: 75%;
+            margin-bottom: 2vh;
+            input[type=text] {
+                font-family: $theme-font-type-roboto !important;
+                font-size: $tablet-font-body-size;
+                box-sizing: border-box;
+                padding: 0 0.5vw 1vh 0.5vw;
+                text-align: left;
+                width: 100%;
+                border: 0;
+                border-bottom: black solid 1px !important;
+                background: transparent;
+                color: black;
+            }
+            small {
+                font-size: 0.7rem;
+                color: red;
+            }
+        }
+        #submit-button {
+            margin-top: 0.5vh;
+            outline: none;
+            width: auto;
+            height: auto;
+            text-align: center;
+            padding: 0.75vh 1.5vw;
+            border: 1px solid $theme-font-grey;
+            color: $theme-font-grey;
+            letter-spacing: 1px;
+            text-shadow: 0;
+            opacity: 0.6;
+            cursor: pointer;
+            font: {
+                size: $tablet-font-h4-size;
+                weight: bold;
+                family: $theme-font-type-roboto;
+            }
+            transition: all 0.25s ease;
+            &:active {
+                letter-spacing: 2px;
+            }
+            &:after {
+                content: "Submit";
+                font-weight: bold;
+            }
+            &:valid {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<section class="newsletter-container" *ngIf="isNewsletterShown" [@newsletterSlideInAnimation]="true">
+    <div class="newsletter-header">
+        <span class="title">Subscribe to our newsletter</span>
+        <span class="close-button" (click)="closeNewsletter()">close</span>
+    </div>
+    <form id="subscriptionForm" class="subscription-form" [formGroup]="subscriptionForm">
+        <div class="form-input">
+            <input type="text" name="Name" placeholder="*Name" formControlName="subscriptionName">
+            <small *ngIf="!subscriptionForm.controls.subscriptionName.valid && subscriptionForm.controls.subscriptionName.dirty">
+                  Name is required (minimum 5 characters).
+              </small>
+        </div>
+        <div class="form-input">
+            <input type="text" name="Email" placeholder="*Email" formControlName="subscriptionEmail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+            <small *ngIf="!subscriptionForm.controls.subscriptionEmail.valid && subscriptionForm.controls.subscriptionEmail.dirty">
+                  Invalid email format
+              </small>
+        </div>
+        <button id="submit-button" [disabled]="!subscriptionForm.valid" (click)="onSubmitForm()"></button>
+    </form>
+</section>
