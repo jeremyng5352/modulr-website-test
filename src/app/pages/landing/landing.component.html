@@ -1,5 +1,5 @@
-<section class="landing-main-container" mouseWheel (mouseWheelUp)="scrollDown()" (mouseWheelDown)="scrollUp()">
-    <div class="landing-main-container-content oneliner" [@boxState]='states.box1'>
+<section class="landing-container">
+    <section class="main-title-container" [@containerState]='states.container1' mouseWheel (mouseWheelDown)="scrollUp()">
         <div class="main-title">
             <h1>
                 We Transform
@@ -11,56 +11,15 @@
                 </span>
             </h1>
         </div>
-    </div>
-    <div class="landing-main-container-content ourvision" [@boxState]='states.box2'>
-        <div class="title" style="color: white">
-            <div class="desktop" style="color: white;">&#9644; &nbsp;</div>{{footerTitle}}</div>
-        <content>
-            We use a distinct combination of artificial intelligence, machine learning, and user-centric design to create scalable solutions that allow businesses to optimise their workflows and maximise their productivity.
-        </content>
-    </div>
-    <div class="landing-main-container-content oursolution" [@boxState]='states.box3'>
-        <div class="title" style="color: white">
-            <div class="desktop" style="color: white;">&#9644; &nbsp;</div>{{footerTitle}}</div>
-        <content>
-            We are driven by a desire for innovation and a vision to create the perfect combination of analytics and design. We tailor all of our products to suit specific needs and focuses. No two projects are the same, allowing for our entrepreneurial spirit and
-            keen eyes for detail to create the most cutting-edge and solutions.
-        </content>
-    </div>
-    <div class="landing-main-container-content press" [@boxState]='states.box4'>
-        <div class="title" style="color: white">
-            <div class="desktop" style="color: white;">&#9644; &nbsp;</div>{{footerTitle}}</div>
-        <nav class="press-block">
-            <a href="http://www.mining.com/ready-impact-four-tech-startups-graduate-unearthed-accelerator-2017-demo-day/ ">
-
-                <div class="press-headline">
-                    <span> Mining.com - &nbsp;</span>
-                    <div class="press-date" class="desktop">December 08 2017</div>
-                    <div class="press-date" class="mobile">08/12/2017</div>
-                </div>
-                <div class="press-picture mining-com"></div>
-                <div class="press-description">Modulr showcases technology at the Unearthed Brisbane Demo Day</div>
-            </a>
-        </nav>
-    </div>
-    <div class="landing-main-container-content oursupporters" [@boxState]='states.box5'>
-        <div class="title" style="color: white">
-            <div class="desktop" style="color: white;">&#9644; &nbsp;</div>{{footerTitle}}</div>
-        <div class="supporter-container">
-            <div class="supporter unearthed">
-                <img src="assets/images/supporters/unearthed.png" alt="unearthed logo">
-            </div>
-            <div class="supporter origin">
-                <img src="assets/images/supporters/origin.png" alt="origin logo">
-            </div>
-            <div class="supporter ilab">
-                <img src="assets/images/supporters/ilab.png" alt="ilab logo">
-            </div>
+    </section>
+    <section class="landing-content" [@containerState]='states.container2'>
+        <div class="landing-description">
+            <h1>bla bla bla landing page</h1>
+            <content>
+                <p>
+                    Our work is inspired by a true understanding of data transformation and a hunger to develop seamless software systems.
+                </p>
+            </content>
         </div>
-    </div>
-    <div class="landing-main-container-content cta" [@boxState]='states.box6'>
-        <div class="title" style="color: white">
-            <div class="desktop" style="color: white;">&#9644; &nbsp;</div>{{footerTitle}}</div>
-        <app-contact-form></app-contact-form>
-    </div>
+    </section>
 </section>

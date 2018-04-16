@@ -48,7 +48,7 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 padding: 0 $tablet-horizontal-padding-light-green;
-                display: none;
+                // display: none;
                 h1 {
                     margin-top: 35vh;
                 }
@@ -60,7 +60,7 @@
                 width: 100vw;
                 height: 100vh;
                 @include row-center;
-                display: none;
+                // display: none;
                 .article-text {
                     height: 100%;
                     width: 50%;
@@ -73,12 +73,13 @@
                         max-height: 10vh;
                     }
                     .aritcle-quote {
+                        font-size: $tablet-font-body-size;
                         font-style: italic;
                         color: #818181;
                         font-weight: 100;
                     }
                     .article-quote-author {
-                        font-size: $tablet-font-body-size;
+                        font-size: $tablet-font-body-size - 2px;
                         font-weight: bold;
                         letter-spacing: 1.5px;
                     }
@@ -124,7 +125,7 @@
                             color: black;
                         }
                         td {
-                            letter-spacing: 2.68px;
+                            letter-spacing: 3px;
                             line-height: 22.5px;
                             font-size: $tablet-font-h4-size + 2px;
                             text-align: center;

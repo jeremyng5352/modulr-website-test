@@ -167,14 +167,13 @@ section.all-modals {
                         width: 100%;
                         height: auto;
                         @include row-center;
+                        justify-content: flex-end;
                         align-items: center;
-                        justify-content: space-around;
                         // $tablet-nav-margin-bottom: 2vh;
                         $tablet-nav-margin-bottom: 0vh;
                         $navigation-tab-size: 17%;
                         nav {
                             @include column-center();
-                            // width: $navigation-tab-size;
                             width: auto;
                             text-transform: uppercase;
                             font-family: $theme-font-type-roboto;
@@ -185,7 +184,7 @@ section.all-modals {
                                 font-size: 0.7rem;
                             }
                             display: block;
-                            margin: 0 0 $tablet-nav-margin-bottom 0;
+                            margin: 0 0 $tablet-nav-margin-bottom 3vw;
                             cursor: pointer;
                             &:first-child {
                                 margin-left: 0;

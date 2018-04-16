@@ -2,337 +2,92 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/_base';
-.landing-main-container {
-    width: 100vw;
-    height: $main-container-height;
-    color: $theme-font-white;
-    font-family: $theme-font-type-roboto;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    line-height: $theme-mobile-content-line-height;
-    font-size: 2.5vh;
-    font-weight: 300;
-    text-transform: uppercase;
-    background: transparent;
-    .landing-main-container-content {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+@include media(tablet) {
+    .landing-container {
+        width: 100vw;
+        height: 100vh;
+        color: $theme-font-grey;
+        font-family: $theme-font-type-roboto;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        font-size: $tablet-font-h4-size;
+        font-weight: 300;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: $main-container-height;
-        padding: 0 $mobile-horizontal-padding;
-    }
-    .press {
-        width: 100%;
-        line-height: 150%;
-        .press-block {
-            width: 100%;
-            height: auto;
-            @include column-center;
-            align-items: flex-start;
-            text-transform: uppercase;
-            margin-bottom: $mobile-title-top-margin;
-            a {
-                text-decoration: none;
-            }
-            .press-headline {
-                height: 100%;
-                font-size: 2.5vh;
-                margin-bottom: $mobile-vertical-margin-purple;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                align-content: center;
-                .press-date {
-                    height: 100%;
-                    font-weight: 300;
-                    display: table-cell;
-                    vertical-align: middle;
-                }
-            }
-            .press-picture {
-                width: 100%;
-                height: 20vh;
-                @include row-center;
-                background-image: url("/assets/images/press/mining.com.jpg");
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: contain;
-                margin-bottom: 1vh;
-            }
-            .press-description {
-                font-size: 0.9rem;
-                line-height: 150%;
-                // text-decoration: underline;
-            }
-            &:nth-last-child(1) {
-                margin-bottom: 0;
-            }
-        }
-    }
-    .oursolution {
-        display: flex;
-        flex-direction: column;
-        content.mockup {
-            // flex-grow: 1;
-            width: auto;
-            height: 40vh;
-            max-height: 50vh;
-            max-width: 80vw;
-            padding: 2vh 1.5vw;
-            background-image: url('/assets/images/product/ipad-dark.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: 50%;
-        }
-    }
-    .oursupporters {
-        width: 100%;
-        .supporter-container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-content: center;
-            .supporter {
-                height: 15vh;
-                @include row-center;
-                img {
-                    max-width: 100%;
-                    max-height: 100%;
-                }
-            }
-            .unearthed {
-                width: 60%;
-            }
-            .origin {
-                width: 30%;
-            }
-            .ilab {
-                width: 35%;
-            }
-        }
-    }
-    .cta {
-        contact-form {
-            width: 100%;
-        }
-    }
-    .title {
-        width: 100%; // 70%
-        height: auto;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        font-size: 3.5vh;
-        font-family: $theme-font-type-roboto;
-        margin-bottom: $mobile-title-bottom-margin;
-    }
-    .pagination-hexagon {
-        // width: 30%; // 24vw
-        width: 18vw;
-        height: 18vw;
-        position: absolute;
-        bottom: 5vh;
-        left: 72vw;
-        hexagon-pagination {
-            width: 18vw;
-            height: 18vw;
-        }
-    }
-}
-
-@include media(tablet) {
-    a {
-        text-decoration: none;
-    }
-    .landing-main-container {
-        line-height: $theme-mobile-content-line-height;
-        font-size: 1.2rem;
-        .landing-main-container-content {
+        @include column-center;
+        .main-title-container {
             position: absolute;
+            width: 100vw;
+            height: 100vh;
+            text-transform: uppercase;
+            letter-spacing: 17.66px;
+            font-size: $tablet-font-hero-size;
             font-weight: bold;
-            text-align: center;
-            h1 {
-                height: auto;
-                text-transform: uppercase;
-                font-size: $tablet-font-h1-size;
-                letter-spacing: 7.5px;
-                line-height: 150%;
-            }
-        }
-        .press {
-            justify-content: center;
-            align-items: center;
-            .press-block {
-                width: 50%;
-                margin-bottom: $mobile-title-top-margin;
-                a {
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-                .press-headline {
-                    font-size: 1.2rem;
-                    margin-bottom: $mobile-vertical-margin-purple;
-                }
-                .press-picture {
-                    width: 100%;
-                    height: 25vh;
-                    margin-bottom: 1vh;
-                }
-                .press-description {
-                    font-size: 0.9rem;
-                    line-height: 150%;
-                    text-decoration: none;
-                }
-            }
-        }
-        .oursolution {
-            content.mockup {
-                height: 40vh;
-            }
-        }
-        .oursupporters {
-            @include column-center;
-            .supporter-container {
-                width: 80%;
-                justify-content: space-around;
-                .supporter {
-                    height: 15vh;
-                    @include row-center;
-                    img {
-                        max-width: 100%;
-                        max-height: 70%;
-                    }
-                }
-                .unearthed {
-                    width: 25%;
-                }
-                .origin {
-                    width: 30%;
-                    height: 20vh;
-                }
-                .ilab {
-                    width: 15%;
-                }
-            }
-        }
-        .cta {
-            contact-form {
+            color: white;
+            padding: 0 $tablet-horizontal-padding-light-green;
+            .main-title {
+                @include row-center;
+                list-style-type: none;
                 width: 100%;
+                height: 100vh;
+                h1 {
+                    height: auto;
+                    text-transform: uppercase;
+                    font-size: $tablet-font-h1-size;
+                    letter-spacing: 7.5px;
+                    line-height: 150%;
+                    text-align: center;
+                }
             }
         }
-        .title {
-            font-size: 1.3rem;
-            font-family: $theme-font-type-roboto;
-            font-weight: 600 !important;
-            letter-spacing: 3.5px;
-        }
-        $hexagon-size: 8vw;
-        .pagination-hexagon {
-            width: $hexagon-size;
-            height: $hexagon-size;
-            position: fixed;
-            bottom: 45vh;
-            left: inherit;
-            right: 2vw;
-            @media (min-width: 768px) and (orientation: portrait) {
-                bottom: 47vh;
-            }
-            @include media(small) {
-                bottom: 40vh;
-                right: 0vw !important;
-            }
-            hexagon-pagination {
-                width: $hexagon-size;
-                height: $hexagon-size;
+        .landing-content {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            color: $theme-font-grey;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            .landing-description {
+                width: 100vw;
+                height: 100vh;
+                @include column-center;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 0 $tablet-horizontal-padding-light-green;
+                // display: none;
+                h1 {
+                    margin-top: 35vh;
+                }
+                content {
+                    width: 50%;
+                }
             }
         }
     }
-    .paginator {
-        $paginatorWidth: 2vw;
-        $paginatorHeight: 3vh;
-        height: auto;
-        width: 100vw;
-        position: fixed;
-        bottom: 1.5vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.8rem;
-        .paginator-line {
-            position: relative;
-            width: $paginatorWidth;
-            height: $paginatorHeight;
-            // border-bottom: white solid 1px;
-            &:before {
-                content: '';
-                position: absolute;
-                top: 0%;
-                left: 50%;
-                height: 100%;
-                width: 1px;
-                background: white;
-                transform-origin: left;
-                transform: scaleX(0);
-                animation: paginator2 2s infinite normal;
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                top: 0%;
-                left: 50%;
-                height: 100%;
-                width: 1px;
-                background: white;
-                transform-origin: left;
-                transform: scaleX(0);
-                animation: paginator 2s infinite normal;
-            }
-        }
-        .pagination-content {
-            width: auto;
-        }
+    h1 {
+        font-family: $theme-font-type-roboto-condensed;
+        font-size: $tablet-font-h1-size;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 7.5px;
+        margin-bottom: $tablet-vertical-margin-dark-blue;
     }
-}
-
-@keyframes paginator {
-    0% {
-        transform: translate(0) scaleY(1);
-        transform-origin: top;
-        top: auto;
+    h2 {
+        text-transform: uppercase;
+        font-family: $theme-font-type-roboto-condensed;
+        font-size: $tablet-font-h2-size;
+        font-weight: bold;
+        letter-spacing: 6px;
+        margin-bottom: $tablet-vertical-margin-light-yellow;
     }
-    50% {
-        transform: translate(0) scaleY(0);
-        transform-origin: top;
+    h4 {
+        font-size: $tablet-font-h4-size;
+        letter-spacing: 3px;
+        margin-bottom: $tablet-vertical-margin-light-yellow;
     }
-    100% {
-        transform: translate(0) scaleY(0);
-        transform-origin: top;
-        top: auto;
-    }
-}
-
-@keyframes paginator2 {
-    0% {
-        transform: translate(0) scaleY(0);
-        transform-origin: top;
-        top: auto;
-    }
-    50% {
-        transform: translate(0) scaleY(0);
-        transform-origin: bottom;
-        bottom: auto;
-    }
-    100% {
-        transform: translate(0) scaleY(1);
-        transform-origin: bottom;
-        bottom: auto;
+    content {
+        letter-spacing: 2.68px;
+        line-height: 22.5px;
     }
 }
