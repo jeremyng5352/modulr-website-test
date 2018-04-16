@@ -4,7 +4,7 @@
 @import '../../sass/base';
 .newsletter-container {
     width: 30vw;
-    height: 30vh;
+    height: 35vh;
     background: white;
     position: fixed;
     bottom: 0;
@@ -62,7 +62,6 @@
         }
         #submit-button {
             margin-top: 0.5vh;
-            outline: none;
             width: auto;
             height: auto;
             text-align: center;
@@ -81,10 +80,6 @@
             transition: all 0.25s ease;
             &:active {
                 letter-spacing: 2px;
-            }
-            &:after {
-                content: "Submit";
-                font-weight: bold;
             }
             &:valid {
                 opacity: 1;

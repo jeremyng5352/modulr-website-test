@@ -38,7 +38,9 @@ export class LandingComponent implements OnInit {
   constructor(
     private router: Router
   ) {
-
+    setTimeout(() => {
+      this.scrollUp();
+    }, 2000);
   }
 
   ngOnInit() {

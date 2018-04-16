@@ -74,8 +74,8 @@ export const containerSlideUpAnimation =
             transform: 'translateY(100%)',
             display: 'none'
         })),
-        transition('middle => top', animate('600ms ease-in-out')),
-        transition('bottom => middle', animate('600ms ease-in-out')),
+        transition('middle => top', animate('600ms 500ms cubic-bezier(0.5,0,0,0)')),
+        transition('bottom => middle', animate('600ms 500ms cubic-bezier(0.5,0,0,0)')),
     ]);
 
 export const menuStaggerAnimation =
@@ -117,12 +117,12 @@ export const titleStaggerAnimation =
         ),
         transition(':enter', [
             query('li', style({
-                transform: 'translateY(-100%)',
+                transform: 'translateY(10%)',
                 opacity: 0,
             })),
             query('li',
-                stagger('50ms', [
-                    animate('1000ms', style({
+                stagger('150ms', [
+                    animate('900ms', style({
                         transform: 'translateX(0)',
                         opacity: 1,
                         color: '#f5f5f5'
@@ -144,7 +144,7 @@ export const titleHighlightAnimation =
             })
         ),
         transition(':enter', [
-            animate('650ms 1500ms ease-in-out', style({
+            animate('650ms 1000ms ease-in-out', style({
                 opacity: 1,
                 color: '#69C7C2',
             })),
@@ -201,7 +201,7 @@ export const newsletterSlideInAnimation =
                 opacity: 0,
                 transform: 'translateY(100%)'
             }),
-            animate('650ms 2000ms ease-in-out', style({
+            animate('650ms 5000ms ease-in-out', style({
                 opacity: 1,
                 transform: 'translateY(0%)'
             }))
