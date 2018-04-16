@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Http, RequestOptions, Headers } from '@angular/http';
 import { newsletterSlideInAnimation } from '../../animations';
@@ -11,7 +11,7 @@ import { newsletterSlideInAnimation } from '../../animations';
   ]
 })
 export class NewsletterComponent implements OnInit {
-  isNewsletterShown = true;
+  @Output() isCloseButtonClicked = new EventEmitter<boolean>();
   subscriptionForm: FormGroup;
   name: string;
   email: string;
@@ -63,6 +63,6 @@ export class NewsletterComponent implements OnInit {
   }
 
   closeNewsletter() {
-    this.isNewsletterShown = false;
+    this.isCloseButtonClicked.emit(true);
   }
 }

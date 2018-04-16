@@ -2,7 +2,7 @@
     <div class="policy">
         Privacy policy | Sitemap
     </div>
-    <div class="newsletter">
+    <div class="newsletter" (click)="showNewsletter()">
         Subscribe to our newsletter
     </div>
     <div class="branding">
@@ -21,3 +21,4 @@
         COPYRIGHT BY MODULR TECH
     </div>
 </section>
+<app-newsletter *ngIf="isNewsletterShown" [@newsletterSlideInAnimation]="true" (isCloseButtonClicked)="hideNewsletter()"></app-newsletter>

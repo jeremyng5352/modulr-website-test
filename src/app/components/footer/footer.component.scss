@@ -21,6 +21,7 @@
         grid-area: newsletter;
         font-size: $tablet-font-h4-size;
         text-decoration: underline;
+        cursor: pointer;
     }
     .branding {
         grid-area: logo;
@@ -61,4 +62,10 @@
         margin-top: 20px;
         margin-bottom: 10px;
     }
+}
+
+app-newsletter {
+    position: fixed;
+    bottom: 0;
+    left: 1vw;
 }

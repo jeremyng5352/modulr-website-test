@@ -188,20 +188,20 @@ export const enquiryPageAnimation =
 
 export const newsletterSlideInAnimation =
     trigger('newsletterSlideInAnimation', [
-        state('*',
-            style({
-                position: 'fixed',
-                left: '1vw',
-                bottom: 0,
-                opacity: 1
-            })
-        ),
+        // state('*',
+        //     style({
+        //         position: 'fixed',
+        //         left: '1vw',
+        //         bottom: 0,
+        //         opacity: 1
+        //     })
+        // ),
         transition(':enter', [
             style({
                 opacity: 0,
                 transform: 'translateY(100%)'
             }),
-            animate('650ms 5000ms ease-in-out', style({
+            animate('650ms ease-in-out', style({
                 opacity: 1,
                 transform: 'translateY(0%)'
             }))
