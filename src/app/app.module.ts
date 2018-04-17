@@ -27,6 +27,7 @@ import { HexagonPaginationComponent } from './components/hexagon-pagination/hexa
 import { WhatweofferComponent } from './pages/whatweoffer/whatweoffer.component';
 import { EnquiryComponent } from './pages/enquiry/enquiry.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { NextPagePromptComponent } from './components/next-page-prompt/next-page-prompt.component';
 export class MyHammerConfig extends HammerGestureConfig {
 
 }
@@ -47,7 +48,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     HexagonPaginationComponent,
     WhatweofferComponent,
     EnquiryComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    NextPagePromptComponent
   ],
   imports: [
     BrowserModule,

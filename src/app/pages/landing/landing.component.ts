@@ -1,6 +1,5 @@
 import { Component, OnInit, HostListener, HostBinding } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
-import * as Hammer from 'hammerjs';
 import { titleHighlightAnimation, containerSlideUpAnimation } from '../../animations';
 
 @Component({
@@ -19,17 +18,7 @@ export class LandingComponent implements OnInit {
     container2: 'bottom',
   };
 
-  currentPage = 1;
-  // Main 3D Variables
-  container;
-  width: number;
   height: number;
-  // 3D components
-  scene;
-  camera;
-  renderer;
-  sunLight;
-  model;
   isScrolling = false;
 
   @HostBinding('style.position') position = 'relative';
@@ -44,21 +33,6 @@ export class LandingComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setupHammer();
-  }
-
-  setupHammer() {
-    const myElement = document.getElementsByClassName('landing-main-container')[0];
-    const myOptions = {};
-    const hammertime = new Hammer(myElement, { myOptions });
-    hammertime.on('pan', (ev) => {
-      console.log(ev.additionalEvent);
-      const direction = ev.additionalEvent;
-      if (direction === 'panup') {
-        this.slideContainerUp();
-      }
-    });
-    hammertime.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL });
   }
 
   slideContainerUp() {
