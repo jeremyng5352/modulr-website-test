@@ -3,38 +3,37 @@
 @import '../../sass/reset';
 @import '../../sass/base';
 .footer-container {
-    background: #eee;
+    background: #232323;
     width: 100vw;
     padding: $tablet-vertical-margin-dark-green $tablet-horizontal-padding-light-red/2 0 $tablet-horizontal-padding-light-red/2;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-template-columns: 15vw 25vw 35vw 20vw;
     font-family: $theme-font-type-roboto;
     grid-template-areas: "policy newsletter logo social-media" ". . copyright .";
     align-items: center;
     letter-spacing: 2.68px;
+    color: $theme-font-white;
     .policy {
         grid-area: policy;
-        font-size: $tablet-font-body-size;
+        font-size: 10px;
         font-weight: 100;
     }
     .newsletter {
         grid-area: newsletter;
-        font-size: $tablet-font-h4-size;
+        font-size: $tablet-font-body-size;
         text-decoration: underline;
         cursor: pointer;
     }
     .branding {
         grid-area: logo;
         .header-icon {
-            display: flex;
-            justify-content: flex-start;
             z-index: 10;
             cursor: pointer;
             width: auto;
             display: flex;
             text-transform: uppercase;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             align-content: center;
             vertical-align: middle;
             font-size: $tablet-font-h3-size;
@@ -58,9 +57,11 @@
     .copyright {
         grid-area: copyright;
         @include row-center;
+        justify-content: flex-start;
         font-size: 10px;
         margin-top: 20px;
         margin-bottom: 10px;
+        margin-left: 15px;
     }
 }
 
