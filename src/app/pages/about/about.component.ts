@@ -22,11 +22,11 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      this.scrollUp();
+      this.slideContainerUp();
     }, 2000);
   }
 
-  scrollUp() {
+  slideContainerUp() {
     const containerID = 'container' + 1;
     const otherContainerID = 'container' + 2;
     this.states[containerID] = 'middle';

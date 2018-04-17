@@ -16,21 +16,23 @@ export class WhatweofferComponent implements OnInit {
   @HostBinding('style.position') position = 'relative';
   @HostBinding('style.display') display = 'block';
   section3Contents: WHATWEOFFERCONTENT;
+  currentContentPage = 0;
   isReadMoreClicked = false;
   states = {
     container1: 'middle',
     container2: 'bottom',
   };
-  constructor() { }
+  constructor() {
+    this.section3Contents = whatWeOfferContent[0];
+  }
 
   ngOnInit() {
     // setTimeout(() => {
-      this.scrollUp();
+    this.slideContainerUp();
     // }, 2000);
-    this.switchSection3Content();
   }
 
-  scrollUp() {
+  slideContainerUp() {
     const containerID = 'container' + 1;
     const otherContainerID = 'container' + 2;
     this.states[containerID] = 'middle';
@@ -43,7 +45,17 @@ export class WhatweofferComponent implements OnInit {
     this.isReadMoreClicked = this.isReadMoreClicked ? false : true;
   }
 
-  switchSection3Content() {
-    this.section3Contents = whatWeOfferContent[0];
+  scrollUp() {
+    if (this.currentContentPage < 2) {
+      this.currentContentPage += 1;
+      this.section3Contents = whatWeOfferContent[this.currentContentPage];
+    }
+  }
+
+  scrollDown() {
+    if (this.currentContentPage > 0) {
+      this.currentContentPage -= 1;
+      this.section3Contents = whatWeOfferContent[this.currentContentPage];
+    }
   }
 }

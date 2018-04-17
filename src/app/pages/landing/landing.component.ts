@@ -39,7 +39,7 @@ export class LandingComponent implements OnInit {
     private router: Router
   ) {
     setTimeout(() => {
-      this.scrollUp();
+      this.slideContainerUp();
     }, 2000);
   }
 
@@ -55,13 +55,13 @@ export class LandingComponent implements OnInit {
       console.log(ev.additionalEvent);
       const direction = ev.additionalEvent;
       if (direction === 'panup') {
-        this.scrollUp();
+        this.slideContainerUp();
       }
     });
     hammertime.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL });
   }
 
-  scrollUp() {
+  slideContainerUp() {
     const containerID = 'container' + 1;
     const otherContainerID = 'container' + 2;
     this.states[containerID] = 'middle';

@@ -28,7 +28,7 @@
                 </p>
             </content>
         </div>
-        <div class="what-we-offer-article data-visualisation">
+        <div class="what-we-offer-article data-visualisation" mouseWheel (mouseWheelUp)="scrollUp()" (mouseWheelDown)="scrollDown()">
             <div class="article-text ">
                 <h2>
                     {{section3Contents.title}}
