@@ -21,41 +21,41 @@
             </content>
         </div>
         <div class="about-team ">
-            <div class="team-description ">
-                <h1>
-                    Our Team
-                </h1>
-                <content>
-                    <p>
-                        As a team of business analysts, user experience designers, and software developers, we bring diverse knowledge and skills to our work. We value quality and…...
-                    </p>
-                    <p>
-                        Founded in 2017 and based in Brisbane, Australia, we are supported by the University of Queensland’s iLab Germinate program for entrepreneurs and Unearthed Solutions.
-                    </p>
-                </content>
-                <div class="team-member">
-                    <div class="member">
-                        <span class="name">Khoi Phan</span>
-                        <span class="position">Co-founder, CEO</span>
+            <div class="team-content">
+                <div class="team-description" *ngIf="!isTeamContainerShown">
+                    <h1>
+                        Our Team
+                    </h1>
+                    <content>
+                        <p>
+                            As a team of business analysts, user experience designers, and software developers, we bring diverse knowledge and skills to our work. We value quality and…...
+                        </p>
+                        <p>
+                            Founded in 2017 and based in Brisbane, Australia, we are supported by the University of Queensland’s iLab Germinate program for entrepreneurs and Unearthed Solutions.
+                        </p>
+                    </content>
+                    <div class="team-member">
+                        <div class="member" *ngFor="let member of teamMembers" (click)="switchTeamMemberContent(member.name)">
+                            <span class="name">{{member.name}}</span>
+                            <span class="position">{{member.position}}</span>
+                        </div>
                     </div>
-                    <div class="member">
-                        <span class="name">Julia Hunyh</span>
-                        <span class="position">Co-founder, Head of Business</span>
+                </div>
+                <div class="team-member-description" *ngIf="isTeamContainerShown">
+                    <span class="back-button" (click)="toggleTeamContainer()">&#8592; BACK</span>
+                    <div class="member-name">
+                        {{currentMember.name}}
                     </div>
-                    <div class="member">
-                        <span class="name">Andrea Yee</span>
-                        <span class="position">Co-founder, Head Designer</span>
-                    </div>
-                    <div class="member">
-                        <span class="name">Jeremy Ng</span>
-                        <span class="position">Lead Web Developer</span>
-                    </div>
-                    <div class="member">
-                        <span class="name">Kimberley Lee</span>
-                        <span class="position">Lead Marketing Coordinator</span>
+                    <content class="member-description">
+                        {{currentMember.description}}
+                    </content>
+                    <div class="social-media">
+                        <nav><a href="https://twitter.com/ModulrAU" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></nav>
+                        <nav><a href="https://www.linkedin.com/company/18195994/" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></nav>
                     </div>
                 </div>
             </div>
+
             <div class="article-video"></div>
         </div>
         <div class="about-news">
@@ -77,4 +77,9 @@
         <app-next-page-prompt></app-next-page-prompt>
         <app-footer></app-footer>
     </section>
+</section>
+
+<section class="content-slider" *ngIf="contentSliderTriggered">
+    <div class="left-slider" [@contentLeftSlideAnimation]="true"></div>
+    <div class="right-slider" [@contentRightSlideAnimation]="true"></div>
 </section>

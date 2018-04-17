@@ -38,7 +38,7 @@ export class WhatweofferComponent implements OnInit {
 
   ngOnInit() {
     // setTimeout(() => {
-    this.slideContainerUp();
+      this.slideContainerUp();
     // }, 2000);
   }
 
@@ -70,12 +70,10 @@ export class WhatweofferComponent implements OnInit {
     setTimeout(() => {
       this.currentContentPage += 1;
       this.section3Contents = whatWeOfferContent[this.currentContentPage];
-      console.log(this.currentContentPage)
     }, 1000);
   }
 
   disableScrolling() {
-    console.log('disabling')
     this.isScrolling = true;
     setTimeout(() => {
       this.isScrolling = false;
@@ -97,7 +95,6 @@ export class WhatweofferComponent implements OnInit {
     setTimeout(() => {
       this.currentContentPage -= 1;
       this.section3Contents = whatWeOfferContent[this.currentContentPage];
-      console.log(this.currentContentPage)
     }, 1000);
   }
 

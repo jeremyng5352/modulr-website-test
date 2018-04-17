@@ -43,7 +43,7 @@
             overflow-y: scroll;
             overflow-x: hidden;
             .about-description {
-                // display: none;
+                display: none !important;
                 width: 100vw;
                 height: 100vh;
                 @include column-center;
@@ -62,28 +62,65 @@
                 width: 100vw;
                 height: 100vh;
                 @include row-center;
-                .team-description {
+                .team-content {
                     height: 100%;
                     width: 50%;
-                    padding: 0 $tablet-horizontal-padding-light-green;
-                    @include column-center;
-                    align-items: flex-start;
-                    justify-content: flex-end;
-                    .team-member {
-                        margin-top: $tablet-vertical-margin-light-yellow;
-                        margin-bottom: $tablet-vertical-margin-light-pink;
+                    .team-description {
+                        height: 100%;
                         width: 100%;
-                        .member {
-                            display: flex;
-                            font-size: $tablet-font-body-size;
-                            margin-bottom: 15px;
-                            .name {
-                                font-family: $theme-font-type-roboto-condensed;
-                                font-weight: bold;
-                                width: 30%;
+                        padding: 0 $tablet-horizontal-padding-light-green;
+                        @include column-center;
+                        align-items: flex-start;
+                        justify-content: flex-end;
+                        // display: none;
+                        .team-member {
+                            margin-top: $tablet-vertical-margin-light-yellow;
+                            margin-bottom: $tablet-vertical-margin-light-pink;
+                            width: 100%;
+                            .member {
+                                display: flex;
+                                font-size: $tablet-font-body-size;
+                                margin-bottom: 15px;
+                                cursor: pointer;
+                                .name {
+                                    font-family: $theme-font-type-roboto-condensed;
+                                    font-weight: bold;
+                                    width: 30%;
+                                }
+                                .position {
+                                    width: 70%;
+                                }
                             }
-                            .position {
-                                width: 70%;
+                        }
+                    }
+                    .team-member-description {
+                        width: 100%;
+                        height: 100%;
+                        padding: 0 $tablet-horizontal-padding-light-green;
+                        padding-top: 17.5vh;
+                        .back-button {
+                            font-weight: bold;
+                            font-size: $tablet-font-body-size;
+                            cursor: pointer;
+                        }
+                        .member-name {
+                            text-transform: uppercase;
+                            font-family: $theme-font-type-roboto-condensed;
+                            font-size: $tablet-font-h1-size;
+                            font-weight: bold;
+                            letter-spacing: 6px;
+                            margin-top: 10vh;
+                            margin-bottom: $tablet-vertical-margin-dark-blue;
+                        }
+                        .member-description {
+                            font-size: $tablet-font-body-size;
+                        }
+                        .social-media {
+                            margin-top: 15vh;
+                            font-size: $tablet-font-h3-size;
+                            display: flex;
+                            nav {
+                                margin-right: 35px;
                             }
                         }
                     }
