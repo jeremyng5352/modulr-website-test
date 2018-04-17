@@ -18,9 +18,11 @@ let lastMove = Date.now();
     trigger('scrollAnimation', [
       state('show', style({
         opacity: 1,
+        display: 'flex'
       })),
       state('hide', style({
         opacity: 0,
+        display: 'none'
       })),
       transition('show => hide', animate('400ms ease-out')),
       transition('hide => show', animate('400ms ease-in'))
@@ -62,20 +64,6 @@ export class WelcomeComponent implements OnInit {
     this.lookCursor(this.model, cursorX, cursorY);
   }
 
-  keyEvent(event: KeyboardEvent) {
-    if (event.keyCode === 38) {
-      event.preventDefault();
-      event.cancelBubble = true;
-      event.stopImmediatePropagation();
-      return;
-    } else if (event.keyCode === 40) {
-      event.preventDefault();
-      event.cancelBubble = true;
-      event.stopImmediatePropagation();
-      return;
-    }
-  }
-
   scrollEvent() {
     const scrollBarPosition = document.body.scrollTop;
     if (scrollBarPosition <= 50) {
@@ -90,6 +78,12 @@ export class WelcomeComponent implements OnInit {
     private router: Router
   ) {
     component = this;
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        document.body.scrollTop = 0;
+        this.scrollEvent();
+      }
+    });
   }
 
   ngOnInit() {
