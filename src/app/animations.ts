@@ -208,3 +208,38 @@ export const newsletterSlideInAnimation =
             }))
         ]),
     ]);
+
+export const contentLeftSlideAnimation =
+    trigger('contentLeftSlideAnimation', [
+        state('*',
+            style({
+                display: 'none'
+            })
+        ),
+        transition(':enter', [
+            style({
+                transform: 'translateY(-100%)'
+            }),
+            animate('1500ms ease-in', style({
+                transform: 'translateY(100%)'
+            }))
+        ]),
+    ]);
+
+
+export const contentRightSlideAnimation =
+    trigger('contentRightSlideAnimation', [
+        state('*',
+            style({
+                display: 'none'
+            })
+        ),
+        transition(':enter', [
+            style({
+                transform: 'translateY(100%)'
+            }),
+            animate('1500ms ease-in', style({
+                transform: 'translateY(-100%)'
+            }))
+        ]),
+    ]);

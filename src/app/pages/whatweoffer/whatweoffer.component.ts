@@ -1,5 +1,11 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { titleStaggerAnimation, containerSlideUpAnimation, fadeAnimation } from '../../animations';
+import {
+  titleStaggerAnimation,
+  containerSlideUpAnimation,
+  fadeAnimation,
+  contentLeftSlideAnimation,
+  contentRightSlideAnimation
+} from '../../animations';
 import { WHATWEOFFERCONTENT } from '../../class/WhatWeOfferContent';
 import { whatWeOfferContent } from '../../data/what-we-offer-contents';
 @Component({
@@ -9,7 +15,9 @@ import { whatWeOfferContent } from '../../data/what-we-offer-contents';
   animations: [
     titleStaggerAnimation,
     containerSlideUpAnimation,
-    fadeAnimation
+    fadeAnimation,
+    contentLeftSlideAnimation,
+    contentRightSlideAnimation
   ]
 })
 export class WhatweofferComponent implements OnInit {
@@ -17,7 +25,9 @@ export class WhatweofferComponent implements OnInit {
   @HostBinding('style.display') display = 'block';
   section3Contents: WHATWEOFFERCONTENT;
   currentContentPage = 0;
+  contentSliderTriggered = false;
   isReadMoreClicked = false;
+  isScrolling = false;
   states = {
     container1: 'middle',
     container2: 'bottom',
@@ -46,16 +56,46 @@ export class WhatweofferComponent implements OnInit {
   }
 
   scrollUp() {
-    if (this.currentContentPage < 2) {
+    if (this.currentContentPage !== 2 && !this.isScrolling) {
+      this.contentSliderTriggered = true;
+      this.incrementContainerContent();
+    }
+    this.disableScrolling();
+    setTimeout(() => {
+      this.contentSliderTriggered = false;
+    }, 1500);
+  }
+
+  incrementContainerContent() {
+    setTimeout(() => {
       this.currentContentPage += 1;
       this.section3Contents = whatWeOfferContent[this.currentContentPage];
-    }
+    }, 1000);
+  }
+
+  disableScrolling() {
+    this.isScrolling = true;
+    setTimeout(() => {
+      this.isScrolling = false;
+    }, 1500);
   }
 
   scrollDown() {
-    if (this.currentContentPage > 0) {
+    if (this.currentContentPage !== 0 && !this.isScrolling) {
+      this.contentSliderTriggered = true;
+      this.decrementContainerContent();
+    }
+    this.disableScrolling();
+    setTimeout(() => {
+      this.contentSliderTriggered = false;
+    }, 1500);
+  }
+
+  decrementContainerContent() {
+    setTimeout(() => {
       this.currentContentPage -= 1;
       this.section3Contents = whatWeOfferContent[this.currentContentPage];
-    }
+    }, 1000);
   }
+
 }
