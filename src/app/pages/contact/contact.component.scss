@@ -2,7 +2,7 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
-@include media(tablet) {
+@include media(small) {
     .contact-background {
         width: 100vw;
         height: 100vh;

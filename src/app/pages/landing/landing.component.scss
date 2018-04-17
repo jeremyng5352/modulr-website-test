@@ -2,7 +2,7 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/_base';
-@include media(tablet) {
+@include media(small) {
     .landing-container {
         width: 100vw;
         height: 100vh;

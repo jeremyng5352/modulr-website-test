@@ -2,66 +2,68 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
-.footer-container {
-    background: #232323;
-    width: 100vw;
-    padding: $tablet-vertical-margin-dark-green $tablet-horizontal-padding-light-red/2 0 $tablet-horizontal-padding-light-red/2;
-    display: grid;
-    grid-template-columns: 15vw 25vw 35vw 20vw;
-    font-family: $theme-font-type-roboto;
-    grid-template-areas: "policy newsletter logo social-media" ". . copyright .";
-    align-items: center;
-    letter-spacing: 2.68px;
-    color: $theme-font-white;
-    .policy {
-        grid-area: policy;
-        font-size: 10px;
-        font-weight: 100;
-    }
-    .newsletter {
-        grid-area: newsletter;
-        font-size: $tablet-font-body-size;
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    .branding {
-        grid-area: logo;
-        .header-icon {
-            z-index: 10;
+@include media(small) {
+    .footer-container {
+        background: #232323;
+        width: 100vw;
+        padding: $tablet-vertical-margin-dark-green $tablet-horizontal-padding-light-red/2 0 $tablet-horizontal-padding-light-red/2;
+        display: grid;
+        grid-template-columns: 15vw 25vw 35vw 20vw;
+        font-family: $theme-font-type-roboto;
+        grid-template-areas: "policy newsletter logo social-media" ". . copyright .";
+        align-items: center;
+        letter-spacing: 2.68px;
+        color: $theme-font-white;
+        .policy {
+            grid-area: policy;
+            font-size: 10px;
+            font-weight: 100;
+        }
+        .newsletter {
+            grid-area: newsletter;
+            font-size: $tablet-font-body-size;
+            text-decoration: underline;
             cursor: pointer;
-            width: auto;
-            display: flex;
-            text-transform: uppercase;
-            align-items: center;
-            justify-content: flex-start;
-            align-content: center;
-            vertical-align: middle;
-            font-size: $tablet-font-h3-size;
-            letter-spacing: 3px;
-            font-family: $theme-font-type-montserrat;
-            font-weight: 300;
-            img {
-                height: 4vh;
+        }
+        .branding {
+            grid-area: logo;
+            .header-icon {
+                z-index: 10;
+                cursor: pointer;
+                width: auto;
+                display: flex;
+                text-transform: uppercase;
+                align-items: center;
+                justify-content: flex-start;
+                align-content: center;
+                vertical-align: middle;
+                font-size: $tablet-font-h3-size;
+                letter-spacing: 3px;
+                font-family: $theme-font-type-montserrat;
+                font-weight: 300;
+                img {
+                    height: 4vh;
+                }
             }
         }
-    }
-    .social-media {
-        grid-area: social-media;
-        @include row-center;
-        justify-content: flex-end;
-        nav {
-            font-size: 22px;
-            margin-left: 40px;
+        .social-media {
+            grid-area: social-media;
+            @include row-center;
+            justify-content: flex-end;
+            nav {
+                font-size: 22px;
+                margin-left: 40px;
+            }
         }
-    }
-    .copyright {
-        grid-area: copyright;
-        @include row-center;
-        justify-content: flex-start;
-        font-size: 10px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        margin-left: 15px;
+        .copyright {
+            grid-area: copyright;
+            @include row-center;
+            justify-content: flex-start;
+            font-size: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+        }
     }
 }
 

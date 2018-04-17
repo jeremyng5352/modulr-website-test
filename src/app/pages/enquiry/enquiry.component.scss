@@ -2,7 +2,7 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
-@include media(tablet) {
+@include media(small) {
     .enquiry-main-container {
         width: 100vw;
         height: 100vh;
@@ -131,32 +131,6 @@
                             opacity: 1;
                         }
                     }
-                    // .activated-submit {
-                    //     height: 4.5vh !important;
-                    //     width: 4.5vh !important;
-                    //     border-color: $theme-background-green !important;
-                    //     border-width: 3px !important;
-                    //     font-size: 0 !important;
-                    //     border-left-color: white !important;
-                    //     background: transparent !important;
-                    //     animation: rotating 2s 0.25s linear infinite;
-                    //     &:after {
-                    //         content: "" !important;
-                    //     }
-                    // }
-                    // .form-submitted {
-                    //     font-size: 1rem !important;
-                    //     &::after {
-                    //         content: "" !important;
-                    //     }
-                    // }
-                    // .form-submitted-failed {
-                    //     background: red !important;
-                    //     font-size: 1rem !important;
-                    //     &::after {
-                    //         content: "" !important;
-                    //     }
-                    // }
                 }
             }
         }
