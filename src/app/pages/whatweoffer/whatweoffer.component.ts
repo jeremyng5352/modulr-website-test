@@ -1,5 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { titleStaggerAnimation, containerSlideUpAnimation } from '../../animations';
+import { titleStaggerAnimation, containerSlideUpAnimation, fadeAnimation } from '../../animations';
+import { WHATWEOFFERCONTENT } from '../../class/WhatWeOfferContent';
+import { whatWeOfferContent } from '../../data/what-we-offer-contents';
 @Component({
   selector: 'app-whatweoffer',
   templateUrl: './whatweoffer.component.html',
@@ -7,13 +9,14 @@ import { titleStaggerAnimation, containerSlideUpAnimation } from '../../animatio
   animations: [
     titleStaggerAnimation,
     containerSlideUpAnimation,
-    // titleHighlightAnimation
+    fadeAnimation
   ]
 })
 export class WhatweofferComponent implements OnInit {
   @HostBinding('style.position') position = 'relative';
   @HostBinding('style.display') display = 'block';
-
+  section3Contents: WHATWEOFFERCONTENT;
+  isReadMoreClicked = false;
   states = {
     container1: 'middle',
     container2: 'bottom',
@@ -21,9 +24,10 @@ export class WhatweofferComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
+    // setTimeout(() => {
       this.scrollUp();
-    }, 2000);
+    // }, 2000);
+    this.switchSection3Content();
   }
 
   scrollUp() {
@@ -35,4 +39,11 @@ export class WhatweofferComponent implements OnInit {
     this.states[otherContainerID] = 'middle';
   }
 
+  toggleReadButton() {
+    this.isReadMoreClicked = this.isReadMoreClicked ? false : true;
+  }
+
+  switchSection3Content() {
+    this.section3Contents = whatWeOfferContent[0];
+  }
 }

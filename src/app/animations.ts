@@ -31,31 +31,14 @@ export const slideInDownAnimation =
 
 export const fadeAnimation =
     trigger('fadeAnimation', [
-        state('*',
-            style({
-                position: 'relative',
-                top: 0,
-                right: 0,
-                bottom: 0,
-                opacity: 1
-            })
-        ),
         transition(':enter', [
             style({
+                display: 'none',
                 opacity: 0,
-                transform: 'translateY(5%)'
             }),
             animate('650ms ease-in-out', style({
                 opacity: 1,
-                transform: 'translateY(0%)'
-            }))
-        ]),
-        transition(':leave', [
-            style({
-                opacity: 1
-            }),
-            animate('650ms ease-in-out', style({
-                opacity: 0
+                display: 'flex'
             }))
         ]),
     ]);

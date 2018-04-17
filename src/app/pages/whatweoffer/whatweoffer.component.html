@@ -31,30 +31,28 @@
         <div class="what-we-offer-article data-visualisation">
             <div class="article-text ">
                 <h2>
-                    Data Visualisation
+                    {{section3Contents.title}}
                 </h2>
-                <h4>
-                    Better manage and control your data with advanced data processing and visualisation.
-                </h4>
-                <content>
+                <content class="initial-content" *ngIf="!isReadMoreClicked" [@fadeAnimation]="true">
+                    <div class="description">
+                        {{section3Contents.description}}
+                    </div>
                     <img class="article-image" src="assets/images/supporters/origin.png" alt="origin logo">
                     <blockquote class="aritcle-quote">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ul labore et dolore magna aliqua"
+                        "{{section3Contents.quote}}"
                     </blockquote>
                     <span class="article-quote-author">
-                        Felicity Underhill, General Manager
+                            {{section3Contents.quoteAuthor}}
                     </span>
                 </content>
-                <!-- <content>
-                    <p>
-                        With our data processing and visualisation system. we aim to help companies better understand and manage their scattered data all in one convenient place with our cloud-based solution
+                <content class="more-content" *ngIf="isReadMoreClicked" [@fadeAnimation]="true">
+                    <p *ngFor="let paragraph of section3Contents.moreContent">
+                        {{paragraph}}
                     </p>
-                    <p>
-                        The system is designed with the end users in mind. With our extensive knowledge and experience in interactive design, we aim to help enhance user experience and usability to make navigation through data a seamless experience.
-                    </p>
-                </content> -->
+                </content>
                 <div class="article-action">
-                    <span>Read Less</span>
+                    <span *ngIf="!isReadMoreClicked" (click)="toggleReadButton()">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
+                    <span *ngIf="isReadMoreClicked" (click)="toggleReadButton()"><i class="fas fa-arrow-left"></i>&nbsp; Read Less</span>
                     <span>ENQUIRE</span>
                 </div>
             </div>
