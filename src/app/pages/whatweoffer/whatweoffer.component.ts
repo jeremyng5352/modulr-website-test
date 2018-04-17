@@ -59,21 +59,23 @@ export class WhatweofferComponent implements OnInit {
     if (this.currentContentPage !== 2 && !this.isScrolling) {
       this.contentSliderTriggered = true;
       this.incrementContainerContent();
+      this.disableScrolling();
+      setTimeout(() => {
+        this.contentSliderTriggered = false;
+      }, 1500);
     }
-    this.disableScrolling();
-    setTimeout(() => {
-      this.contentSliderTriggered = false;
-    }, 1500);
   }
 
   incrementContainerContent() {
     setTimeout(() => {
       this.currentContentPage += 1;
       this.section3Contents = whatWeOfferContent[this.currentContentPage];
+      console.log(this.currentContentPage)
     }, 1000);
   }
 
   disableScrolling() {
+    console.log('disabling')
     this.isScrolling = true;
     setTimeout(() => {
       this.isScrolling = false;
@@ -84,17 +86,18 @@ export class WhatweofferComponent implements OnInit {
     if (this.currentContentPage !== 0 && !this.isScrolling) {
       this.contentSliderTriggered = true;
       this.decrementContainerContent();
+      this.disableScrolling();
+      setTimeout(() => {
+        this.contentSliderTriggered = false;
+      }, 1500);
     }
-    this.disableScrolling();
-    setTimeout(() => {
-      this.contentSliderTriggered = false;
-    }, 1500);
   }
 
   decrementContainerContent() {
     setTimeout(() => {
       this.currentContentPage -= 1;
       this.section3Contents = whatWeOfferContent[this.currentContentPage];
+      console.log(this.currentContentPage)
     }, 1000);
   }
 

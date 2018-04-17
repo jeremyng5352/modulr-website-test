@@ -51,8 +51,8 @@
                     </p>
                 </content>
                 <div class="article-action">
-                    <span *ngIf="!isReadMoreClicked" (click)="toggleReadButton()">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
-                    <span *ngIf="isReadMoreClicked" (click)="toggleReadButton()"><i class="fas fa-arrow-left"></i>&nbsp; Read Less</span>
+                    <span *ngIf="!isReadMoreClicked" (click)="toggleReadButton()" [@fadeAnimation]="true">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
+                    <span *ngIf="isReadMoreClicked" (click)="toggleReadButton()" [@fadeAnimation]="true"><i class="fas fa-arrow-left"></i>&nbsp; Read Less</span>
                     <span>ENQUIRE</span>
                 </div>
             </div>
