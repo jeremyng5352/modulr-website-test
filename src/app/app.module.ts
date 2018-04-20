@@ -19,11 +19,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PressComponent } from './pages/press/press.component';
 import { AboutComponent } from './pages/about/about.component';
-import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { LandingComponent } from './pages/landing/landing.component';
-import { HexagonPaginationComponent } from './components/hexagon-pagination/hexagon-pagination.component';
 import { WhatweofferComponent } from './pages/whatweoffer/whatweoffer.component';
 import { EnquiryComponent } from './pages/enquiry/enquiry.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
@@ -41,11 +38,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     ContactComponent,
     ContactFormComponent,
     FooterComponent,
-    PressComponent,
     AboutComponent,
-    SolutionsComponent,
     LandingComponent,
-    HexagonPaginationComponent,
     WhatweofferComponent,
     EnquiryComponent,
     NewsletterComponent,

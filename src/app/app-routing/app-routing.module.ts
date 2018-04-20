@@ -5,9 +5,7 @@ import { AppCustomPreloader } from '../app-custom-preloader';
 import { CommonModule } from '@angular/common';
 import { WelcomeComponent } from '../pages/welcome/welcome.component';
 import { ContactComponent } from '../pages/contact/contact.component';
-import { PressComponent } from '../pages/press/press.component';
 import { AboutComponent } from '../pages/about/about.component';
-import { SolutionsComponent } from '../pages/solutions/solutions.component';
 import { LandingComponent } from '../pages/landing/landing.component';
 import { WhatweofferComponent } from '../pages/whatweoffer/whatweoffer.component';
 import { EnquiryComponent } from '../pages/enquiry/enquiry.component';
@@ -18,9 +16,7 @@ const routes: Routes = [
     path: 'welcome', component: WelcomeComponent,
     children: [
       { path: 'landingpage', component: LandingComponent },
-      { path: 'solutionpage', component: SolutionsComponent, },
       { path: 'aboutpage', component: AboutComponent, data: { preload: true } },
-      { path: 'presspage', component: PressComponent, data: { preload: true } },
       { path: 'contactpage', component: ContactComponent },
       { path: 'whatweofferpage', component: WhatweofferComponent },
       { path: 'enquirypage', component: EnquiryComponent },
