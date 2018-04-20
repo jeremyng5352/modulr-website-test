@@ -32,9 +32,9 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit() {
-    // setTimeout(() => {
-    this.slideContainerUp();
-    // }, 2000);
+    setTimeout(() => {
+      this.slideContainerUp();
+    }, 2000);
   }
 
   slideContainerUp() {

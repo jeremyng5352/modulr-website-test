@@ -43,7 +43,7 @@
             overflow-y: scroll;
             overflow-x: hidden;
             .about-description {
-                display: none !important;
+                // display: none !important;
                 width: 100vw;
                 height: 100vh;
                 @include column-center;
@@ -60,7 +60,7 @@
             .about-team {
                 // display: none;
                 width: 100vw;
-                height: 100vh;
+                height: 90vh;
                 @include row-center;
                 .team-content {
                     height: 100%;
@@ -97,7 +97,10 @@
                         width: 100%;
                         height: 100%;
                         padding: 0 $tablet-horizontal-padding-light-green;
-                        padding-top: 17.5vh;
+                        padding-bottom: 15vh;
+                        @include column-center;
+                        align-items: flex-start;
+                        justify-content: flex-end;
                         .back-button {
                             font-weight: bold;
                             font-size: $tablet-font-body-size;
@@ -116,7 +119,7 @@
                             font-size: $tablet-font-body-size;
                         }
                         .social-media {
-                            margin-top: 15vh;
+                            margin-top: 10vh;
                             font-size: $tablet-font-h3-size;
                             display: flex;
                             nav {
@@ -137,6 +140,9 @@
                 width: 100vw;
                 height: auto;
                 padding: 0 $tablet-horizontal-padding-light-green;
+                h2 {
+                    color: $theme-color-black;
+                }
                 .news-articles {
                     width: 100%;
                     height: auto;
@@ -176,29 +182,13 @@
             }
         }
     }
-    h1 {
-        font-family: $theme-font-type-roboto-condensed;
-        font-size: $tablet-font-h1-size;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 7.5px;
-        margin-bottom: $tablet-vertical-margin-dark-blue;
-    }
-    h2 {
-        text-transform: uppercase;
-        font-family: $theme-font-type-roboto-condensed;
-        font-size: $tablet-font-h2-size;
-        font-weight: bold;
-        letter-spacing: 6px;
-        margin-bottom: $tablet-vertical-margin-light-yellow;
-    }
-    h4 {
-        font-size: $tablet-font-h4-size;
-        letter-spacing: 3px;
-        margin-bottom: $tablet-vertical-margin-light-yellow;
-    }
-    content {
-        letter-spacing: 2.68px;
-        line-height: 22.5px;
-    }
+}
+
+h1 {
+    color: $theme-color-yellow;
+}
+
+h2 {
+    color: $theme-color-pink;
+    font-size: $tablet-font-h1-size;
 }
