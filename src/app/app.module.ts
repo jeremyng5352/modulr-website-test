@@ -17,7 +17,6 @@ import 'hammerjs';
 import 'hammer-timejs';
 import { HeaderComponent } from './components/header/header.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
 import { LandingComponent } from './pages/landing/landing.component';
@@ -36,7 +35,6 @@ export class MyHammerConfig extends HammerGestureConfig {
     MouseWheelDirective,
     HeaderComponent,
     ContactComponent,
-    ContactFormComponent,
     FooterComponent,
     AboutComponent,
     LandingComponent,
