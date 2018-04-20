@@ -11,9 +11,8 @@
         overflow-y: scroll;
         overflow-x: hidden;
         font-size: $tablet-font-h4-size;
-        font-weight: 300;
-        top: 0;
-        left: 0;
+        font-weight: $tablet-font-standard-weight;
+        letter-spacing: $tablet-font-standard-spacing;
         @include column-center;
         .main-title-container {
             position: absolute;

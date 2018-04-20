@@ -28,7 +28,7 @@
                 </p>
             </content>
         </div>
-        <div class="what-we-offer-article data-visualisation" mouseWheel (mouseWheelUp)="scrollDown()" (mouseWheelDown)="scrollUp()">
+        <!-- <div class="what-we-offer-article data-visualisation" mouseWheel (mouseWheelUp)="scrollDown()" (mouseWheelDown)="scrollUp()">
             <div class="article-text ">
                 <h2>
                     {{section3Contents.title}}
@@ -57,9 +57,9 @@
                 </div>
             </div>
             <div class="article-video"></div>
-        </div>
+        </div> -->
         <div class="what-we-offer-overview">
-            <h1>Service Overview</h1>
+            <h2>Service Overview</h2>
             <div class="overview-table">
                 <table>
                     <tr>
@@ -112,6 +112,16 @@
                     </tr>
                 </table>
             </div>
+        </div>
+        <div class="what-we-offer-assist">
+            <h2>Assisting you in</h2>
+            <content>
+                <ul>
+                    <li>Automatically sift through large databases</li>
+                    <li>Make more cost-effective decisions through better insights into existing databases</li>
+                    <li>Empower operators to carry out actions more confidently</li>
+                </ul>
+            </content>
         </div>
         <app-next-page-prompt></app-next-page-prompt>
         <app-footer></app-footer>
