@@ -13,7 +13,7 @@
         grid-template-areas: "policy newsletter logo social-media" ". . copyright .";
         align-items: center;
         letter-spacing: 2.68px;
-        color: $theme-font-white;
+        color: $theme-color-white;
         .policy {
             grid-area: policy;
             font-size: 10px;

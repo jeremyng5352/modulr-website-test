@@ -6,7 +6,7 @@
     .landing-container {
         width: 100vw;
         height: 100vh;
-        color: $theme-font-grey;
+        color: $theme-color-grey;
         font-family: $theme-font-type-roboto;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -45,7 +45,7 @@
             width: 100vw;
             height: auto;
             background: white;
-            color: $theme-font-grey;
+            color: $theme-color-grey;
             overflow-y: scroll;
             overflow-x: hidden;
             .landing-description {

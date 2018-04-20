@@ -7,7 +7,7 @@
         width: 100vw;
         height: 100vh;
         background: white;
-        color: $theme-font-grey;
+        color: $theme-color-grey;
         padding: $tablet-vertical-margin-dark-green $tablet-horizontal-padding-light-red;
         font-family: $theme-font-type-roboto;
         overflow-y: scroll;
@@ -27,7 +27,7 @@
                 cursor: pointer;
             }
             h1 {
-                color: $theme-font-pink;
+                color: $theme-color-pink;
                 margin-top: 1.5vh;
                 margin-bottom: $tablet-vertical-margin-orange;
             }
@@ -47,7 +47,7 @@
                         width: 100%;
                         text-align: left;
                         border: none;
-                        border-bottom: 1px solid $theme-font-grey;
+                        border-bottom: 1px solid $theme-color-grey;
                         padding: 0 0 7.5px 0;
                         font-size: $tablet-font-h4-size;
                         color: #666;
@@ -70,7 +70,7 @@
                     width: 100%;
                     height: 50%;
                     border: none !important;
-                    border-bottom: 1px solid $theme-font-grey !important;
+                    border-bottom: 1px solid $theme-color-grey !important;
                     -webkit-appearance: none;
                     border-radius: 0px !important;
                     font-size: $tablet-font-h4-size;
@@ -93,7 +93,7 @@
                     width: 100%;
                     text-align: left;
                     border: none;
-                    border-bottom: 1px solid $theme-font-grey;
+                    border-bottom: 1px solid $theme-color-grey;
                     padding: 0 0 7.5px 0;
                     font-size: $tablet-font-h4-size;
                     color: #666;
@@ -108,8 +108,8 @@
                         height: 4.5vh;
                         text-align: center;
                         width: 20%;
-                        border: 1px solid $theme-font-grey;
-                        color: $theme-font-grey;
+                        border: 1px solid $theme-color-grey;
+                        color: $theme-color-grey;
                         letter-spacing: 1px;
                         text-shadow: 0;
                         opacity: 0.6;

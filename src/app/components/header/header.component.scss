@@ -3,11 +3,11 @@
 @import '../../sass/reset';
 @import '../../sass/base';
 .grey-font {
-    color: $theme-font-white;
+    color: $theme-color-white;
 }
 
 .black-font {
-    color: $theme-font-black;
+    color: $theme-color-black;
 }
 
 section.all-modals {
@@ -30,7 +30,7 @@ section.all-modals {
     }
     width: 100vw;
     height: $header-height;
-    color: $theme-font-white;
+    color: $theme-color-white;
     font-family: $theme-font-type-roboto;
     display: flex;
     align-items: flex-end;
@@ -68,14 +68,14 @@ section.all-modals {
                 text-transform: uppercase;
                 background: transparent;
                 border: 0px;
-                color: $theme-font-white;
+                color: $theme-color-white;
             }
         }
         .header-navigation-container {
             height: 100%;
             width: 100vw;
             text-align: center;
-            color: $theme-font-black;
+            color: $theme-color-black;
             z-index: 11;
             $header-navigation-content-height: 75vh;
             $header-navigation-social-container: 100vh - $header-navigation-content-height;

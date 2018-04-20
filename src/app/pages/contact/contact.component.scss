@@ -34,7 +34,7 @@
             margin-top: $tablet-vertical-margin-sky-blue;
             padding-left: $tablet-horizontal-padding-light-green/2;
             h1 {
-                color: $theme-font-pink;
+                color: $theme-color-pink;
                 margin-bottom: $tablet-vertical-margin-orange;
             }
             .contact-address {
@@ -64,7 +64,7 @@
                         font-weight: bold;
                     }
                     .email {
-                        color: $theme-font-pink;
+                        color: $theme-color-pink;
                         font-size: $tablet-font-h4-size;
                     }
                 }
@@ -92,6 +92,6 @@
 }
 
 .highlight {
-    color: $theme-font-pink;
+    color: $theme-color-pink;
     cursor: pointer;
 }
