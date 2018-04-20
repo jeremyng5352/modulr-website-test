@@ -27,9 +27,9 @@ export class LandingComponent implements OnInit {
   constructor(
     private router: Router
   ) {
-    setTimeout(() => {
+    // setTimeout(() => {
       this.slideContainerUp();
-    }, 2000);
+    // }, 2000);
   }
 
   ngOnInit() {
