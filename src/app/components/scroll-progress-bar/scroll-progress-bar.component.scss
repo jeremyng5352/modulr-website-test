@@ -1,0 +1,14 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+@import '../../sass/reset';
+@import '../../sass/base';
+.scroll-progress-bar-container {
+    width: 100vw;
+    height: 5px;
+    background: linear-gradient(to right, $theme-color-yellow, $theme-color-pink);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: width 0.6s;
+}

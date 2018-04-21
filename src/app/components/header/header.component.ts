@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { slideInDownAnimation, menuStaggerAnimation, fadeAnimation } from '../../animations';
 import {
@@ -41,8 +41,6 @@ import {
   ]
 })
 export class HeaderComponent implements OnInit {
-  @Input()
-  isShow = true;
 
   activeHeader = 'one';
   activeText = 'home';
@@ -52,7 +50,6 @@ export class HeaderComponent implements OnInit {
   needFilter = false;
 
   constructor(
-    private activatedRoute: ActivatedRoute,
     private router: Router
   ) {
   }

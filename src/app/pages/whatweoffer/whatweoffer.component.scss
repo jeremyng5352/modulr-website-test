@@ -8,8 +8,6 @@
         height: 100vh;
         color: $theme-color-grey;
         font-family: $theme-font-type-roboto;
-        overflow-y: scroll;
-        overflow-x: hidden;
         font-size: $tablet-font-h4-size;
         font-weight: $tablet-font-standard-weight;
         letter-spacing: $tablet-font-standard-spacing;
@@ -38,8 +36,6 @@
             height: auto;
             background: white;
             color: $theme-color-grey;
-            overflow-y: scroll;
-            overflow-x: hidden;
             .what-we-offer-description {
                 width: 100vw;
                 height: 100vh;

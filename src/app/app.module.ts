@@ -24,6 +24,7 @@ import { WhatweofferComponent } from './pages/whatweoffer/whatweoffer.component'
 import { EnquiryComponent } from './pages/enquiry/enquiry.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { NextPagePromptComponent } from './components/next-page-prompt/next-page-prompt.component';
+import { ScrollProgressBarComponent } from './components/scroll-progress-bar/scroll-progress-bar.component';
 export class MyHammerConfig extends HammerGestureConfig {
 
 }
@@ -41,7 +42,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     WhatweofferComponent,
     EnquiryComponent,
     NewsletterComponent,
-    NextPagePromptComponent
+    NextPagePromptComponent,
+    ScrollProgressBarComponent
   ],
   imports: [
     BrowserModule,

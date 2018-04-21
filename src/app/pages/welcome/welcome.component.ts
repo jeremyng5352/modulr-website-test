@@ -35,6 +35,7 @@ export class WelcomeComponent implements OnInit {
   container;
   width: number;
   height: number;
+  scrollBarPosition: number;
   // 3D components
   scene;
   camera;
@@ -65,8 +66,8 @@ export class WelcomeComponent implements OnInit {
   }
 
   scrollEvent() {
-    const scrollBarPosition = document.body.scrollTop;
-    if (scrollBarPosition <= 50) {
+    this.scrollBarPosition = document.body.scrollTop;
+    if (this.scrollBarPosition <= 50) {
       this.state = 'show';
     } else {
       this.state = 'hide';
