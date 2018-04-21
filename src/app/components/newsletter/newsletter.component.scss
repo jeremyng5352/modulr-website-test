@@ -10,7 +10,7 @@
         z-index: 15;
         @include column-center;
         justify-content: flex-start;
-        padding: $tablet-vertical-margin-dark-blue;
+        padding: $desktop-vertical-margin-dark-blue;
         font-family: $theme-font-type-roboto;
         border: rgba(200, 200, 200, 0.7) solid 0.5px;
         line-height: 30px;
@@ -43,7 +43,7 @@
                 margin-bottom: 2vh;
                 input[type=text] {
                     font-family: $theme-font-type-roboto !important;
-                    font-size: $tablet-font-body-size;
+                    font-size: $desktop-font-body-size;
                     box-sizing: border-box;
                     padding: 0 0.5vw 1vh 0.5vw;
                     text-align: left;
@@ -71,7 +71,7 @@
                 opacity: 0.6;
                 cursor: pointer;
                 font: {
-                    size: $tablet-font-h4-size;
+                    size: $desktop-font-h4-size;
                     weight: bold;
                     family: $theme-font-type-roboto;
                 }

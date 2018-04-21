@@ -2,7 +2,7 @@
 @import '_mixins';
 // For putting all the values for the main elements 
 p {
-    margin-top: $tablet-vertical-margin-dark-blue;
+    margin-top: $desktop-vertical-margin-dark-blue;
 }
 
 p:first-of-type {
@@ -49,26 +49,26 @@ p:first-of-type {
 
 h1 {
     font-family: $theme-font-type-roboto-condensed;
-    font-size: $tablet-font-h1-size;
+    font-size: $desktop-font-h1-size;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 7.5px;
-    margin-bottom: $tablet-vertical-margin-dark-blue;
+    margin-bottom: $desktop-vertical-margin-dark-blue;
 }
 
 h2 {
     text-transform: uppercase;
     font-family: $theme-font-type-roboto-condensed;
-    font-size: $tablet-font-h2-size;
+    font-size: $desktop-font-h2-size;
     font-weight: bold;
     letter-spacing: 6px;
-    margin-bottom: $tablet-vertical-margin-light-yellow;
+    margin-bottom: $desktop-vertical-margin-light-yellow;
 }
 
 h4 {
-    font-size: $tablet-font-h4-size;
+    font-size: $desktop-font-h4-size;
     letter-spacing: 3px;
-    margin-bottom: $tablet-vertical-margin-light-yellow;
+    margin-bottom: $desktop-vertical-margin-light-yellow;
 }
 
 content {

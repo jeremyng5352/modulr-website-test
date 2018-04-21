@@ -125,7 +125,7 @@ section.all-modals {
     .header-main-container {
         .header-main-container-content {
             height: auto;
-            padding: 0 $tablet-horizontal-padding-light-red;
+            padding: 0 $desktop-horizontal-padding-light-red;
             .header-icon {
                 width: 30vw;
                 height: 100%;
@@ -159,8 +159,8 @@ section.all-modals {
                     @include row-center;
                     align-items: center;
                     justify-content: flex-end;
-                    // $tablet-nav-margin-bottom: 2vh;
-                    $tablet-nav-margin-bottom: 0vh;
+                    // $desktop-nav-margin-bottom: 2vh;
+                    $desktop-nav-margin-bottom: 0vh;
                     $navigation-tab-size: 17%;
                     div {
                         position: relative;
@@ -169,8 +169,8 @@ section.all-modals {
                         @include row-center;
                         justify-content: flex-end;
                         align-items: center;
-                        // $tablet-nav-margin-bottom: 2vh;
-                        $tablet-nav-margin-bottom: 0vh;
+                        // $desktop-nav-margin-bottom: 2vh;
+                        $desktop-nav-margin-bottom: 0vh;
                         $navigation-tab-size: 17%;
                         nav {
                             @include column-center();
@@ -184,13 +184,13 @@ section.all-modals {
                                 font-size: 0.7rem;
                             }
                             display: block;
-                            margin: 0 0 $tablet-nav-margin-bottom 3vw;
+                            margin: 0 0 $desktop-nav-margin-bottom 3vw;
                             cursor: pointer;
                             &:first-child {
                                 margin-left: 0;
                             }
                             &:nth-child(6) {
-                                margin-bottom: $tablet-nav-margin-bottom;
+                                margin-bottom: $desktop-nav-margin-bottom;
                             }
                         }
                     }

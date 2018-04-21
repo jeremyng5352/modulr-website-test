@@ -6,7 +6,7 @@
     .footer-container {
         background: #232323;
         width: 100vw;
-        padding: $tablet-vertical-margin-dark-green $tablet-horizontal-padding-light-red/2 0 $tablet-horizontal-padding-light-red/2;
+        padding: $desktop-vertical-margin-dark-green $desktop-horizontal-padding-light-red/2 0 $desktop-horizontal-padding-light-red/2;
         display: grid;
         grid-template-columns: 15vw 25vw 35vw 20vw;
         font-family: $theme-font-type-roboto;
@@ -21,7 +21,7 @@
         }
         .newsletter {
             grid-area: newsletter;
-            font-size: $tablet-font-body-size;
+            font-size: $desktop-font-body-size;
             text-decoration: underline;
             cursor: pointer;
         }
@@ -37,7 +37,7 @@
                 justify-content: flex-start;
                 align-content: center;
                 vertical-align: middle;
-                font-size: $tablet-font-h3-size;
+                font-size: $desktop-font-h3-size;
                 letter-spacing: 3px;
                 font-family: $theme-font-type-montserrat;
                 font-weight: 300;

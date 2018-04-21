@@ -10,9 +10,9 @@
         font-family: $theme-font-type-roboto;
         overflow-y: scroll;
         overflow-x: hidden;
-        font-size: $tablet-font-h4-size;
-        font-weight: $tablet-font-standard-weight;
-        letter-spacing: $tablet-font-standard-spacing;
+        font-size: $desktop-font-h4-size;
+        font-weight: $desktop-font-standard-weight;
+        letter-spacing: $desktop-font-standard-spacing;
         @include column-center;
         .main-title-container {
             position: absolute;
@@ -20,7 +20,7 @@
             height: 100vh;
             text-transform: uppercase;
             letter-spacing: 17.66px;
-            font-size: $tablet-font-hero-size;
+            font-size: $desktop-font-hero-size;
             font-weight: bold;
             .main-title {
                 @include row-center;
@@ -48,7 +48,7 @@
                 @include column-center;
                 justify-content: flex-start;
                 align-items: flex-start;
-                padding: 0 $tablet-horizontal-padding-light-green;
+                padding: 0 $desktop-horizontal-padding-light-green;
                 h1 {
                     margin-top: 35vh;
                 }
@@ -67,18 +67,18 @@
                     .team-description {
                         height: 100%;
                         width: 100%;
-                        padding: 0 $tablet-horizontal-padding-light-green;
+                        padding: 0 $desktop-horizontal-padding-light-green;
                         @include column-center;
                         align-items: flex-start;
                         justify-content: flex-end;
                         // display: none;
                         .team-member {
-                            margin-top: $tablet-vertical-margin-light-yellow;
-                            margin-bottom: $tablet-vertical-margin-light-pink;
+                            margin-top: $desktop-vertical-margin-light-yellow;
+                            margin-bottom: $desktop-vertical-margin-light-pink;
                             width: 100%;
                             .member {
                                 display: flex;
-                                font-size: $tablet-font-body-size;
+                                font-size: $desktop-font-body-size;
                                 margin-bottom: 15px;
                                 cursor: pointer;
                                 .name {
@@ -95,31 +95,31 @@
                     .team-member-description {
                         width: 100%;
                         height: 100%;
-                        padding: 0 $tablet-horizontal-padding-light-green;
+                        padding: 0 $desktop-horizontal-padding-light-green;
                         padding-bottom: 15vh;
                         @include column-center;
                         align-items: flex-start;
                         justify-content: flex-end;
                         .back-button {
                             font-weight: bold;
-                            font-size: $tablet-font-body-size;
+                            font-size: $desktop-font-body-size;
                             cursor: pointer;
                         }
                         .member-name {
                             text-transform: uppercase;
                             font-family: $theme-font-type-roboto-condensed;
-                            font-size: $tablet-font-h1-size;
+                            font-size: $desktop-font-h1-size;
                             font-weight: bold;
                             letter-spacing: 6px;
                             margin-top: 10vh;
-                            margin-bottom: $tablet-vertical-margin-dark-blue;
+                            margin-bottom: $desktop-vertical-margin-dark-blue;
                         }
                         .member-description {
-                            font-size: $tablet-font-body-size;
+                            font-size: $desktop-font-body-size;
                         }
                         .social-media {
                             margin-top: 10vh;
-                            font-size: $tablet-font-h3-size;
+                            font-size: $desktop-font-h3-size;
                             display: flex;
                             nav {
                                 margin-right: 35px;
@@ -135,10 +135,10 @@
             }
             .about-news {
                 // display: none; 
-                margin: $tablet-vertical-margin-sky-blue 0;
+                margin: $desktop-vertical-margin-sky-blue 0;
                 width: 100vw;
                 height: auto;
-                padding: 0 $tablet-horizontal-padding-light-green;
+                padding: 0 $desktop-horizontal-padding-light-green;
                 h2 {
                     color: $theme-color-black;
                 }
@@ -167,7 +167,7 @@
                         .news-title {
                             height: 7.5vw;
                             text-align: center;
-                            font-size: $tablet-font-h4-size;
+                            font-size: $desktop-font-h4-size;
                             @include row-center;
                         }
                         .news-date {
@@ -189,5 +189,5 @@ h1 {
 
 h2 {
     color: $theme-color-pink;
-    font-size: $tablet-font-h1-size;
+    font-size: $desktop-font-h1-size;
 }
