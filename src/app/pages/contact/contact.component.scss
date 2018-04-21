@@ -25,7 +25,8 @@
         overflow-y: scroll;
         overflow-x: hidden;
         font-size: $desktop-font-h4-size;
-        font-weight: 100;
+        font-weight: $desktop-font-standard-weight;
+        letter-spacing: $desktop-font-standard-spacing;
         @include column-center;
         align-items: flex-start;
         justify-content: space-between;
@@ -51,6 +52,9 @@
                 grid-template-columns: 20% 20%;
                 grid-row-gap: $desktop-vertical-margin-dark-blue;
                 margin-bottom: $desktop-vertical-margin-light-yellow;
+                @include media(tablet) {
+                    grid-template-columns: 30% 30%;
+                }
                 .detail {
                     width: 100%;
                     letter-spacing: 2.01px;

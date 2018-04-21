@@ -141,6 +141,9 @@
                             color: $theme-color-sky-blue;
                         }
                     }
+                    @include media(tablet) {
+                        padding: 0;
+                    }
                 }
             }
             .what-we-offer-assist {

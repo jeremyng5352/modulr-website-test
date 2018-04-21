@@ -81,11 +81,11 @@
                     width: 100%;
                     padding: 0 $desktop-horizontal-padding-light-red;
                     display: grid;
+                    justify-content: space-between;
                     // grid total width = 70vw;
                     $supporter-grid-width-height: 15vw;
                     grid-template-columns: repeat(4, $supporter-grid-width-height);
                     grid-template-rows: $supporter-grid-width-height;
-                    grid-column-gap: 2.5vw;
                     .supporter {
                         width: $supporter-grid-width-height;
                         height: $supporter-grid-width-height;
@@ -97,6 +97,15 @@
                         }
                         .ilab {
                             max-height: 20%;
+                        }
+                        @include media(tablet) {
+                            img {
+                                max-width: 80%;
+                                max-height: 45%;
+                            }
+                            .ilab {
+                                max-height: 30%;
+                            }
                         }
                     }
                 }
