@@ -191,7 +191,7 @@
  */
 
 @mixin media($type) {
-    $tablet-size: "(min-width: 768px)";
+    $tablet-size: "(max-width: 1024px)";
     $small-screen-size: "(min-width: 1024px)";
     $large-screen-size: "(min-width: 1440px)";
     $retina-screen-size: "(min-width: 2500px)";

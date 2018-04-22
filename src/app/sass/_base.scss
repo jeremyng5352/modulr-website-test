@@ -84,3 +84,12 @@ content {
         display: block;
     }
 }
+
+@include media(small) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}
