@@ -12,6 +12,7 @@ import { MouseWheelDirective } from './mousewheel.directive';
 
 import { D3Service } from 'd3-ng2-service';
 import { LoaderService } from './services/loader.service';
+import { ScrollService } from './services/scroll.service';
 
 import 'hammerjs';
 import 'hammer-timejs';
@@ -56,6 +57,7 @@ export class MyHammerConfig extends HammerGestureConfig {
   providers: [
     D3Service,
     LoaderService,
+    ScrollService,
     {
       provide: HAMMER_GESTURE_CONFIG,
       useClass: MyHammerConfig
