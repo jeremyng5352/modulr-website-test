@@ -87,11 +87,11 @@ export class NextPagePromptComponent implements OnInit, AppObserver {
   }
 
   navigateToNextPage() {
-    if (this.currentPage === 'home') {
+    if (this.currentPage === '/home') {
       this.router.navigate(['/what-we-offer']);
-    } else if (this.currentPage === 'what-we-offer') {
+    } else if (this.currentPage === '/what-we-offer') {
       this.router.navigate(['/about']);
-    } else if (this.currentPage === 'about') {
+    } else if (this.currentPage === '/about') {
       this.router.navigate(['/contact']);
     }
   }
