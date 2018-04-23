@@ -41,6 +41,16 @@ export const fadeAnimation =
                 display: 'flex'
             }))
         ]),
+        transition(':leave', [
+            style({
+                opacity: 1,
+                display: 'flex'
+            }),
+            animate('650ms ease-in-out', style({
+                display: 'none',
+                opacity: 0,
+            }))
+        ]),
     ]);
 
 export const containerSlideUpAnimation =
@@ -242,4 +252,15 @@ export const contentRightSlideAnimation =
                 transform: 'translateY(-100%)'
             }))
         ]),
+    ]);
+
+export const nextPagePromptAnimation =
+    trigger('nextPagePromptAnimation', [
+        state('shrink', style({
+            height: '30vh'
+        })),
+        state('expand', style({
+            height: '40vh'
+        })),
+        transition('shrink <=> expand', animate('600ms ease-in-out')),
     ]);

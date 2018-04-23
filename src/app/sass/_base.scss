@@ -47,35 +47,6 @@ p:first-of-type {
     }
 }
 
-h1 {
-    font-family: $theme-font-type-roboto-condensed;
-    font-size: $desktop-font-h1-size;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 7.5px;
-    margin-bottom: $desktop-vertical-margin-dark-blue;
-}
-
-h2 {
-    text-transform: uppercase;
-    font-family: $theme-font-type-roboto-condensed;
-    font-size: $desktop-font-h2-size;
-    font-weight: bold;
-    letter-spacing: 6px;
-    margin-bottom: $desktop-vertical-margin-light-yellow;
-}
-
-h4 {
-    font-size: $desktop-font-h4-size;
-    letter-spacing: 3px;
-    margin-bottom: $desktop-vertical-margin-light-yellow;
-}
-
-content {
-    letter-spacing: 2.68px;
-    line-height: 22.5px;
-}
-
 @include media(tablet) {
     .mobile {
         display: none;
@@ -91,5 +62,30 @@ content {
     }
     .desktop {
         display: block;
+    }
+    h1 {
+        font-family: $theme-font-type-roboto-condensed;
+        font-size: $desktop-font-h1-size;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 7.5px;
+        margin-bottom: $desktop-vertical-margin-dark-blue;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-family: $theme-font-type-roboto-condensed;
+        font-size: $desktop-font-h2-size;
+        font-weight: bold;
+        letter-spacing: 6px;
+        margin-bottom: $desktop-vertical-margin-light-yellow;
+    }
+    h4 {
+        font-size: $desktop-font-h4-size;
+        letter-spacing: 3px;
+        margin-bottom: $desktop-vertical-margin-light-yellow;
+    }
+    content {
+        letter-spacing: 2.68px;
+        line-height: 22.5px;
     }
 }

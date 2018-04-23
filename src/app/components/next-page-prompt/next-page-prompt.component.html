@@ -1,7 +1,11 @@
-<section class="next-page-prompt-container">
+<section class="next-page-prompt-container" [@nextPagePromptAnimation]="containerState">
     <div class="next-page-prompt-content" (click)="navigateToNextPage()">
         <span class="direction">next</span>
         <span class="page-indicator">{{nextPageTitle}}</span>
         <span class="arrow"><i class="fas fa-arrow-right"></i></span>
     </div>
+</section>
+
+<section class="next-page-prompt-overlay" *ngIf="isOverlayed" [@fadeAnimation]="true">
+
 </section>

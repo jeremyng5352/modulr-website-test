@@ -14,6 +14,8 @@
         align-items: center;
         letter-spacing: 2.68px;
         color: $theme-color-white;
+        position: relative;
+        z-index: 2;
         .policy {
             grid-area: policy;
             font-size: 10px;

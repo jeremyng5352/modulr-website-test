@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WelcomeComponent } from './welcome.component';
+import { ScrollService } from '../../services/scroll.service';
 
 describe('WelcomeComponent', () => {
   let component: WelcomeComponent;
@@ -8,7 +9,10 @@ describe('WelcomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WelcomeComponent ]
+      declarations: [ WelcomeComponent ],
+      providers: [
+        ScrollService
+      ]
     })
     .compileComponents();
   }));

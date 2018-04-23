@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import * as TWEEN from '@tweenjs/tween.js';
 import { Router, NavigationEnd } from '@angular/router';
 import { LoaderService } from '../../services/loader.service';
+import { ScrollService } from '../../services/scroll.service';
 
 // Variables for threejs controller
 let cursorX, cursorY;
@@ -67,6 +68,7 @@ export class WelcomeComponent implements OnInit {
 
   scrollEvent() {
     this.scrollBarPosition = document.body.scrollTop;
+    this.scrollService.scrollPosition = this.scrollBarPosition;
     if (this.scrollBarPosition <= 50) {
       this.state = 'show';
     } else {
@@ -76,6 +78,7 @@ export class WelcomeComponent implements OnInit {
 
   constructor(
     private loaderService: LoaderService,
+    private scrollService: ScrollService,
     private router: Router
   ) {
     component = this;
