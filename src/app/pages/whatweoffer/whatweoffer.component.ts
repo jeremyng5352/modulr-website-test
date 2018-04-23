@@ -8,6 +8,7 @@ import {
 } from '../../animations';
 import { WHATWEOFFERCONTENT } from '../../class/WhatWeOfferContent';
 import { whatWeOfferContent } from '../../data/what-we-offer-contents';
+import { Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-whatweoffer',
   templateUrl: './whatweoffer.component.html',
@@ -33,14 +34,21 @@ export class WhatweofferComponent implements OnInit {
     container1: 'middle',
     container2: 'bottom',
   };
-  constructor() {
+  constructor(
+    private meta: Meta
+  ) {
     this.section3Contents = this.whatWeOfferContent[0];
+    this.meta.addTag({
+      name: 'Digital Solutions',
+      // tslint:disable-next-line:max-line-length
+      content: 'Explore how our data processing, analytics and visualisation engine solutions can start helping you make more insight-driven decisions from enterprise big data.'
+    });
   }
 
   ngOnInit() {
-    // setTimeout(() => {
+    setTimeout(() => {
       this.slideContainerUp();
-    // }, 2000);
+    }, 2000);
   }
 
   slideContainerUp() {

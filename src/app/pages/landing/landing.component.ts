@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, HostBinding } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { titleHighlightAnimation, containerSlideUpAnimation } from '../../animations';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-landing',
@@ -25,11 +26,17 @@ export class LandingComponent implements OnInit {
   @HostBinding('style.display') display = 'block';
 
   constructor(
-    private router: Router
+    private router: Router,
+    private meta: Meta
   ) {
-    // setTimeout(() => {
+    setTimeout(() => {
       this.slideContainerUp();
-    // }, 2000);
+    }, 2000);
+    this.meta.addTag({
+      name: 'Modulr Tech: Transforming Data into Actionable Insights',
+      // tslint:disable-next-line:max-line-length
+      content: 'At Modulr Tech, we specialise in helping businesses make sense of their big data challenges with our advance data processing, analytics and visualisation engines. Start turning your data into actionable insights today with our digital solutions.'
+    });
   }
 
   ngOnInit() {
