@@ -116,8 +116,20 @@
                         border-collapse: collapse;
                         width: 100%;
                         font-family: $theme-font-type-roboto-condensed;
-                        tr:nth-child(even) {
-                            background: #f0f0f0;
+                        tr {
+                            td {
+                                &:nth-child(1) {
+                                    cursor: initial;
+                                    &::after {
+                                        content: '';
+                                        background: white !important;
+                                        opacity: 0 !important;
+                                    }
+                                }
+                            }
+                            &:nth-child(even) {
+                                background: #f0f0f0;
+                            }
                         }
                         .title {
                             font-size: $desktop-font-h3-size + 2px;
@@ -139,6 +151,18 @@
                             width: 20%;
                             padding: 2vh 0;
                             color: $theme-color-sky-blue;
+                            position: relative;
+                            cursor: pointer;
+                            &:hover::after {
+                                content: '';
+                                background-color: $theme-color-pink;
+                                opacity: 0.2;
+                                height: 10000px;
+                                left: 0;
+                                position: absolute;
+                                top: -5000px;
+                                width: 100%;
+                            }
                         }
                     }
                     @include media(tablet) {
@@ -171,4 +195,15 @@ h1 {
 h2 {
     color: $theme-color-pink;
     font-size: $desktop-font-h1-size;
+}
+
+table {
+    overflow: hidden;
+}
+
+td,
+th {
+    padding: 10px;
+    position: relative;
+    outline: 0;
 }

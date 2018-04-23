@@ -28,25 +28,25 @@
                 </p>
             </content>
         </div>
-        <!-- <div class="what-we-offer-article data-visualisation" mouseWheel (mouseWheelUp)="scrollDown()" (mouseWheelDown)="scrollUp()">
-            <div class="article-text ">
+        <div class="what-we-offer-article" id="{{content.className}}" *ngFor="let content of whatWeOfferContent">
+            <div class="article-text">
                 <h2>
-                    {{section3Contents.title}}
+                    {{content.title}}
                 </h2>
                 <content class="initial-content" *ngIf="!isReadMoreClicked" [@fadeAnimation]="true">
                     <div class="description">
-                        {{section3Contents.description}}
+                        {{content.description}}
                     </div>
                     <img class="article-image" src="assets/images/supporters/origin.png" alt="origin logo">
                     <blockquote class="aritcle-quote">
-                        "{{section3Contents.quote}}"
+                        "{{content.quote}}"
                     </blockquote>
                     <span class="article-quote-author">
-                            {{section3Contents.quoteAuthor}}
+                            {{content.quoteAuthor}}
                     </span>
                 </content>
                 <content class="more-content" *ngIf="isReadMoreClicked" [@fadeAnimation]="true">
-                    <p *ngFor="let paragraph of section3Contents.moreContent">
+                    <p *ngFor="let paragraph of content.moreContent">
                         {{paragraph}}
                     </p>
                 </content>
@@ -57,59 +57,63 @@
                 </div>
             </div>
             <div class="article-video"></div>
-        </div> -->
+        </div>
         <div class="what-we-offer-overview">
             <h2>Service Overview</h2>
             <div class="overview-table">
                 <table>
-                    <tr>
-                        <td></td>
-                        <td class="title">DATA VISUALISATION</td>
-                        <td class="title">BIG DATA ANALYTICS</td>
-                        <td class="title">PREDICTIVE MODELLING</td>
-                    </tr>
-                    <tr>
-                        <td class="options">Data clean up and processing</td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                    </tr>
-                    <tr>
-                        <td class="options">User-centered design</td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                    </tr>
-                    <tr>
-                        <td class="options">Cloud-base solutions</td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                    </tr>
-                    <tr>
-                        <td class="options">Data usage logging</td>
-                        <td></td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                    </tr>
-                    <tr>
-                        <td class="options">Extract actionable insights</td>
-                        <td></td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                    </tr>
-                    <tr>
-                        <td class="options">In-depth histirocal data analysis</td>
-                        <td></td>
-                        <td></td>
-                        <td><i class="fas fa-check"></i></td>
-                    </tr>
-                    <tr>
-                        <td class="options">Analyse business processes to indentify potential application of predictive technology</td>
-                        <td></td>
-                        <td></td>
-                        <td><i class="fas fa-check"></i></td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="title">DATA VISUALISATION</th>
+                            <th class="title">BIG DATA ANALYTICS</th>
+                            <th class="title">PREDICTIVE MODELLING</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="options">Data clean up and processing</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="options">User-centered design</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="options">Cloud-base solutions</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="options">Data usage logging</td>
+                            <td></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="options">Extract actionable insights</td>
+                            <td></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="options">In-depth histirocal data analysis</td>
+                            <td></td>
+                            <td></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="options">Analyse business processes to indentify potential application of predictive technology</td>
+                            <td></td>
+                            <td></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>

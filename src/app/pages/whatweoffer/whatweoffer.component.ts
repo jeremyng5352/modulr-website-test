@@ -28,12 +28,13 @@ export class WhatweofferComponent implements OnInit {
   contentSliderTriggered = false;
   isReadMoreClicked = false;
   isScrolling = false;
+  whatWeOfferContent: WHATWEOFFERCONTENT[] = whatWeOfferContent;
   states = {
     container1: 'middle',
     container2: 'bottom',
   };
   constructor() {
-    this.section3Contents = whatWeOfferContent[0];
+    this.section3Contents = this.whatWeOfferContent[0];
   }
 
   ngOnInit() {
