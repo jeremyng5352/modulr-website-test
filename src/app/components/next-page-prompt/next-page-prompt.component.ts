@@ -24,12 +24,12 @@ export class NextPagePromptComponent implements OnInit, AppObserver {
     private router: Router,
     private scrollService: ScrollService
   ) {
-    this.currentPage = this.router.url.slice(9);
+    this.currentPage = this.router.url;
     this.scrollService.subscribe(this);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.changePageTitle();
-        this.currentPage = this.router.url.slice(9);
+        this.currentPage = this.router.url;
       }
     });
   }
@@ -38,6 +38,22 @@ export class NextPagePromptComponent implements OnInit, AppObserver {
     this.totalContainerHeight = this.getTotalContainerHeight(this.currentPage) - 886;
     this.applyOverlay(this.scrollService.scrollPosition);
     this.expandContainer(this.scrollService.scrollPosition);
+  }
+
+  getTotalContainerHeight(url): number {
+    let totalHeight: number;
+    let container: HTMLElement;
+    if (url === '/what-we-offer') {
+      container = document.getElementById('what-we-offer-content');
+      totalHeight = container.offsetHeight;
+    } else if (url === '/about') {
+      container = document.getElementById('about-content');
+      totalHeight = container.offsetHeight;
+    } else if (url === '/home') {
+      container = document.getElementById('landing-content');
+      totalHeight = container.offsetHeight;
+    }
+    return totalHeight;
   }
 
   applyOverlay(scrollPosition: number) {
@@ -61,40 +77,23 @@ export class NextPagePromptComponent implements OnInit, AppObserver {
   }
 
   changePageTitle() {
-    if (this.currentPage === 'landingpage') {
+    if (this.currentPage === '/home') {
       this.nextPageTitle = 'What We Offer';
-    } else if (this.currentPage === 'whatweofferpage') {
+    } else if (this.currentPage === '/what-we-offer') {
       this.nextPageTitle = 'About';
-    } else if (this.currentPage === 'aboutpage') {
+    } else if (this.currentPage === 'about') {
       this.nextPageTitle = 'Contact Us';
     }
   }
 
   navigateToNextPage() {
-    if (this.currentPage === 'landingpage') {
-      this.router.navigate(['/welcome/whatweofferpage']);
-    } else if (this.currentPage === 'whatweofferpage') {
-      this.router.navigate(['/welcome/aboutpage']);
-    } else if (this.currentPage === 'aboutpage') {
-      this.router.navigate(['/welcome/contactpage']);
+    if (this.currentPage === 'home') {
+      this.router.navigate(['/what-we-offer']);
+    } else if (this.currentPage === 'what-we-offer') {
+      this.router.navigate(['/about']);
+    } else if (this.currentPage === 'about') {
+      this.router.navigate(['/contact']);
     }
   }
-
-  getTotalContainerHeight(url): number {
-    let totalHeight: number;
-    let container: HTMLElement;
-    if (url === 'whatweofferpage') {
-      container = document.getElementById('what-we-offer-content');
-      totalHeight = container.offsetHeight;
-    } else if (url === 'aboutpage') {
-      container = document.getElementById('about-content');
-      totalHeight = container.offsetHeight;
-    } else if (url === 'landingpage') {
-      container = document.getElementById('landing-content');
-      totalHeight = container.offsetHeight;
-    }
-    return totalHeight;
-  }
-
 
 }

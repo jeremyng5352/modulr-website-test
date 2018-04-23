@@ -11,17 +11,12 @@ import { WhatweofferComponent } from '../pages/whatweoffer/whatweoffer.component
 import { EnquiryComponent } from '../pages/enquiry/enquiry.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/welcome/landingpage', pathMatch: 'full' },
-  {
-    path: 'welcome', component: WelcomeComponent,
-    children: [
-      { path: 'landingpage', component: LandingComponent },
-      { path: 'aboutpage', component: AboutComponent, data: { preload: true } },
-      { path: 'contactpage', component: ContactComponent },
-      { path: 'whatweofferpage', component: WhatweofferComponent },
-      { path: 'enquirypage', component: EnquiryComponent },
-    ]
-  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: LandingComponent },
+  { path: 'what-we-offer', component: WhatweofferComponent },
+  { path: 'about', component: AboutComponent, data: { preload: true } },
+  { path: 'enquiry', component: EnquiryComponent },
+  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({

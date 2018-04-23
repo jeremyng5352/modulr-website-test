@@ -13,10 +13,10 @@ export class ScrollProgressBarComponent implements OnInit {
   constructor(
     private router: Router
   ) {
-    this.currentUrl = this.router.url.slice(9);
+    this.currentUrl = this.router.url;
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.currentUrl = this.router.url.slice(9);
+        this.currentUrl = this.router.url;
       }
     });
   }
@@ -40,13 +40,13 @@ export class ScrollProgressBarComponent implements OnInit {
   getTotalContainerHeight(url): number {
     let totalHeight: number;
     let container: HTMLElement;
-    if (url === 'whatweofferpage') {
+    if (url === '/what-we-offer') {
       container = document.getElementById('what-we-offer-content');
       totalHeight = container.offsetHeight;
-    } else if (url === 'aboutpage') {
+    } else if (url === '/about') {
       container = document.getElementById('about-content');
       totalHeight = container.offsetHeight;
-    } else if (url === 'landingpage') {
+    } else if (url === '/home') {
       container = document.getElementById('landing-content');
       totalHeight = container.offsetHeight;
     }

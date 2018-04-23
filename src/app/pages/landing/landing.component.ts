@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener, HostBinding } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { titleHighlightAnimation, containerSlideUpAnimation } from '../../animations';
 import { Meta } from '@angular/platform-browser';
 
@@ -26,7 +25,6 @@ export class LandingComponent implements OnInit {
   @HostBinding('style.display') display = 'block';
 
   constructor(
-    private router: Router,
     private meta: Meta
   ) {
     setTimeout(() => {

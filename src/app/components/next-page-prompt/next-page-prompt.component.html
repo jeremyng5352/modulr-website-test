@@ -6,6 +6,6 @@
     </div>
 </section>
 
-<section class="next-page-prompt-overlay" *ngIf="isOverlayed" [@fadeAnimation]="true">
+<section class="next-page-prompt-overlay" (click)="navigateToNextPage()" *ngIf="isOverlayed" [@fadeAnimation]="true">
 
 </section>

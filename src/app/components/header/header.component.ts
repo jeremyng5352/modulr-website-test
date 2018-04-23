@@ -52,59 +52,31 @@ export class HeaderComponent implements OnInit {
   constructor(
     private router: Router
   ) {
+    const url = this.router.url;
+    this.navigationTabStyling(url);
   }
 
   ngOnInit() {
-    const slicedURL = this.router.url.slice(9);
-    this.navigationTabStyling(slicedURL);
-    this.goTo(slicedURL);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        const page = event.url.slice(9);
+        const page = event.url;
         this.toggleMenu();
         this.navigationTabStyling(page);
         this.menu = false;
-        this.goTo(page);
       }
     });
   }
 
   navigationTabStyling(url: string) {
     this.needFilter = false;
-    if (url === 'whatweofferpage' || url === 'aboutpage' || url === 'landingpage' ) {
+    if (url === '/what-we-offer' || url === '/about' || url === '/home') {
       setTimeout(() => {
         this.needFilter = true;
       }, 2400);
-    } else if (url === 'enquirypage') {
+    } else if (url === '/enquiry') {
       this.needFilter = true;
     } else {
       this.needFilter = false;
-    }
-  }
-
-  goTo(page: string) {
-    this.activeText = page;
-    if (this.activeText === '') {
-      this.activeText = 'homepage';
-    }
-    switch (this.activeText) {
-      case 'homepage':
-        this.activeHeader = 'one';
-        break;
-      case 'solutionpage':
-        this.activeHeader = 'two';
-        break;
-      case 'aboutpage':
-        this.activeHeader = 'three';
-        break;
-      case 'presspage':
-        this.activeHeader = 'four';
-        break;
-      case 'contactpage':
-        this.activeHeader = 'six';
-        break;
-      default:
-        this.activeHeader = 'one';
     }
   }
 
