@@ -56,6 +56,10 @@
                 height: 100vh;
                 @include row-center;
                 // display: none;
+                h2 {
+                    font-size: $desktop-font-h2-size;
+                    color: $theme-color-pink;
+                }
                 .article-text {
                     height: 100%;
                     width: 50%;
@@ -95,6 +99,15 @@
                         justify-content: space-between;
                         span {
                             cursor: pointer;
+                        }
+                        .enquire-button {
+                            background: $theme-color-sky-blue;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            color: white;
+                            border: 0;
+                            font-family: $theme-font-type-roboto-condensed;
+                            letter-spacing: 3px;
                         }
                     }
                 }
@@ -179,9 +192,23 @@
                 h2 {
                     color: $theme-color-black;
                 }
-                ul {
-                    margin-top: 7.5vh;
-                    margin-left: $desktop-horizontal-padding-light-green;
+                content {
+                    @include row-center;
+                    justify-content: space-between;
+                    .assist-content {
+                        @include column-center;
+                        height: auto;
+                        width: 30%;
+                        img {
+                            @include row-center;
+                            max-width: 70%;
+                            max-height: 20vh;
+                        }
+                        .assist-text {
+                            margin-top: $desktop-vertical-margin-light-yellow;
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }

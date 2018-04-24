@@ -53,7 +53,7 @@
                 <div class="article-action">
                     <span *ngIf="!isReadMoreClicked" (click)="toggleReadButton()" [@fadeAnimation]="true">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
                     <span *ngIf="isReadMoreClicked" (click)="toggleReadButton()" [@fadeAnimation]="true"><i class="fas fa-arrow-left"></i>&nbsp; Read Less</span>
-                    <span>ENQUIRE</span>
+                    <button class="enquire-button" name="enquire button">ENQUIRE</button>
                 </div>
             </div>
             <div class="article-video"></div>
@@ -120,11 +120,24 @@
         <div class="what-we-offer-assist">
             <h2>Assisting you in</h2>
             <content>
-                <ul>
-                    <li>Automatically sift through large databases</li>
-                    <li>Make more cost-effective decisions through better insights into existing databases</li>
-                    <li>Empower operators to carry out actions more confidently</li>
-                </ul>
+                <div class="assist-content">
+                    <img src="assets/images/graphics/Big_Data_Management.png" alt="">
+                    <div class="assist-text">
+                        Achieving better Big Data Management and organisation
+                    </div>
+                </div>
+                <div class="assist-content">
+                    <img src="assets/images/graphics/Empower.png" alt="">
+                    <div class="assist-text">
+                        Empowering your team to carry out actions and decisions more confidently
+                    </div>
+                </div>
+                <div class="assist-content">
+                    <img src="assets/images/graphics/Cost_Effective.png" alt="">
+                    <div class="assist-text">
+                        Making more cost-effective decisions with insightful information into existing databases
+                    </div>
+                </div>
             </content>
         </div>
         <app-next-page-prompt></app-next-page-prompt>

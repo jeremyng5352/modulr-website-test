@@ -46,9 +46,9 @@ export class WhatweofferComponent implements OnInit {
   }
 
   ngOnInit() {
-    setTimeout(() => {
+    // setTimeout(() => {
       this.slideContainerUp();
-    }, 2000);
+    // }, 2000);
   }
 
   slideContainerUp() {
