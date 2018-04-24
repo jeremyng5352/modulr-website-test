@@ -61,6 +61,9 @@
                 width: 100vw;
                 height: 100vh;
                 @include row-center;
+                h2 {
+                    font-size: $desktop-font-h2-size;
+                }
                 .team-content {
                     height: 100%;
                     width: 50%;
