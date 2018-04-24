@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
   }
 
   scrollEvent() {
-    this.scrollBarPosition = document.body.scrollTop;
+    this.scrollBarPosition = window.scrollY;
     this.scrollService.scrollPosition = this.scrollBarPosition;
     if (this.scrollBarPosition <= 50) {
       this.state = 'show';
