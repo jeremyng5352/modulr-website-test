@@ -132,7 +132,6 @@ section.all-modals {
                 justify-content: flex-start;
                 align-items: center;
                 z-index: 1;
-                // filter: invert(100%);
                 nav {
                     font-size: 1rem;
                     letter-spacing: 3px;
@@ -151,7 +150,6 @@ section.all-modals {
                 position: relative;
                 @include row-center;
                 align-items: flex-end;
-                // filter: invert(100%);
                 .header-navigation-content {
                     position: relative;
                     width: 100%;
@@ -159,7 +157,6 @@ section.all-modals {
                     @include row-center;
                     align-items: center;
                     justify-content: flex-end;
-                    // $desktop-nav-margin-bottom: 2vh;
                     $desktop-nav-margin-bottom: 0vh;
                     $navigation-tab-size: 17%;
                     div {
@@ -169,7 +166,6 @@ section.all-modals {
                         @include row-center;
                         justify-content: flex-end;
                         align-items: center;
-                        // $desktop-nav-margin-bottom: 2vh;
                         $desktop-nav-margin-bottom: 0vh;
                         $navigation-tab-size: 17%;
                         nav {
@@ -194,23 +190,6 @@ section.all-modals {
                             }
                         }
                     }
-                    // .active-link {
-                    //     position: absolute;
-                    //     bottom: 10%;
-                    //     left: 0;
-                    //     width: $navigation-tab-size;
-                    //     height: 1px;
-                    //     @include column-center;
-                    //     &:focus {
-                    //         outline: 0;
-                    //     }
-                    //     span {
-                    //         width: fit-content;
-                    //         color: transparent;
-                    //         display: block;
-                    //         border-bottom: white solid 2px !important;
-                    //     }
-                    // }
                     .navigation-btn {
                         font-family: $theme-font-type-roboto;
                         font-weight: 100;
@@ -286,7 +265,6 @@ section.all-modals {
 
 .filter {
     filter: invert(100%);
-    // opacity: 0.5;
     transition: 0.3s;
     &:hover {
         opacity: 1;

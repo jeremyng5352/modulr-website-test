@@ -64,13 +64,44 @@
             .landing-description {
                 width: 100vw;
                 height: auto;
-                display: none;
+                // display: none;
                 h1 {
                     margin-top: 35vh;
                 }
                 .special {
                     font-size: $desktop-font-h3-size;
                     font-weight: bold;
+                }
+            }
+            .landing-tech {
+                width: 100vw;
+                height: auto;
+                .tech-content {
+                    @include row-center;
+                    content {
+                        width: 50%;
+                        .highlight {
+                            &:nth-child(1) {
+                                background: $theme-color-sky-blue;
+                            }
+                            &:nth-child(2) {
+                                background: $theme-color-yellow;
+                            }
+                            &:nth-child(3) {
+                                background: $theme-color-pink;
+                            }
+                        }
+                    }
+                    .tech-graphcis {
+                        width: 50%;
+                        height: 100%;
+                        @include row-center;
+                        justify-content: flex-end;
+                        img {
+                            max-width: 90%;
+                            max-height: 90%;
+                        }
+                    }
                 }
             }
             .landing-supporters {
