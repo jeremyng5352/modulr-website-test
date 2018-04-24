@@ -9,7 +9,6 @@
         color: $theme-color-grey;
         font-family: $theme-font-type-roboto;
         overflow-y: scroll;
-        overflow-x: hidden;
         font-size: $desktop-font-h4-size;
         font-weight: $desktop-font-standard-weight;
         letter-spacing: $desktop-font-standard-spacing;
@@ -48,7 +47,6 @@
             background: white;
             color: $theme-color-grey;
             overflow-y: scroll;
-            overflow-x: hidden;
             .landing {
                 @include column-center;
                 justify-content: flex-start;
