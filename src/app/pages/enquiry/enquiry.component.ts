@@ -13,7 +13,7 @@ import { enquiryPageAnimation } from '../../animations';
 })
 export class EnquiryComponent implements OnInit {
   @HostBinding('style.position') position = 'relative';
-  @HostBinding('@enquiryPageAnimation') routeAnimation = true;
+  // @HostBinding('@enquiryPageAnimation') routeAnimation = true;
   @HostBinding('style.display') display = 'block';
   activatedSubmit = false;
   formSubmitted = false;

@@ -53,7 +53,7 @@
                 <div class="article-action">
                     <span *ngIf="!isReadMoreClicked" (click)="toggleReadButton()" [@fadeAnimation]="true">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
                     <span *ngIf="isReadMoreClicked" (click)="toggleReadButton()" [@fadeAnimation]="true"><i class="fas fa-arrow-left"></i>&nbsp; Read Less</span>
-                    <button class="enquire-button" name="enquire button">ENQUIRE</button>
+                    <button class="enquire-button" name="enquire button" routerLink="/enquiry">ENQUIRE</button>
                 </div>
             </div>
             <div class="article-video"></div>
