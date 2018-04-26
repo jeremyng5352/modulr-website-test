@@ -2,23 +2,62 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
+.next-page-prompt-container {
+    width: 100vw;
+    height: 30vh;
+    background: #e9e9e9;
+    font-family: $theme-font-type-roboto;
+    position: relative;
+    z-index: 2;
+    @include column-center;
+    .next-page-prompt-content {
+        height: 100%;
+        width: auto;
+        @include column-center;
+        text-transform: uppercase;
+        $vertical-margin: 3.5vh;
+        cursor: pointer;
+        transition: 0.3s;
+        .direction {
+            font-size: 12px;
+            margin-bottom: $vertical-margin;
+            font-weight: bold;
+        }
+        .page-indicator {
+            font-family: $theme-font-type-roboto-condensed;
+            font-size: $mobile-font-h2-size;
+            font-weight: bold;
+            margin-bottom: $vertical-margin;
+            letter-spacing: 6px;
+        }
+        .arrow {
+            color: $theme-color-sky-blue;
+        }
+    }
+}
+
+.next-page-prompt-overlay {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    &::after {
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -2;
+    }
+}
+
 @include media(small) {
     .next-page-prompt-container {
-        width: 100vw;
-        height: 30vh;
-        background: #e9e9e9;
-        font-family: $theme-font-type-roboto;
-        position: relative;
-        z-index: 2;
-        @include column-center;
         .next-page-prompt-content {
-            height: 100%;
-            width: auto;
             @include column-center;
-            text-transform: uppercase;
             $vertical-margin: 3.5vh;
-            cursor: pointer;
-            transition: 0.3s;
             .direction {
                 font-size: 10px;
                 margin-bottom: $vertical-margin;
@@ -29,29 +68,10 @@
                 font-weight: bold;
                 margin-bottom: $vertical-margin;
             }
-            .arrow {
-                color: $theme-color-sky-blue;
-            }
             &:hover {
                 background: #e9e9e9;
                 opacity: 0.7;
             }
-        }
-    }
-    .next-page-prompt-overlay {
-        z-index: 0;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        &::after {
-            content: '';
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: -2;
         }
     }
 }
