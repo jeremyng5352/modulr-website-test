@@ -25,11 +25,12 @@ export class NextPagePromptComponent implements OnInit, AppObserver {
     private scrollService: ScrollService
   ) {
     this.currentPage = this.router.url;
+    this.changePageTitle();
     this.scrollService.subscribe(this);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.changePageTitle();
         this.currentPage = this.router.url;
+        this.changePageTitle();
       }
     });
   }
@@ -81,7 +82,7 @@ export class NextPagePromptComponent implements OnInit, AppObserver {
       this.nextPageTitle = 'What We Offer';
     } else if (this.currentPage === '/what-we-offer') {
       this.nextPageTitle = 'About';
-    } else if (this.currentPage === 'about') {
+    } else if (this.currentPage === '/about') {
       this.nextPageTitle = 'Contact Us';
     }
   }

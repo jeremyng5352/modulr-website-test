@@ -2,33 +2,233 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
-@include media(small) {
-    .about-container {
+.about-container {
+    width: 100vw;
+    height: 100vh;
+    color: $theme-color-grey;
+    font-family: $theme-font-type-roboto;
+    font-size: $mobile-font-h4-size;
+    font-weight: $desktop-font-standard-weight;
+    letter-spacing: $desktop-font-standard-spacing;
+    @include column-center;
+    .main-title-container {
+        position: absolute;
         width: 100vw;
         height: 100vh;
+        text-transform: uppercase;
+        color: white;
+        padding: 0 15vw;
+        .main-title {
+            @include row-center;
+            list-style-type: none;
+            width: 100%;
+            height: 100vh;
+            h1,
+            span {
+                font-weight: bold;
+                height: auto;
+                text-transform: uppercase;
+                font-size: $mobile-font-hero-size + 10px;
+                letter-spacing: 6px;
+                line-height: 140%;
+                text-align: center;
+            }
+        }
+    }
+    .about-content {
+        position: absolute;
+        width: 100vw;
+        height: auto;
+        background: white;
         color: $theme-color-grey;
-        font-family: $theme-font-type-roboto;
-        overflow-y: scroll;
-        font-size: $desktop-font-h4-size;
-        font-weight: $desktop-font-standard-weight;
-        letter-spacing: $desktop-font-standard-spacing;
-        @include column-center;
-        .main-title-container {
-            position: absolute;
+        .about-description {
+            width: 100vw;
+            height: auto;
+            @include column-center;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: $mobile-vertical-margin-green $mobile-horizontal-padding-light-red;
+            // display: none;
+            h2 {
+                font-size: $mobile-font-h1-size;
+            }
+            content {
+                width: 100%;
+                font-size: $mobile-font-h3-size;
+            }
+        }
+        .about-team {
+            // display: none;
             width: 100vw;
             height: 100vh;
-            text-transform: uppercase;
-            letter-spacing: 17.66px;
-            font-size: $desktop-font-hero-size;
-            font-weight: bold;
+            @include row-center;
+            position: relative;
+            h2 {
+                font-size: $desktop-font-h2-size;
+            }
+            .team-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+                padding: $mobile-vertical-margin-red 0;
+                .team-description {
+                    height: 100%;
+                    width: 100%;
+                    padding: 0 $mobile-horizontal-padding-light-red;
+                    @include column-center;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    // display: none;
+                    .team-member {
+                        margin-top: $mobile-vertical-margin-purple;
+                        width: 100%;
+                        .member {
+                            display: flex;
+                            font-size: $desktop-font-body-size;
+                            margin-bottom: 15px;
+                            cursor: pointer;
+                            .name {
+                                font-family: $theme-font-type-roboto-condensed;
+                                font-weight: bold;
+                                width: 30%;
+                            }
+                            .position {
+                                width: 70%;
+                            }
+                            @include media(tablet) {
+                                .name {
+                                    width: 35%;
+                                }
+                                .position {
+                                    width: 65%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .team-member-description {
+                    width: 100%;
+                    height: 100%;
+                    padding: $mobile-vertical-margin-red $mobile-horizontal-padding-light-red;
+                    @include column-center;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    .back-button {
+                        font-weight: bold;
+                        font-size: $desktop-font-body-size;
+                        cursor: pointer;
+                    }
+                    .member-name {
+                        text-transform: uppercase;
+                        font-family: $theme-font-type-roboto-condensed;
+                        font-size: $mobile-font-h1-size;
+                        font-weight: bold;
+                        letter-spacing: 6px;
+                        margin-top: $mobile-vertical-margin-orange;
+                        margin-bottom: $mobile-vertical-margin-red;
+                    }
+                    .member-description {
+                        font-size: $mobile-font-h4-size;
+                    }
+                    .social-media {
+                        margin-top: 7.5vh;
+                        font-size: 26px;
+                        display: flex;
+                        nav {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+            .article-video {
+                position: absolute;
+                z-index: 0;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: #999;
+            }
+        }
+        .about-news {
+            // display: none; 
+            width: 100vw;
+            height: auto;
+            padding: 0 $mobile-horizontal-padding-light-red;
+            padding-bottom: $mobile-vertical-margin-green;
+            h2 {
+                color: $theme-color-black;
+                margin-top: $mobile-vertical-margin-red;
+                font-size: $mobile-font-h1-size;
+            }
+            .news-articles {
+                width: 100%;
+                height: auto;
+                display: grid;
+                justify-content: center;
+                $news-width-height: 100vw - $mobile-horizontal-padding-light-green*4;
+                grid-template-columns: $news-width-height;
+                grid-row-gap: $mobile-vertical-margin-red;
+                .news {
+                    width: 100%;
+                    height: $news-width-height;
+                    background: #f0f0f0;
+                    padding: 2vh;
+                    @include column-center;
+                    justify-content: space-between;
+                    .news-image {
+                        height: auto;
+                        @include row-center;
+                        img {
+                            max-width: $news-width-height - 10vw;
+                            max-height: 6vh;
+                        }
+                    }
+                    .news-title {
+                        height: 7.5vw;
+                        text-align: center;
+                        font-size: $desktop-font-h4-size;
+                        @include row-center;
+                    }
+                    .news-date {
+                        height: 2vw;
+                        text-align: center;
+                        font-size: 10px;
+                        @include row-center;
+                    }
+                }
+                @include media(tablet) {
+                    $news-width-height: 23.5vw;
+                    grid-template-columns: $news-width-height $news-width-height $news-width-height;
+                    .news {
+                        height: $news-width-height;
+                        .news-image {
+                            img {
+                                max-width: $news-width-height - 4vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media(small) {
+    .about-container {
+        font-size: $desktop-font-h4-size;
+        .main-title-container {
+            padding: 0 $desktop-horizontal-padding-light-green;
             .main-title {
-                @include row-center;
-                list-style-type: none;
-                width: 100vw;
-                height: 100vh;
-                li {
-                    margin-right: 10px;
-                    color: $theme-color-white;
+                h1,
+                span {
+                    font-size: $desktop-font-h1-size;
+                    letter-spacing: 7.5px;
+                    line-height: 150%;
+                    text-align: center;
                 }
             }
         }
@@ -36,22 +236,22 @@
             position: absolute;
             width: 100vw;
             height: auto;
-            background: white;
-            color: $theme-color-grey;
-            overflow-y: scroll;
             .about-description {
                 // display: none !important;
                 width: 100vw;
                 height: 100vh;
                 @include column-center;
+                @include column-center;
                 justify-content: flex-start;
                 align-items: flex-start;
                 padding: 0 $desktop-horizontal-padding-light-green;
-                h1 {
+                h2 {
                     margin-top: 35vh;
+                    font-size: $desktop-font-h1-size;
                 }
                 content {
                     width: 60%;
+                    font-size: $desktop-font-h4-size;
                 }
             }
             .about-team {
@@ -63,28 +263,20 @@
                     font-size: $desktop-font-h2-size;
                 }
                 .team-content {
+                    position: relative;
                     height: 100%;
                     width: 50%;
                     .team-description {
-                        height: 100%;
-                        width: 100%;
                         padding: 0 $desktop-horizontal-padding-light-green;
-                        @include column-center;
-                        align-items: flex-start;
-                        justify-content: flex-end;
-                        // display: none;
                         .team-member {
                             margin-top: $desktop-vertical-margin-light-yellow;
                             margin-bottom: $desktop-vertical-margin-light-pink;
                             width: 100%;
                             .member {
-                                display: flex;
                                 font-size: $desktop-font-body-size;
                                 margin-bottom: 15px;
-                                cursor: pointer;
                                 .name {
                                     font-family: $theme-font-type-roboto-condensed;
-                                    font-weight: bold;
                                     width: 30%;
                                 }
                                 .position {
@@ -102,29 +294,20 @@
                         }
                     }
                     .team-member-description {
-                        width: 100%;
-                        height: 100%;
                         padding: 0 $desktop-horizontal-padding-light-green;
                         padding-bottom: 15vh;
-                        @include column-center;
-                        align-items: flex-start;
-                        justify-content: flex-end;
                         .back-button {
-                            font-weight: bold;
                             font-size: $desktop-font-body-size;
-                            cursor: pointer;
                         }
                         .member-name {
-                            text-transform: uppercase;
-                            font-family: $theme-font-type-roboto-condensed;
                             font-size: $desktop-font-h1-size;
-                            font-weight: bold;
                             letter-spacing: 6px;
                             margin-top: 10vh;
                             margin-bottom: $desktop-vertical-margin-dark-blue;
                         }
                         .member-description {
                             font-size: $desktop-font-body-size;
+                            line-height: 175%;
                         }
                         .social-media {
                             margin-top: 10vh;
@@ -137,9 +320,9 @@
                     }
                 }
                 .article-video {
+                    position: relative;
                     height: 100%;
                     width: 50%;
-                    background: #999;
                 }
             }
             .about-news {
@@ -204,13 +387,14 @@
             }
         }
     }
-}
-
-h1 {
-    color: $theme-color-yellow;
+    h1 {
+        color: $theme-color-yellow;
+    }
+    h2 {
+        font-size: $desktop-font-h1-size;
+    }
 }
 
 h2 {
     color: $theme-color-pink;
-    font-size: $desktop-font-h1-size;
 }

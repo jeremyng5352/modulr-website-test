@@ -1,5 +1,10 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { titleStaggerAnimation, containerSlideUpAnimation, contentLeftSlideAnimation, contentRightSlideAnimation } from '../../animations';
+import {
+  containerSlideUpAnimation,
+  contentLeftSlideAnimation,
+  contentRightSlideAnimation,
+  titleHighlightAnimation
+} from '../../animations';
 import { NEWSARTICLE } from '../../class/NewsArticle';
 import { newsArticle } from '../../data/news-articles';
 import { TEAMMEMBER } from '../../class/TeamMember';
@@ -11,9 +16,9 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./about.component.scss'],
   animations: [
     containerSlideUpAnimation,
-    titleStaggerAnimation,
     contentLeftSlideAnimation,
-    contentRightSlideAnimation
+    contentRightSlideAnimation,
+    titleHighlightAnimation
   ]
 })
 export class AboutComponent implements OnInit {
@@ -40,9 +45,9 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit() {
-    setTimeout(() => {
+    // setTimeout(() => {
       this.slideContainerUp();
-    }, 2000);
+    // }, 2000);
   }
 
   slideContainerUp() {

@@ -85,7 +85,7 @@ export class AppComponent implements OnInit {
     component = this;
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        document.body.scrollTop = 0;
+        this.initScrollToTop();
         this.scrollEvent();
       }
     });
@@ -101,12 +101,8 @@ export class AppComponent implements OnInit {
   }
 
   initScrollToTop() {
-    this.router.events.subscribe((evt) => {
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-      document.body.scrollTop = 0;
-    });
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 
   // tslint:disable-next-line:use-life-cycle-interface
