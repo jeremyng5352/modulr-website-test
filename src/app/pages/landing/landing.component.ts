@@ -27,9 +27,9 @@ export class LandingComponent implements OnInit {
   constructor(
     private meta: Meta
   ) {
-    setTimeout(() => {
+    // setTimeout(() => {
       this.slideContainerUp();
-    }, 2000);
+    // }, 2000);
     this.meta.addTag({
       name: 'Modulr Tech: Transforming Data into Actionable Insights',
       // tslint:disable-next-line:max-line-length

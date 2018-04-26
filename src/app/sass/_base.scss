@@ -47,6 +47,15 @@ p:first-of-type {
     }
 }
 
+@include media(mobile) {
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+}
+
 @include media(tablet) {
     .mobile {
         display: none;
