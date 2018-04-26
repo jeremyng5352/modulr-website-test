@@ -2,35 +2,95 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
-@include media(small) {
-    .contact-background {
-        width: 100vw;
-        height: 100vh;
-        background: url("/assets/images/modulr/modulr-base.png") no-repeat center;
-        background-size: cover;
-        z-index: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
+.contact-background {
+    width: 100vw;
+    height: 100vh;
+    background: url("/assets/images/modulr/modulr-base.png") no-repeat center;
+    background-size: cover;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contact-main-container {
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f5f5f5;
+    padding: $mobile-vertical-margin-purple $mobile-horizontal-padding-light-red;
+    font-family: $theme-font-type-roboto;
+    overflow-y: scroll;
+    font-size: $mobile-font-h4-size;
+    font-weight: $desktop-font-standard-weight;
+    letter-spacing: $desktop-font-standard-spacing;
+    @include column-center;
+    align-items: flex-start;
+    justify-content: space-between;
+    .contact-content {
+        width: 100%;
+        margin-top: 20vh;
+        h1 {
+            color: $theme-color-pink;
+            margin-bottom: $desktop-vertical-margin-orange;
+            font-size: $mobile-font-hero-size;
+        }
+        .contact-address {
+            font-size: $desktop-font-h3-size;
+            line-height: 25px;
+            letter-spacing: 2.48px;
+            font-weight: 100;
+            margin-bottom: $mobile-vertical-margin-orange;
+        }
+        .contact-details {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            .detail {
+                width: 100%;
+                line-height: 20.5px;
+                @include column-center;
+                align-items: flex-start;
+                margin-bottom: $mobile-vertical-margin-purple;
+                .name {
+                    letter-spacing: 2.5px;
+                    font-family: $theme-font-type-roboto-condensed;
+                    text-transform: uppercase;
+                    font-size: $mobile-font-h4-size - 4px;
+                    font-weight: bold;
+                }
+                .email {
+                    color: $theme-color-pink;
+                    font-size: $mobile-font-body-size - 2px;
+                }
+                &:nth-last-child(1) {
+                    margin-bottom: $mobile-vertical-margin-red;
+                }
+            }
+        }
+        .contact-enquiry {
+            font-size: $desktop-font-h3-size;
+        }
     }
+    .contact-social-media {
+        @include row-center;
+        nav {
+            font-size: 22px;
+            margin-right: 30px;
+        }
+    }
+}
+
+@include media(small) {
     .contact-main-container {
-        position: relative;
-        z-index: 1;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        color: #f5f5f5;
         padding: $desktop-vertical-margin-dark-green $desktop-horizontal-padding-light-red;
-        font-family: $theme-font-type-roboto;
-        overflow-y: scroll;
         font-size: $desktop-font-h4-size;
         font-weight: $desktop-font-standard-weight;
         letter-spacing: $desktop-font-standard-spacing;
-        @include column-center;
-        align-items: flex-start;
-        justify-content: space-between;
         .contact-content {
-            width: 100%;
             margin-top: $desktop-vertical-margin-sky-blue;
             padding-left: $desktop-horizontal-padding-light-green/2;
             h1 {
@@ -45,8 +105,6 @@
                 margin-bottom: $desktop-vertical-margin-orange;
             }
             .contact-details {
-                width: 100%;
-                height: auto;
                 display: grid;
                 grid-template-columns: 20% 20%;
                 grid-row-gap: $desktop-vertical-margin-dark-blue;
@@ -60,14 +118,11 @@
                     line-height: 22.5px;
                     @include column-center;
                     align-items: flex-start;
+                    margin-bottom: 0;
                     .name {
-                        font-family: $theme-font-type-roboto-condensed;
-                        text-transform: uppercase;
                         font-size: $desktop-font-body-size;
-                        font-weight: bold;
                     }
                     .email {
-                        color: $theme-color-pink;
                         font-size: $desktop-font-h4-size;
                     }
                 }
@@ -83,14 +138,6 @@
                 margin-right: 30px;
             }
         }
-    }
-    h1 {
-        font-family: $theme-font-type-roboto-condensed;
-        font-size: $desktop-font-h1-size;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 7.5px;
-        margin-bottom: $desktop-vertical-margin-dark-blue;
     }
 }
 
