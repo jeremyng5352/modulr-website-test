@@ -2,6 +2,70 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
+.footer-container {
+    background: #232323;
+    width: 100vw;
+    @include column-center;
+    padding: $mobile-vertical-margin-purple 0;
+    font-family: $theme-font-type-roboto;
+    letter-spacing: 2.68px;
+    color: $theme-color-white;
+    position: relative;
+    z-index: 2;
+    .policy {
+        order: 4;
+        font-size: 10px;
+        font-weight: 100;
+        margin-top: $mobile-vertical-margin-purple;
+    }
+    .newsletter {
+        order: 3;
+        font-size: 13px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .branding {
+        order: 1;
+        .header-icon {
+            z-index: 10;
+            cursor: pointer;
+            width: auto;
+            display: flex;
+            text-transform: uppercase;
+            align-items: center;
+            justify-content: flex-start;
+            align-content: center;
+            vertical-align: middle;
+            font-size: $mobile-font-body-size;
+            letter-spacing: 3px;
+            font-family: $theme-font-type-montserrat;
+            font-weight: 300;
+            img {
+                height: 4vh;
+            }
+        }
+    }
+    .social-media {
+        order: 2;
+        @include row-center;
+        justify-content: flex-end;
+        margin: $mobile-vertical-margin-purple 0;
+        nav {
+            font-size: 20px;
+            margin-left: 35px;
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+        }
+    }
+    .copyright {
+        order: 5;
+        @include row-center;
+        font-size: 6px;
+        margin-top: 20px;
+    }
+}
+
 @include media(small) {
     .footer-container {
         background: #232323;
@@ -20,6 +84,7 @@
             grid-area: policy;
             font-size: 10px;
             font-weight: 100;
+            margin: 0;
         }
         .newsletter {
             grid-area: newsletter;
@@ -52,6 +117,7 @@
             grid-area: social-media;
             @include row-center;
             justify-content: flex-end;
+            margin: 0;
             nav {
                 font-size: 22px;
                 margin-left: 40px;
