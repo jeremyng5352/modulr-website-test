@@ -2,31 +2,137 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
+.enquiry-main-container {
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    color: $theme-color-grey;
+    padding: $mobile-vertical-margin-purple $mobile-horizontal-padding-light-red;
+    font-family: $theme-font-type-roboto;
+    overflow-y: scroll;
+    font-size: $desktop-font-h4-size;
+    font-weight: 100;
+    @include column-center;
+    align-items: flex-start;
+    justify-content: space-between;
+    .enquiry-content {
+        width: 100%;
+        margin-top: 10vh;
+        padding-left: $desktop-horizontal-padding-light-green/2;
+        .back-button {
+            font-weight: bold;
+            font-size: $desktop-font-body-size;
+            cursor: pointer;
+        }
+        h1 {
+            color: $theme-color-pink;
+            margin-top: $mobile-vertical-margin-purple;
+            margin-bottom: $mobile-vertical-margin-red;
+            font-size: $mobile-font-hero-size;
+        }
+        form {
+            width: 100%;
+            height: auto;
+            display: column;
+            .form-input {
+                width: 70%;
+                margin-bottom: $mobile-vertical-margin-orange;
+                input[type=text] {
+                    font-size: $mobile-font-body-size - 2px;
+                    width: 100%;
+                    text-align: left;
+                    border: none;
+                    border-bottom: 1px solid $theme-color-grey;
+                    padding: 0 0 7.5px 0;
+                    color: #666;
+                    font-weight: 100;
+                }
+                small {
+                    font-size: 0.7rem;
+                    font-weight: bold;
+                    color: red;
+                }
+            }
+            .interest {
+                margin-bottom: $mobile-vertical-margin-orange;
+            }
+            select {
+                box-sizing: border-box;
+                width: 70%;
+                height: 50%;
+                border: none !important;
+                border-bottom: 1px solid $theme-color-grey !important;
+                -webkit-appearance: none;
+                border-radius: 0px !important;
+                font-weight: 100;
+                background: transparent;
+                padding: 0 0 7.5px 0;
+                font-size: $mobile-font-body-size - 2px;
+                option {
+                    color: black;
+                    width: 100%;
+                    font-size: $mobile-font-body-size;
+                    background: transparent;
+                }
+            }
+            .message {
+                font-weight: 100;
+                width: 100%;
+                text-align: left;
+                border: none;
+                border-bottom: 1px solid $theme-color-grey;
+                padding: 0 0 7.5px 0;
+                font-size: $mobile-font-body-size - 2px;
+            }
+            .submit {
+                width: 100%;
+                @include row-center;
+                #submit-button {
+                    margin-top: $desktop-vertical-margin-dark-blue;
+                    outline: none;
+                    background: transparent;
+                    height: 4.5vh;
+                    text-align: center;
+                    width: 25%;
+                    border: 1px solid $theme-color-grey;
+                    color: $theme-color-grey;
+                    letter-spacing: 1px;
+                    text-shadow: 0;
+                    opacity: 0.6;
+                    transition: all 0.25s ease;
+                    cursor: pointer;
+                    font: {
+                        size: $mobile-font-body-size - 2px;
+                        weight: bold;
+                        family: $theme-font-type-roboto;
+                    }
+                    &:active {
+                        letter-spacing: 2px;
+                    }
+                    &:valid {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include media(small) {
     .enquiry-main-container {
-        width: 100vw;
-        height: 100vh;
-        background: white;
-        color: $theme-color-grey;
+        height: 86vh;
         padding: $desktop-vertical-margin-dark-green $desktop-horizontal-padding-light-red;
-        font-family: $theme-font-type-roboto;
-        overflow-y: scroll;
         font-size: $desktop-font-h4-size;
-        font-weight: 100;
         @include column-center;
         align-items: flex-start;
         justify-content: space-between;
         .enquiry-content {
-            width: 100%;
             margin-top: $desktop-vertical-margin-sky-blue;
             padding-left: $desktop-horizontal-padding-light-green/2;
             .back-button {
-                font-weight: bold;
                 font-size: $desktop-font-body-size;
-                cursor: pointer;
             }
             h1 {
-                color: $theme-color-pink;
                 margin-top: 1.5vh;
                 margin-bottom: $desktop-vertical-margin-orange;
             }
@@ -95,7 +201,6 @@
                     border-bottom: 1px solid $theme-color-grey;
                     padding: 0 0 7.5px 0;
                     font-size: $desktop-font-h4-size;
-                    color: #666;
                 }
                 .submit {
                     grid-area: submit;
@@ -103,43 +208,17 @@
                     @include row-center;
                     #submit-button {
                         margin-top: $desktop-vertical-margin-dark-blue;
-                        outline: none;
                         height: 4.5vh;
-                        text-align: center;
                         width: 20%;
                         border: 1px solid $theme-color-grey;
-                        color: $theme-color-grey;
                         letter-spacing: 1px;
-                        text-shadow: 0;
-                        opacity: 0.6;
                         cursor: pointer;
                         font: {
                             size: $desktop-font-h4-size;
-                            weight: bold;
-                            family: $theme-font-type-roboto;
-                        }
-                        transition: all 0.25s ease;
-                        &:active {
-                            letter-spacing: 2px;
-                        }
-                        &:after {
-                            content: "Submit";
-                            font-weight: bold;
-                        }
-                        &:valid {
-                            opacity: 1;
                         }
                     }
                 }
             }
         }
-    }
-    h1 {
-        font-family: $theme-font-type-roboto-condensed;
-        font-size: $desktop-font-h1-size;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 7.5px;
-        margin-bottom: $desktop-vertical-margin-dark-blue;
     }
 }
