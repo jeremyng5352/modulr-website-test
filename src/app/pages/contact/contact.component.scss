@@ -31,14 +31,14 @@
     justify-content: space-between;
     .contact-content {
         width: 100%;
-        margin-top: 20vh;
+        margin-top: 12.5vh;
         h1 {
             color: $theme-color-pink;
             margin-bottom: $desktop-vertical-margin-orange;
             font-size: $mobile-font-hero-size;
         }
         .contact-address {
-            font-size: $desktop-font-h3-size;
+            font-size: $desktop-font-h3-size - 2px;
             line-height: 25px;
             letter-spacing: 2.48px;
             font-weight: 100;
@@ -72,7 +72,7 @@
             }
         }
         .contact-enquiry {
-            font-size: $desktop-font-h3-size;
+            font-size: $desktop-font-h3-size - 2px;
         }
     }
     .contact-social-media {

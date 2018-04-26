@@ -2,31 +2,258 @@
 @import '../../sass/mixins';
 @import '../../sass/reset';
 @import '../../sass/base';
-@include media(small) {
-    .what-we-offer-container {
+.what-we-offer-container {
+    width: 100vw;
+    height: 100vh;
+    color: $theme-color-grey;
+    font-family: $theme-font-type-roboto;
+    font-size: $mobile-font-h4-size;
+    font-weight: $desktop-font-standard-weight;
+    letter-spacing: $desktop-font-standard-spacing;
+    @include column-center;
+    .main-title-container {
+        position: absolute;
         width: 100vw;
         height: 100vh;
+        text-transform: uppercase;
+        color: white;
+        padding: 0 15vw;
+        .main-title {
+            @include row-center;
+            list-style-type: none;
+            width: 100%;
+            height: 100vh;
+            h1,
+            span {
+                font-weight: bold;
+                height: auto;
+                text-transform: uppercase;
+                font-size: $mobile-font-hero-size + 10px;
+                letter-spacing: 6px;
+                line-height: 140%;
+                text-align: center;
+            }
+        }
+    }
+    .what-we-offer-content {
+        position: absolute;
+        width: 100vw;
+        height: auto;
+        background: white;
         color: $theme-color-grey;
-        font-family: $theme-font-type-roboto;
-        font-size: $desktop-font-h4-size;
-        font-weight: $desktop-font-standard-weight;
-        letter-spacing: $desktop-font-standard-spacing;
-        @include column-center;
-        .main-title-container {
-            position: absolute;
+        .what-we-offer-description {
+            width: 100vw;
+            height: auto;
+            @include column-center;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: $mobile-vertical-margin-green $mobile-horizontal-padding-light-red;
+            // display: none;
+            h2 {
+                font-size: $mobile-font-h1-size;
+            }
+            content {
+                width: 100%;
+                font-size: $mobile-font-h3-size;
+            }
+        }
+        .what-we-offer-article {
             width: 100vw;
             height: 100vh;
-            text-transform: uppercase;
-            letter-spacing: 17.66px;
-            font-size: $desktop-font-hero-size;
-            font-weight: bold;
+            @include row-center;
+            // display: none;
+            position: relative;
+            h2 {
+                font-size: $mobile-font-h2-size;
+                color: $theme-color-pink;
+            }
+            .article-text {
+                position: absolute;
+                z-index: 1;
+                height: 100%;
+                width: 100%;
+                padding: $mobile-vertical-margin-blue $mobile-horizontal-padding-light-red;
+                @include column-center;
+                align-items: flex-start;
+                justify-content: flex-start;
+                border-bottom: white solid 1px;
+                content {
+                    width: 100%;
+                    height: 35vh;
+                    font-size: $mobile-font-body-size;
+                    color: white;
+                    line-height: 150%;
+                    .description {
+                        margin-bottom: $desktop-vertical-margin-light-yellow;
+                    }
+                    img.article-image {
+                        max-width: 20vw;
+                        max-height: 10vh;
+                    }
+                    .aritcle-quote {
+                        font-size: $mobile-font-body-size - 2px;
+                        font-style: italic;
+                        color: white;
+                        font-weight: 100;
+                    }
+                    .article-quote-author {
+                        font-size: $mobile-font-body-size - 4px;
+                        font-weight: bold;
+                        letter-spacing: 1.5px;
+                    }
+                }
+                .article-action {
+                    width: 100%;
+                    margin-top: 15vh;
+                    text-transform: uppercase;
+                    @include row-center;
+                    justify-content: space-between;
+                    span {
+                        cursor: pointer;
+                        font-size: $mobile-font-body-size;
+                    }
+                    .enquire-button {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        cursor: pointer;
+                        background: $theme-color-sky-blue;
+                        padding: 25px 40px;
+                        color: white;
+                        border: 0;
+                        letter-spacing: 3px;
+                        font-size: $mobile-font-h3-size;
+                        opacity: 0.8;
+                    }
+                }
+            }
+            .article-video {
+                position: absolute;
+                z-index: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.4);
+            }
+        }
+        .what-we-offer-overview {
+            margin: $desktop-vertical-margin-sky-blue 0;
+            width: 100vw;
+            height: auto;
+            padding: 0 $desktop-horizontal-padding-light-green;
+            .overview-table {
+                width: 100%;
+                padding: 0 $desktop-horizontal-padding-light-red;
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    font-family: $theme-font-type-roboto-condensed;
+                    tr {
+                        td {
+                            &:nth-child(1) {
+                                cursor: initial;
+                                &::after {
+                                    content: '';
+                                    background: white !important;
+                                    opacity: 0 !important;
+                                }
+                            }
+                        }
+                        &:nth-child(even) {
+                            background: #f0f0f0;
+                        }
+                    }
+                    .title {
+                        font-size: $desktop-font-h3-size + 2px;
+                        font-weight: bold;
+                        color: black;
+                    }
+                    .options {
+                        width: 40%;
+                        text-align: left;
+                        padding-left: 1vw;
+                        color: black;
+                    }
+                    td {
+                        letter-spacing: 3px;
+                        line-height: 22.5px;
+                        font-size: $desktop-font-h4-size + 2px;
+                        text-align: center;
+                        vertical-align: middle;
+                        width: 20%;
+                        padding: 2vh 0;
+                        color: $theme-color-sky-blue;
+                        position: relative;
+                        cursor: pointer;
+                        &:hover::after {
+                            content: '';
+                            background-color: $theme-color-pink;
+                            opacity: 0.2;
+                            height: 10000px;
+                            left: 0;
+                            position: absolute;
+                            top: -5000px;
+                            width: 100%;
+                        }
+                    }
+                }
+                @include media(tablet) {
+                    padding: 0;
+                }
+            }
+        }
+        .what-we-offer-assist {
+            margin: $desktop-vertical-margin-sky-blue 0;
+            width: 100vw;
+            height: auto;
+            padding: 0 $desktop-horizontal-padding-light-green;
+            font-size: $desktop-font-body-size;
+            h2 {
+                color: $theme-color-black;
+            }
+            content {
+                @include column-center;
+                justify-content: space-between;
+                line-height: 150%;
+                .assist-content {
+                    @include column-center;
+                    height: auto;
+                    width: 100%;
+                    margin-bottom: 8vh;
+                    .assist-image {
+                        width: 100%;
+                        height: 20vh;
+                        @include row-center;
+                        img {
+                            max-width: 50%;
+                            max-height: 20vh;
+                        }
+                    }
+                    .assist-text {
+                        margin-top: $mobile-vertical-margin-purple;
+                        text-align: center;
+                        font-size: $mobile-font-h4-size;
+                    }
+                }
+            }
+        }
+    }
+    h2 {
+        font-size: $mobile-font-h1-size;
+    }
+}
+
+@include media(small) {
+    .what-we-offer-container {
+        font-size: $desktop-font-h4-size;
+        .main-title-container {
+            padding: 0 $desktop-horizontal-padding-light-green;
             .main-title {
-                @include row-center;
-                list-style-type: none;
-                width: 100vw;
-                height: 100vh;
-                li {
-                    margin-right: 10px;
+                h1,
+                span {
+                    font-size: $desktop-font-h1-size;
+                    letter-spacing: 7.5px;
+                    line-height: 150%;
+                    text-align: center;
                 }
             }
         }
@@ -44,11 +271,13 @@
                 align-items: flex-start;
                 padding: 0 $desktop-horizontal-padding-light-green;
                 // display: none;
-                h1 {
+                h2 {
                     margin-top: 35vh;
+                    font-size: $desktop-font-h1-size;
                 }
                 content {
-                    width: 50%;
+                    width: 60%;
+                    font-size: $desktop-font-h4-size;
                 }
             }
             .what-we-offer-article {
@@ -61,16 +290,16 @@
                     color: $theme-color-pink;
                 }
                 .article-text {
+                    position: relative;
                     height: 100%;
                     width: 50%;
                     padding: 0 $desktop-horizontal-padding-light-green;
-                    @include column-center;
-                    align-items: flex-start;
                     justify-content: flex-end;
                     content {
                         width: 100%;
                         height: 25vh;
                         font-size: $desktop-font-body-size;
+                        color: $theme-color-black;
                         .description {
                             margin-bottom: $desktop-vertical-margin-light-yellow;
                         }
@@ -80,39 +309,29 @@
                         }
                         .aritcle-quote {
                             font-size: $desktop-font-body-size;
-                            font-style: italic;
-                            color: #818181;
-                            font-weight: 100;
+                            color: $theme-color-grey;
                         }
                         .article-quote-author {
                             font-size: $desktop-font-body-size - 2px;
-                            font-weight: bold;
-                            letter-spacing: 1.5px;
+                            color: $theme-color-grey;
                         }
                     }
                     .article-action {
                         width: 100%;
                         margin-top: 15vh;
                         margin-bottom: $desktop-vertical-margin-light-pink;
-                        text-transform: uppercase;
-                        @include row-center;
-                        justify-content: space-between;
-                        span {
-                            cursor: pointer;
-                        }
                         .enquire-button {
-                            cursor: pointer;
+                            position: relative;
                             background: $theme-color-sky-blue;
                             padding: 10px 20px;
                             border-radius: 5px;
-                            color: white;
-                            border: 0;
                             font-family: $theme-font-type-roboto-condensed;
-                            letter-spacing: 3px;
+                            font-size: $desktop-font-h4-size;
                         }
                     }
                 }
                 .article-video {
+                    position: relative;
                     height: 100%;
                     width: 50%;
                     background: #999;
@@ -189,21 +408,26 @@
                 width: 100vw;
                 height: auto;
                 padding: 0 $desktop-horizontal-padding-light-green;
-                font-size: $desktop-font-body-size;
+                font-size: $desktop-font-h4-size;
                 h2 {
                     color: $theme-color-black;
                 }
                 content {
                     @include row-center;
                     justify-content: space-between;
+                    align-items: flex-start;
                     .assist-content {
                         @include column-center;
                         height: auto;
                         width: 30%;
-                        img {
+                        .assist-image {
+                            width: 100%;
+                            height: 20vh;
                             @include row-center;
-                            max-width: 70%;
-                            max-height: 20vh;
+                            img {
+                                max-width: 60%;
+                                max-height: 20vh;
+                            }
                         }
                         .assist-text {
                             margin-top: $desktop-vertical-margin-light-yellow;
@@ -214,24 +438,21 @@
             }
         }
     }
-}
-
-h1 {
-    color: $theme-color-yellow;
+    h2 {
+        font-size: $desktop-font-h1-size;
+    }
+    td,
+    th {
+        padding: 10px;
+        position: relative;
+        outline: 0;
+    }
 }
 
 h2 {
     color: $theme-color-pink;
-    font-size: $desktop-font-h1-size;
 }
 
 table {
     overflow: hidden;
-}
-
-td,
-th {
-    padding: 10px;
-    position: relative;
-    outline: 0;
 }

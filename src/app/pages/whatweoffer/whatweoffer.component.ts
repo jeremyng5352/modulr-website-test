@@ -1,6 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import {
-  titleStaggerAnimation,
   containerSlideUpAnimation,
   fadeAnimation,
   contentLeftSlideAnimation,
@@ -9,16 +8,17 @@ import {
 import { WHATWEOFFERCONTENT } from '../../class/WhatWeOfferContent';
 import { whatWeOfferContent } from '../../data/what-we-offer-contents';
 import { Meta } from '@angular/platform-browser';
+import { titleHighlightAnimation } from '../../animations';
 @Component({
   selector: 'app-whatweoffer',
   templateUrl: './whatweoffer.component.html',
   styleUrls: ['./whatweoffer.component.scss'],
   animations: [
-    titleStaggerAnimation,
     containerSlideUpAnimation,
     fadeAnimation,
     contentLeftSlideAnimation,
-    contentRightSlideAnimation
+    contentRightSlideAnimation,
+    titleHighlightAnimation
   ]
 })
 export class WhatweofferComponent implements OnInit {

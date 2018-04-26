@@ -1,7 +1,8 @@
 <section id="what-we-offer-container" class="what-we-offer-container">
     <section class="main-title-container" [@containerState]='states.container1'>
-        <div class="main-title" [@titleStaggerAnimation]="true">
-            <li>W</li>
+        <!-- <div class="main-title" [@titleStaggerAnimation]="true"> -->
+        <div class="main-title">
+            <!-- <li>W</li>
             <li>h</li>
             <li>a</li>
             <li>t</li>
@@ -13,18 +14,23 @@
             <li>f</li>
             <li>f</li>
             <li>e</li>
-            <li>r</li>
+            <li>r</li> -->
+            <h1>
+                <span [@titleHighlightAnimation]="true">
+                    What we offer
+                </span>
+            </h1>
         </div>
     </section>
     <section id="what-we-offer-content" class="what-we-offer-content" [@containerState]='states.container2'>
         <div class="what-we-offer-description">
-            <h1>What we offer</h1>
+            <h2>What we offer</h2>
             <content>
                 <p>
-                    Our work is inspired by a true understanding of data transformation and a hunger to develop seamless software systems.
+                    Our technology is inspired by a true understanding of data transformation and a hunger to develop cross functional software systems.
                 </p>
                 <p>
-                    We are driven by a desire for innovation and a vision to create the perfect combination of analytics and design.
+                    We are driven by a desire for innovation and a vision to create the perfect combination of analytics, usability, and design to help you identify big data opportunities in your organisation.
                 </p>
             </content>
         </div>
@@ -33,7 +39,7 @@
                 <h2>
                     {{content.title}}
                 </h2>
-                <content class="initial-content" *ngIf="!isReadMoreClicked" [@fadeAnimation]="true">
+                <content class="initial-content" *ngIf="!isReadMoreClicked">
                     <div class="description">
                         {{content.description}}
                     </div>
@@ -45,14 +51,14 @@
                             {{content.quoteAuthor}}
                     </span>
                 </content>
-                <content class="more-content" *ngIf="isReadMoreClicked" [@fadeAnimation]="true">
+                <content class="more-content" *ngIf="isReadMoreClicked">
                     <p *ngFor="let paragraph of content.moreContent">
                         {{paragraph}}
                     </p>
                 </content>
                 <div class="article-action">
-                    <span *ngIf="!isReadMoreClicked" (click)="toggleReadButton()" [@fadeAnimation]="true">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
-                    <span *ngIf="isReadMoreClicked" (click)="toggleReadButton()" [@fadeAnimation]="true"><i class="fas fa-arrow-left"></i>&nbsp; Read Less</span>
+                    <span *ngIf="!isReadMoreClicked" (click)="toggleReadButton()">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
+                    <span *ngIf="isReadMoreClicked" (click)="toggleReadButton()"><i class="fas fa-arrow-left"></i>&nbsp; Read Less</span>
                     <button class="enquire-button" name="enquire button" routerLink="/enquiry">ENQUIRE</button>
                 </div>
             </div>
@@ -121,19 +127,25 @@
             <h2>Assisting you in</h2>
             <content>
                 <div class="assist-content">
-                    <img src="assets/images/graphics/Big_Data_Management.png" alt="">
+                    <div class="assist-image">
+                        <img src="assets/images/graphics/Big_Data_Management.png" alt="">
+                    </div>
                     <div class="assist-text">
                         Achieving better Big Data Management and organisation
                     </div>
                 </div>
                 <div class="assist-content">
-                    <img src="assets/images/graphics/Empower.png" alt="">
+                    <div class="assist-image">
+                        <img src="assets/images/graphics/Empower.png" alt="">
+                    </div>
                     <div class="assist-text">
                         Empowering your team to carry out actions and decisions more confidently
                     </div>
                 </div>
                 <div class="assist-content">
-                    <img src="assets/images/graphics/Cost_Effective.png" alt="">
+                    <div class="assist-image">
+                        <img src="assets/images/graphics/Cost_Effective.png" alt="">
+                    </div>
                     <div class="assist-text">
                         Making more cost-effective decisions with insightful information into existing databases
                     </div>

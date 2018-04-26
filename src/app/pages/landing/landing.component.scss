@@ -48,19 +48,20 @@
             justify-content: flex-start;
             align-items: flex-start;
             padding: 0 $mobile-horizontal-padding-light-red;
-            content {
-                width: 100%;
-            }
             h2 {
                 margin-top: $mobile-vertical-margin-blue;
+            }
+            content {
+                width: 100%;
             }
         }
         .landing-description {
             width: 100vw;
             height: auto;
             // display: none;
-            h1 {
+            h2 {
                 margin-top: $mobile-vertical-margin-green;
+                font-size: $mobile-font-h1-size;
             }
             .special {
                 font-size: $mobile-font-h3-size;
@@ -178,8 +179,9 @@
                 }
             }
             .landing-description {
-                h1 {
+                h2 {
                     margin-top: 35vh;
+                    font-size: $desktop-font-h1-size;
                 }
                 .special {
                     font-size: $desktop-font-h3-size;
