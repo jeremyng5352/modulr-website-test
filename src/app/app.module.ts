@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { MouseWheelDirective } from './mousewheel.directive';
 
 import { D3Service } from 'd3-ng2-service';
@@ -33,7 +32,6 @@ export class MyHammerConfig extends HammerGestureConfig {
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,
     MouseWheelDirective,
     HeaderComponent,
     ContactComponent,
