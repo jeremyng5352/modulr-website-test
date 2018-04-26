@@ -17,10 +17,23 @@ sans-serif;
 // Structure Guide
 $header-height: 10vh;
 $main-container-height: 100vh;
-//// Mobile Version
-$mobile-horizontal-padding-light-red: 5vw;
 ////////////////////////////////
-// new variables
+//// Mobile Version
+// font-size
+$mobile-font-h1-size: 40px;
+$mobile-font-h2-size: 35px;
+$mobile-font-h3-size: 20px;
+$mobile-font-h4-size: 18px;
+$desktop-font-body-size: 16px;
+// margin and padding
+$mobile-horizontal-padding-light-red: 5vw;
+$mobile-horizontal-padding-light-green: 10vw;
+$mobile-vertical-margin-green: 15vh;
+$mobile-vertical-margin-blue: 15vh;
+$mobile-vertical-margin-red: 4vh;
+$mobile-vertical-margin-purple: 3vh;
+////////////////////////////////
+//// Desktop Version
 // font-size
 $desktop-font-h1-size: 70px;
 $desktop-font-h2-size: 45px;
