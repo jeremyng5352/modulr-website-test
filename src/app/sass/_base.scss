@@ -71,7 +71,7 @@ p:first-of-type {
 
 @include media(tablet) {
     .mobile {
-        display: none;
+        display: block;
     }
     .desktop {
         display: block;

@@ -60,14 +60,14 @@
         .about-team {
             // display: none;
             width: 100vw;
-            height: 100vh;
+            height: auto;
             @include row-center;
             position: relative;
             h2 {
                 font-size: $desktop-font-h2-size;
             }
             .team-content {
-                position: absolute;
+                position: relative;
                 top: 0;
                 left: 0;
                 height: 100%;
@@ -297,12 +297,13 @@
                         padding: 0 $desktop-horizontal-padding-light-green;
                         padding-bottom: 15vh;
                         .back-button {
+                            margin-top: 5vh;
                             font-size: $desktop-font-body-size;
                         }
                         .member-name {
                             font-size: $desktop-font-h1-size;
                             letter-spacing: 6px;
-                            margin-top: 10vh;
+                            margin-top: 7.5vh;
                             margin-bottom: $desktop-vertical-margin-dark-blue;
                         }
                         .member-description {
