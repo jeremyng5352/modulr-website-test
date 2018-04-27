@@ -81,13 +81,13 @@
                     width: 100%;
                     .highlight {
                         &:nth-child(1) {
-                            background: $theme-color-sky-blue;
+                            background: rgba(106, 199, 195, 0.3);
                         }
                         &:nth-child(2) {
-                            background: $theme-color-yellow;
+                            background: rgba(224, 174, 73, 0.6);
                         }
                         &:nth-child(3) {
-                            background: $theme-color-pink;
+                            background: rgba(235, 124, 132, 0.6);
                         }
                     }
                 }
@@ -196,17 +196,6 @@
                     flex-direction: row;
                     content {
                         width: 50%;
-                        .highlight {
-                            &:nth-child(1) {
-                                background: $theme-color-sky-blue;
-                            }
-                            &:nth-child(2) {
-                                background: $theme-color-yellow;
-                            }
-                            &:nth-child(3) {
-                                background: $theme-color-pink;
-                            }
-                        }
                     }
                     .tech-graphcis {
                         width: 50%;
