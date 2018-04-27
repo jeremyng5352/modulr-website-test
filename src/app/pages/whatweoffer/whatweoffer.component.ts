@@ -1,6 +1,5 @@
 import { Component, OnInit, HostBinding, ChangeDetectorRef } from '@angular/core';
 import {
-  containerSlideUpAnimation,
   fadeAnimation,
   contentLeftSlideAnimation,
   contentRightSlideAnimation
@@ -14,7 +13,6 @@ import { titleHighlightAnimation } from '../../animations';
   templateUrl: './whatweoffer.component.html',
   styleUrls: ['./whatweoffer.component.scss'],
   animations: [
-    containerSlideUpAnimation,
     fadeAnimation,
     contentLeftSlideAnimation,
     contentRightSlideAnimation,
@@ -50,22 +48,11 @@ export class WhatweofferComponent implements OnInit {
   }
 
   ngOnInit() {
-    // setTimeout(() => {
     this.whatWeOfferContent.forEach(content => {
       this.showContent[content.title] = false;
     });
-    this.slideContainerUp();
-    // }, 2000);
   }
 
-  slideContainerUp() {
-    const containerID = 'container' + 1;
-    const otherContainerID = 'container' + 2;
-    this.states[containerID] = 'middle';
-    this.states[containerID] = 'top';
-    this.states[otherContainerID] = 'bottom';
-    this.states[otherContainerID] = 'middle';
-  }
 
   toggleReadButton(title: string) {
     this.showContent[title] = !this.showContent[title];

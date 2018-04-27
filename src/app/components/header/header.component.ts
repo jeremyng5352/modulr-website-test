@@ -69,11 +69,11 @@ export class HeaderComponent implements OnInit {
 
   navigationTabStyling(url: string) {
     this.needFilter = false;
-    if (url === '/what-we-offer' || url === '/about' || url === '/home') {
+    if (url === '/home') {
       setTimeout(() => {
         this.needFilter = true;
       }, 2600);
-    } else if (url === '/enquiry') {
+    } else if (url === '/what-we-offer' || url === '/about' || url === '/enquiry') {
       this.needFilter = true;
     } else {
       this.needFilter = false;

@@ -4,39 +4,15 @@
 @import '../../sass/base';
 .about-container {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     color: $theme-color-grey;
     font-family: $theme-font-type-roboto;
     font-size: $mobile-font-h4-size;
     font-weight: $desktop-font-standard-weight;
     letter-spacing: $desktop-font-standard-spacing;
     @include column-center;
-    .main-title-container {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        text-transform: uppercase;
-        color: white;
-        padding: 0 15vw;
-        .main-title {
-            @include row-center;
-            list-style-type: none;
-            width: 100%;
-            height: 100vh;
-            h1,
-            span {
-                font-weight: bold;
-                height: auto;
-                text-transform: uppercase;
-                font-size: $mobile-font-hero-size + 10px;
-                letter-spacing: 6px;
-                line-height: 140%;
-                text-align: center;
-            }
-        }
-    }
     .about-content {
-        position: absolute;
+        position: relative;
         width: 100vw;
         height: auto;
         background: white;
@@ -220,22 +196,7 @@
 @include media(small) {
     .about-container {
         font-size: $desktop-font-h4-size;
-        .main-title-container {
-            padding: 0 $desktop-horizontal-padding-light-green;
-            .main-title {
-                h1,
-                span {
-                    font-size: $desktop-font-h1-size;
-                    letter-spacing: 7.5px;
-                    line-height: 150%;
-                    text-align: center;
-                }
-            }
-        }
         .about-content {
-            position: absolute;
-            width: 100vw;
-            height: auto;
             .about-description {
                 // display: none !important;
                 width: 100vw;
@@ -246,7 +207,7 @@
                 align-items: flex-start;
                 padding: 0 $desktop-horizontal-padding-light-green;
                 h2 {
-                    margin-top: 35vh;
+                    margin-top: 30vh;
                     font-size: $desktop-font-h1-size;
                 }
                 content {

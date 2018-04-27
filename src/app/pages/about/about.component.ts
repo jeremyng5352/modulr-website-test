@@ -1,6 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import {
-  containerSlideUpAnimation,
   contentLeftSlideAnimation,
   contentRightSlideAnimation,
   titleHighlightAnimation
@@ -15,7 +14,6 @@ import { Meta } from '@angular/platform-browser';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
   animations: [
-    containerSlideUpAnimation,
     contentLeftSlideAnimation,
     contentRightSlideAnimation,
     titleHighlightAnimation
@@ -45,18 +43,6 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit() {
-    // setTimeout(() => {
-      this.slideContainerUp();
-    // }, 2000);
-  }
-
-  slideContainerUp() {
-    const containerID = 'container' + 1;
-    const otherContainerID = 'container' + 2;
-    this.states[containerID] = 'middle';
-    this.states[containerID] = 'top';
-    this.states[otherContainerID] = 'bottom';
-    this.states[otherContainerID] = 'middle';
   }
 
   switchTeamMemberContent(name: string) {
