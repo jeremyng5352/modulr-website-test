@@ -39,7 +39,7 @@
                 <h2>
                     {{content.title}}
                 </h2>
-                <content class="initial-content" *ngIf="!isReadMoreClicked">
+                <content class="initial-content" *ngIf="!showContent[content.title]">
                     <div class="description">
                         {{content.description}}
                     </div>
@@ -51,14 +51,14 @@
                             {{content.quoteAuthor}}
                     </span>
                 </content>
-                <content class="more-content" *ngIf="isReadMoreClicked">
+                <content class="more-content" *ngIf="showContent[content.title]">
                     <p *ngFor="let paragraph of content.moreContent">
                         {{paragraph}}
                     </p>
                 </content>
                 <div class="article-action">
-                    <span *ngIf="!isReadMoreClicked" (click)="toggleReadButton()">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
-                    <span *ngIf="isReadMoreClicked" (click)="toggleReadButton()"><i class="fas fa-arrow-left"></i>&nbsp; Read Less</span>
+                    <span *ngIf="!showContent[content.title]" (click)="toggleReadButton(content.title)">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
+                    <span *ngIf="showContent[content.title]" (click)="toggleReadButton(content.title)"><i class="fas fa-arrow-left"></i>&nbsp; Read Less</span>
                     <button class="enquire-button" name="enquire button" routerLink="/enquiry">ENQUIRE</button>
                 </div>
             </div>

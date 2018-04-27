@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectorRef } from '@angular/core';
 import {
   containerSlideUpAnimation,
   fadeAnimation,
@@ -30,6 +30,7 @@ export class WhatweofferComponent implements OnInit {
   isReadMoreClicked = false;
   isScrolling = false;
   whatWeOfferContent: WHATWEOFFERCONTENT[] = whatWeOfferContent;
+  showContent = {};
   states = {
     container1: 'middle',
     container2: 'bottom',
@@ -47,6 +48,9 @@ export class WhatweofferComponent implements OnInit {
 
   ngOnInit() {
     // setTimeout(() => {
+    this.whatWeOfferContent.forEach(content => {
+      this.showContent[content.title] = false;
+    });
       this.slideContainerUp();
     // }, 2000);
   }
@@ -60,8 +64,8 @@ export class WhatweofferComponent implements OnInit {
     this.states[otherContainerID] = 'middle';
   }
 
-  toggleReadButton() {
-    this.isReadMoreClicked = this.isReadMoreClicked ? false : true;
+  toggleReadButton(title: string) {
+    this.showContent[title] = !this.showContent[title];
   }
 
   scrollUp() {

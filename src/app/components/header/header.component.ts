@@ -52,11 +52,11 @@ export class HeaderComponent implements OnInit {
   constructor(
     private router: Router
   ) {
-    const url = this.router.url;
-    this.navigationTabStyling(url);
   }
 
   ngOnInit() {
+    const url = this.router.url;
+    this.navigationTabStyling(url);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         const page = event.url;
@@ -72,7 +72,7 @@ export class HeaderComponent implements OnInit {
     if (url === '/what-we-offer' || url === '/about' || url === '/home') {
       setTimeout(() => {
         this.needFilter = true;
-      }, 2400);
+      }, 2600);
     } else if (url === '/enquiry') {
       this.needFilter = true;
     } else {

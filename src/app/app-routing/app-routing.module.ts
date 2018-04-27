@@ -3,7 +3,6 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { AppCustomPreloader } from '../app-custom-preloader';
 
 import { CommonModule } from '@angular/common';
-import { WelcomeComponent } from '../pages/welcome/welcome.component';
 import { ContactComponent } from '../pages/contact/contact.component';
 import { AboutComponent } from '../pages/about/about.component';
 import { LandingComponent } from '../pages/landing/landing.component';
