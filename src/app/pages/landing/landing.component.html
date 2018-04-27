@@ -1,5 +1,5 @@
 <section class="landing-container">
-    <section class="main-title-container" [@containerState]='states.container1'>
+    <section class="main-title-container" mouseWheel (mouseWheelDown)="slideContainerUp()" [@containerState]='states.container1'>
         <div class="main-title">
             <h1>
                 We Transform
