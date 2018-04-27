@@ -66,7 +66,59 @@
         </div>
         <div class="what-we-offer-overview">
             <h2>Service Overview</h2>
-            <div class="overview-table mobile">testing</div>
+            <div class="overview-table mobile">
+                <div class="overview-item">
+                    <div class="item-name" (click)="toggleOverviewList('data visualisation')">
+                        <span *ngIf="!isDataVisualisation">
+                            <i class="fas fa-chevron-down" ></i>
+                        </span>
+                        <span *ngIf="isDataVisualisation">
+                            <i class="fas fa-chevron-up" ></i> 
+                        </span> &nbsp; data visualisation
+                    </div>
+                    <ul *ngIf="isDataVisualisation">
+                        <li>Data clean up and processing</li>
+                        <li>User-centered design</li>
+                        <li>Cloud-based solutions</li>
+                    </ul>
+                </div>
+                <div class="overview-item">
+                    <div class="item-name" (click)="toggleOverviewList('big data')">
+                        <span *ngIf="!isBigData">
+                            <i class="fas fa-chevron-down" ></i>
+                        </span>
+                        <span *ngIf="isBigData">
+                            <i class="fas fa-chevron-up" ></i>
+                        </span> &nbsp; BIG DATA ANALYTICS
+                    </div>
+                    <ul *ngIf="isBigData">
+                        <li>Data clean up and processing</li>
+                        <li>User-centered design</li>
+                        <li>Cloud-based solutions</li>
+                        <li>Data usage logging</li>
+                        <li>Extract actionable insights</li>
+                    </ul>
+                </div>
+                <div class="overview-item">
+                    <div class="item-name" (click)="toggleOverviewList('predictive model')">
+                        <span *ngIf="!isPredictiveModel">
+                            <i class="fas fa-chevron-down" ></i>
+                        </span>
+                        <span *ngIf="isPredictiveModel">
+                            <i class="fas fa-chevron-up" ></i>
+                        </span> &nbsp; PREDICTIVE MODELLING
+                    </div>
+                    <ul *ngIf="isPredictiveModel">
+                        <li>Data clean up and processing</li>
+                        <li>User-centered design</li>
+                        <li>Cloud-based solutions</li>
+                        <li>Data usage logging</li>
+                        <li>Extract actionable insights</li>
+                        <li>In-depth histirocal data analysis</li>
+                        <li>Analyse business processes to indentify potential application of predictive technology</li>
+                    </ul>
+                </div>
+            </div>
             <div class="overview-table desktop">
                 <table>
                     <thead>

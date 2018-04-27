@@ -139,65 +139,28 @@
             margin: $desktop-vertical-margin-sky-blue 0;
             width: 100vw;
             height: auto;
-            padding: 0 $desktop-horizontal-padding-light-green;
-            .overview-table {
+            padding: 0 $desktop-horizontal-padding-light-red;
+            .overview-item {
                 width: 100%;
-                padding: 0 $desktop-horizontal-padding-light-red;
-                table {
-                    border-collapse: collapse;
-                    width: 100%;
+                height: auto;
+                margin-bottom: $mobile-vertical-margin-red;
+                .item-name {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: $mobile-font-h3-size;
                     font-family: $theme-font-type-roboto-condensed;
-                    tr {
-                        td {
-                            &:nth-child(1) {
-                                cursor: initial;
-                                &::after {
-                                    content: '';
-                                    background: white !important;
-                                    opacity: 0 !important;
-                                }
-                            }
-                        }
-                        &:nth-child(even) {
+                    border-bottom: rgba(0, 0, 0, 0.5) solid 0.5px;
+                }
+                ul {
+                    list-style-type: none;
+                    width: 100%;
+                    font-size: $mobile-font-body-size;
+                    li {
+                        padding: 3vh 3vw;
+                        &:nth-child(odd) {
                             background: #f0f0f0;
                         }
                     }
-                    .title {
-                        font-size: $desktop-font-h3-size + 2px;
-                        font-weight: bold;
-                        color: black;
-                    }
-                    .options {
-                        width: 40%;
-                        text-align: left;
-                        padding-left: 1vw;
-                        color: black;
-                    }
-                    td {
-                        letter-spacing: 3px;
-                        line-height: 22.5px;
-                        font-size: $desktop-font-h4-size + 2px;
-                        text-align: center;
-                        vertical-align: middle;
-                        width: 20%;
-                        padding: 2vh 0;
-                        color: $theme-color-sky-blue;
-                        position: relative;
-                        cursor: pointer;
-                        &:hover::after {
-                            content: '';
-                            background-color: $theme-color-pink;
-                            opacity: 0.2;
-                            height: 10000px;
-                            left: 0;
-                            position: absolute;
-                            top: -5000px;
-                            width: 100%;
-                        }
-                    }
-                }
-                @include media(tablet) {
-                    padding: 0;
                 }
             }
         }

@@ -29,6 +29,9 @@ export class WhatweofferComponent implements OnInit {
   contentSliderTriggered = false;
   isReadMoreClicked = false;
   isScrolling = false;
+  isDataVisualisation = false;
+  isBigData = false;
+  isPredictiveModel = false;
   whatWeOfferContent: WHATWEOFFERCONTENT[] = whatWeOfferContent;
   showContent = {};
   states = {
@@ -51,7 +54,7 @@ export class WhatweofferComponent implements OnInit {
     this.whatWeOfferContent.forEach(content => {
       this.showContent[content.title] = false;
     });
-      this.slideContainerUp();
+    this.slideContainerUp();
     // }, 2000);
   }
 
@@ -66,6 +69,16 @@ export class WhatweofferComponent implements OnInit {
 
   toggleReadButton(title: string) {
     this.showContent[title] = !this.showContent[title];
+  }
+
+  toggleOverviewList(title: string) {
+    if (title === 'data visualisation') {
+      this.isDataVisualisation = !this.isDataVisualisation;
+    } else if (title === 'big data') {
+      this.isBigData = !this.isBigData;
+    } else {
+      this.isPredictiveModel = !this.isPredictiveModel;
+    }
   }
 
   scrollUp() {
