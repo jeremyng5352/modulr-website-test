@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
-import { slideInDownAnimation, menuStaggerAnimation, fadeAnimation } from '../../animations';
+import { PageNavigationService } from '../../services/page-navigation.service';
 import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+  slideInDownAnimation,
+  menuStaggerAnimation,
+  fadeAnimation,
+  mainPageAnimation
+} from '../../animations';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +15,8 @@ import {
   animations: [
     slideInDownAnimation,
     menuStaggerAnimation,
-    fadeAnimation
+    fadeAnimation,
+    mainPageAnimation
   ]
 })
 export class HeaderComponent implements OnInit {
@@ -26,20 +26,20 @@ export class HeaderComponent implements OnInit {
   isHeaderShown = true;
   menu = false;
   needFilter = false;
+  url: string;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private pageNavigationService: PageNavigationService
   ) {
   }
 
   ngOnInit() {
-    const url = this.router.url;
-    this.navigationTabStyling(url);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        const page = event.url;
+        this.url = event.url;
         this.toggleMenu();
-        this.navigationTabStyling(page);
+        this.navigationTabStyling(this.url);
         this.menu = false;
       }
     });
@@ -66,4 +66,13 @@ export class HeaderComponent implements OnInit {
   toggleMenu() {
     this.menu = !this.menu;
   }
+
+  switchPage(page: string) {
+    this.pageNavigationService.switchPage(page);
+  }
+
 }
+
+
+
+

@@ -3,6 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { ScrollService } from '../../services/scroll.service';
 import { AppObserver } from '../../class/appObserver';
 import { fadeAnimation, nextPagePromptAnimation } from '../../animations';
+import { PageNavigationService } from '../../services/page-navigation.service';
 
 @Component({
   selector: 'app-next-page-prompt',
@@ -22,7 +23,8 @@ export class NextPagePromptComponent implements OnInit, AppObserver {
 
   constructor(
     private router: Router,
-    private scrollService: ScrollService
+    private scrollService: ScrollService,
+    private pageNavigationService: PageNavigationService
   ) {
     this.currentPage = this.router.url;
     this.changePageTitle();
@@ -60,7 +62,7 @@ export class NextPagePromptComponent implements OnInit, AppObserver {
   applyOverlay(scrollPosition: number) {
     if (scrollPosition > this.totalContainerHeight - 85) {
       this.isOverlayed = true;
-    } else  {
+    } else {
       this.isOverlayed = false;
     }
   }
@@ -68,7 +70,7 @@ export class NextPagePromptComponent implements OnInit, AppObserver {
   expandContainer(scrollPosition: number) {
     if (scrollPosition > this.totalContainerHeight - 50) {
       this.containerState = 'expand';
-    } else  {
+    } else {
       this.containerState = 'shrink';
     }
   }
@@ -89,11 +91,11 @@ export class NextPagePromptComponent implements OnInit, AppObserver {
 
   navigateToNextPage() {
     if (this.currentPage === '/home') {
-      this.router.navigate(['/what-we-offer']);
+      this.pageNavigationService.switchPage('what-we-offer');
     } else if (this.currentPage === '/what-we-offer') {
-      this.router.navigate(['/about']);
+      this.pageNavigationService.switchPage('about');
     } else if (this.currentPage === '/about') {
-      this.router.navigate(['/contact']);
+      this.pageNavigationService.switchPage('contact');
     }
   }
 

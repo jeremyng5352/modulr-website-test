@@ -4,3 +4,5 @@
     <app-scroll-progress-bar [scrollProgress]="scrollBarPosition"></app-scroll-progress-bar>
     <router-outlet></router-outlet>
 </div>
+
+<section class="container-slider" *ngIf="containerSliderTriggered" [@mainPageAnimation]="true"></section>

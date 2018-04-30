@@ -26,6 +26,7 @@ import { NewsletterComponent } from './components/newsletter/newsletter.componen
 import { NextPagePromptComponent } from './components/next-page-prompt/next-page-prompt.component';
 import { ScrollProgressBarComponent } from './components/scroll-progress-bar/scroll-progress-bar.component';
 import { TeamComponent } from './pages/team/team.component';
+import { PageNavigationService } from './services/page-navigation.service';
 export class MyHammerConfig extends HammerGestureConfig {
 
 }
@@ -58,6 +59,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     D3Service,
     LoaderService,
     ScrollService,
+    PageNavigationService,
     {
       provide: HAMMER_GESTURE_CONFIG,
       useClass: MyHammerConfig

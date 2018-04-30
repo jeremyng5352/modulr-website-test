@@ -1,4 +1,4 @@
-import { trigger, state, style, transition, animate, query, stagger } from '@angular/animations';
+import { trigger, state, style, transition, animate, query, stagger, keyframes } from '@angular/animations';
 
 // Component transition animations
 export const slideInDownAnimation =
@@ -233,6 +233,22 @@ export const nextPagePromptAnimation =
             height: '40vh'
         })),
         transition('shrink <=> expand', animate('600ms ease-in-out')),
+    ]);
+
+export const mainPageAnimation =
+    trigger('mainPageAnimation', [
+        state('*',
+            style({
+                display: 'none'
+            })
+        ),
+        transition(':enter', [
+            animate('1.75s ease-in-out', keyframes([
+                style({ transform: 'translateX(-100%)' }),
+                style({ transform: 'translateX(0%)' }),
+                style({ transform: 'translateX(-100%)' }),
+            ]))
+        ]),
     ]);
 
 export const titleStaggerAnimation =

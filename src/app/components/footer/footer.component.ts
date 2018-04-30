@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { newsletterSlideInAnimation } from '../../animations';
+import { PageNavigationService } from '../../services/page-navigation.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,7 +12,9 @@ import { newsletterSlideInAnimation } from '../../animations';
 })
 export class FooterComponent implements OnInit {
   isNewsletterShown = false;
-  constructor() { }
+  constructor(
+    private pageNavigationService: PageNavigationService
+  ) { }
 
   ngOnInit() {
   }
@@ -22,5 +25,9 @@ export class FooterComponent implements OnInit {
 
   hideNewsletter() {
     this.isNewsletterShown = false;
+  }
+
+  switchPage(page: string) {
+    this.pageNavigationService.switchPage(page);
   }
 }

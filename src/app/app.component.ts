@@ -1,10 +1,12 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, OnChanges } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import * as THREE from 'three';
 import * as TWEEN from '@tweenjs/tween.js';
 import { Router, NavigationEnd } from '@angular/router';
 import { LoaderService } from './services/loader.service';
 import { ScrollService } from './services/scroll.service';
+import { PageNavigationService } from './services/page-navigation.service';
+import { mainPageAnimation } from './animations';
 
 // Variables for threejs controller
 let cursorX, cursorY;
@@ -27,7 +29,8 @@ let lastMove = Date.now();
       })),
       transition('show => hide', animate('400ms ease-out')),
       transition('hide => show', animate('400ms ease-in'))
-    ])
+    ]),
+    mainPageAnimation
   ]
 })
 export class AppComponent implements OnInit {
@@ -44,6 +47,7 @@ export class AppComponent implements OnInit {
   renderer;
   sunLight;
   model;
+  containerSliderTriggered: boolean;
 
   @HostListener('window:resize', ['$event'])
   @HostListener('mousemove', ['$event'])
@@ -80,9 +84,11 @@ export class AppComponent implements OnInit {
   constructor(
     private loaderService: LoaderService,
     private scrollService: ScrollService,
+    private pageNavigationService: PageNavigationService,
     private router: Router
   ) {
     component = this;
+    this.pageNavigationService.subscribe(this);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.initScrollToTop();
@@ -90,6 +96,11 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
+  update() {
+    this.containerSliderTriggered = this.pageNavigationService.containerSliderTriggered;
+  }
+
 
   ngOnInit() {
     this.loaderService.display(true);
