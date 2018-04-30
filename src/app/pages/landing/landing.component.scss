@@ -249,3 +249,41 @@
         }
     }
 }
+
+.test {
+    position: relative;
+    animation: 2s testm;
+    &::before {
+        content: '';
+        background: black;
+        height: 100%;
+        position: absolute;
+        animation: 2s testn ease-in-out;
+        animation-iteration-count: 1;
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes testn {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes testm {
+    0% {
+        color: transparent;
+    }
+    60% {
+        color: transparent;
+    }
+    100% {
+        color: inherit;
+    }
+}
