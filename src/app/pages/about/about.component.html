@@ -13,7 +13,7 @@
         </div>
         <div class="about-team ">
             <div class="team-content">
-                <div class="team-description" *ngIf="!isTeamContainerShown">
+                <div class="team-description">
                     <h2>
                         Our Team
                     </h2>
@@ -30,19 +30,6 @@
                             <span class="name">{{member.name}}</span>
                             <span class="position">{{member.position}}</span>
                         </div>
-                    </div>
-                </div>
-                <div class="team-member-description" *ngIf="isTeamContainerShown">
-                    <span class="back-button" (click)="toggleTeamContainer()">&#8592; BACK</span>
-                    <div class="member-name">
-                        {{currentMember.name}}
-                    </div>
-                    <content class="member-description">
-                        {{currentMember.description}}
-                    </content>
-                    <div class="social-media">
-                        <nav><a href="https://twitter.com/ModulrAU" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></nav>
-                        <nav><a href="https://www.linkedin.com/company/18195994/" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></nav>
                     </div>
                 </div>
             </div>

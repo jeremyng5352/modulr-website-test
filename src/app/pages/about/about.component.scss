@@ -85,39 +85,6 @@
                         }
                     }
                 }
-                .team-member-description {
-                    width: 100%;
-                    height: 100%;
-                    padding: $mobile-vertical-margin-red $mobile-horizontal-padding-light-red;
-                    @include column-center;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    .back-button {
-                        font-weight: bold;
-                        font-size: $desktop-font-body-size;
-                        cursor: pointer;
-                    }
-                    .member-name {
-                        text-transform: uppercase;
-                        font-family: $theme-font-type-roboto-condensed;
-                        font-size: $mobile-font-h1-size;
-                        font-weight: bold;
-                        letter-spacing: 6px;
-                        margin-top: $mobile-vertical-margin-orange;
-                        margin-bottom: $mobile-vertical-margin-red;
-                    }
-                    .member-description {
-                        font-size: $mobile-font-h4-size;
-                    }
-                    .social-media {
-                        margin-top: 7.5vh;
-                        font-size: 26px;
-                        display: flex;
-                        nav {
-                            margin-right: 20px;
-                        }
-                    }
-                }
             }
             .article-video {
                 position: absolute;
@@ -251,32 +218,6 @@
                                         width: 65%;
                                     }
                                 }
-                            }
-                        }
-                    }
-                    .team-member-description {
-                        padding: 0 $desktop-horizontal-padding-light-green;
-                        padding-bottom: 15vh;
-                        .back-button {
-                            margin-top: 5vh;
-                            font-size: $desktop-font-body-size;
-                        }
-                        .member-name {
-                            font-size: $desktop-font-h1-size;
-                            letter-spacing: 6px;
-                            margin-top: 7.5vh;
-                            margin-bottom: $desktop-vertical-margin-dark-blue;
-                        }
-                        .member-description {
-                            font-size: $desktop-font-body-size;
-                            line-height: 175%;
-                        }
-                        .social-media {
-                            margin-top: 10vh;
-                            font-size: $desktop-font-h3-size;
-                            display: flex;
-                            nav {
-                                margin-right: 35px;
                             }
                         }
                     }

@@ -46,6 +46,7 @@ export class HeaderComponent implements OnInit {
   activeText = 'home';
   isDropdown = false;
   isModalShown = false;
+  isHeaderShown = true;
   menu = false;
   needFilter = false;
 
@@ -73,10 +74,15 @@ export class HeaderComponent implements OnInit {
       setTimeout(() => {
         this.needFilter = true;
       }, 2600);
+      this.isHeaderShown = true;
     } else if (url === '/what-we-offer' || url === '/about' || url === '/enquiry') {
       this.needFilter = true;
+      this.isHeaderShown = true;
+    } else if (url.includes('team')) {
+      this.isHeaderShown = false;
     } else {
       this.needFilter = false;
+      this.isHeaderShown = true;
     }
   }
 

@@ -8,12 +8,14 @@ import { AboutComponent } from '../pages/about/about.component';
 import { LandingComponent } from '../pages/landing/landing.component';
 import { WhatweofferComponent } from '../pages/whatweoffer/whatweoffer.component';
 import { EnquiryComponent } from '../pages/enquiry/enquiry.component';
+import { TeamComponent } from '../pages/team/team.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: LandingComponent },
   { path: 'what-we-offer', component: WhatweofferComponent },
   { path: 'about', component: AboutComponent, data: { preload: true } },
+  { path: 'team/:member-name', component: TeamComponent },
   { path: 'enquiry', component: EnquiryComponent },
   { path: 'contact', component: ContactComponent },
 ];

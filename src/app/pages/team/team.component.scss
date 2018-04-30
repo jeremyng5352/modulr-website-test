@@ -1,0 +1,120 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+@import '../../sass/reset';
+@import '../../sass/base';
+.team-container {
+    // display: none;
+    width: 100vw;
+    height: auto;
+    @include row-center;
+    position: relative;
+    color: $theme-color-grey;
+    font-family: $theme-font-type-roboto;
+    font-size: $mobile-font-h4-size;
+    font-weight: $desktop-font-standard-weight;
+    letter-spacing: $desktop-font-standard-spacing;
+    background: white;
+    h2 {
+        font-size: $desktop-font-h2-size;
+    }
+    .team-content {
+        position: relative;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100%;
+        z-index: 1;
+        padding: $mobile-vertical-margin-red 0;
+        .team-member-description {
+            width: 100%;
+            height: 100%;
+            padding: $mobile-vertical-margin-red $mobile-horizontal-padding-light-red;
+            @include column-center;
+            align-items: flex-start;
+            justify-content: flex-start;
+            .back-button {
+                font-weight: bold;
+                font-size: $desktop-font-body-size;
+                cursor: pointer;
+            }
+            .member-name {
+                text-transform: uppercase;
+                font-family: $theme-font-type-roboto-condensed;
+                font-size: $mobile-font-h1-size;
+                font-weight: bold;
+                letter-spacing: 6px;
+                margin-top: $mobile-vertical-margin-orange;
+                margin-bottom: $mobile-vertical-margin-red;
+            }
+            .member-description {
+                font-size: $mobile-font-h4-size;
+            }
+            .social-media {
+                margin-top: 7.5vh;
+                font-size: 26px;
+                display: flex;
+                nav {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    .article-video {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #999;
+    }
+}
+
+@include media(small) {
+    .team-container {
+        // display: none;
+        width: 100vw;
+        height: 100vh;
+        @include row-center;
+        h2 {
+            font-size: $desktop-font-h2-size;
+        }
+        .team-content {
+            position: relative;
+            height: 100%;
+            width: 50%;
+            padding: 0;
+            .team-member-description {
+                padding: 0 $desktop-horizontal-padding-light-green;
+                padding-bottom: 10vh;
+                .back-button {
+                    margin-top: 15vh;
+                    font-size: $desktop-font-body-size;
+                }
+                .member-name {
+                    font-size: $desktop-font-h2-size;
+                    letter-spacing: 6px;
+                    margin-top: 7.5vh;
+                    margin-bottom: $desktop-vertical-margin-dark-blue;
+                }
+                .member-description {
+                    font-size: $desktop-font-body-size;
+                    line-height: 175%;
+                }
+                .social-media {
+                    margin-top: 10vh;
+                    font-size: $desktop-font-h3-size;
+                    display: flex;
+                    nav {
+                        margin-right: 35px;
+                    }
+                }
+            }
+        }
+        .article-video {
+            position: relative;
+            height: 100%;
+            width: 50%;
+        }
+    }
+}

@@ -9,6 +9,7 @@ import { newsArticle } from '../../data/news-articles';
 import { TEAMMEMBER } from '../../class/TeamMember';
 import { teamMembers } from '../../data/team-members';
 import { Meta } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -22,19 +23,17 @@ import { Meta } from '@angular/platform-browser';
 export class AboutComponent implements OnInit {
   @HostBinding('style.position') position = 'relative';
   @HostBinding('style.display') display = 'block';
-  isTeamContainerShown = false;
   contentSliderTriggered = false;
   newsArticles: NEWSARTICLE[] = newsArticle;
-  currentMember: TEAMMEMBER;
   teamMembers = teamMembers;
   states = {
     container1: 'middle',
     container2: 'bottom',
   };
   constructor(
-    private meta: Meta
+    private meta: Meta,
+    private router: Router
   ) {
-    this.currentMember = teamMembers[0];
     this.meta.addTag({
       name: 'About',
       // tslint:disable-next-line:max-line-length
@@ -46,10 +45,7 @@ export class AboutComponent implements OnInit {
   }
 
   switchTeamMemberContent(name: string) {
-    console.log(name);
-    this.toggleTeamContainer();
-    this.activateContentSlideAnimation();
-    this.switchToMember(name);
+    this.router.navigate(['/team', name]);
   }
 
   activateContentSlideAnimation() {
@@ -57,31 +53,6 @@ export class AboutComponent implements OnInit {
     setTimeout(() => {
       this.contentSliderTriggered = false;
     }, 1500);
-  }
-
-  switchToMember(name: string) {
-    let memberIndex: number;
-    if (name === 'Khoi Phan') {
-      memberIndex = 0;
-    } else if (name === 'Julia Huynh') {
-      memberIndex = 1;
-    } else if (name === 'Andrea Yee') {
-      memberIndex = 2;
-    } else if (name === 'Jeremy Ng') {
-      memberIndex = 3;
-    } else if (name === 'Kimberley Lee') {
-      memberIndex = 4;
-    }
-    setTimeout(() => {
-      this.currentMember = teamMembers[memberIndex];
-    }, 1000);
-  }
-
-  toggleTeamContainer() {
-    this.activateContentSlideAnimation();
-    setTimeout(() => {
-      this.isTeamContainerShown = this.isTeamContainerShown ? false : true;
-    }, 1000);
   }
 
 }
