@@ -14,27 +14,6 @@ import {
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   animations: [
-    trigger('activeHeader', [
-      state('one', style({
-        transform: 'translateX(0%)'
-      })),
-      state('two', style({
-        transform: 'translateX(100%)'
-      })),
-      state('three', style({
-        transform: 'translateX(200%)'
-      })),
-      state('four', style({
-        transform: 'translateX(300%)'
-      })),
-      state('five', style({
-        transform: 'translateX(400%)'
-      })),
-      state('six', style({
-        transform: 'translateX(500%)'
-      })),
-      transition('* => *', animate('400ms ease-in-out'))
-    ]),
     slideInDownAnimation,
     menuStaggerAnimation,
     fadeAnimation
@@ -42,8 +21,6 @@ import {
 })
 export class HeaderComponent implements OnInit {
 
-  activeHeader = 'one';
-  activeText = 'home';
   isDropdown = false;
   isModalShown = false;
   isHeaderShown = true;
