@@ -7,7 +7,6 @@ import {
 import { WHATWEOFFERCONTENT } from '../../class/WhatWeOfferContent';
 import { whatWeOfferContent } from '../../data/what-we-offer-contents';
 import { Meta } from '@angular/platform-browser';
-import { titleHighlightAnimation } from '../../animations';
 @Component({
   selector: 'app-whatweoffer',
   templateUrl: './whatweoffer.component.html',
@@ -16,7 +15,6 @@ import { titleHighlightAnimation } from '../../animations';
     fadeAnimation,
     contentLeftSlideAnimation,
     contentRightSlideAnimation,
-    titleHighlightAnimation
   ]
 })
 export class WhatweofferComponent implements OnInit {

@@ -8,7 +8,7 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./landing.component.scss'],
   animations: [
     containerSlideUpAnimation,
-    titleHighlightAnimation
+    titleHighlightAnimation,
   ]
 })
 export class LandingComponent implements OnInit {

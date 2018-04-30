@@ -109,28 +109,6 @@ export const menuStaggerAnimation =
         ])
     ]);
 
-export const titleStaggerAnimation =
-    trigger('titleStaggerAnimation', [
-        state('*',
-            style({
-                color: '#f5f5f5'
-            })
-        ),
-        transition(':enter', [
-            query('li', style({
-                transform: 'translateY(10%)',
-                opacity: 0,
-            })),
-            query('li',
-                stagger('150ms', [
-                    animate('900ms', style({
-                        transform: 'translateX(0)',
-                        opacity: 1,
-                        color: '#f5f5f5'
-                    }))
-                ]))
-        ])
-    ]);
 
 export const titleHighlightAnimation =
     trigger('titleHighlightAnimation', [
@@ -189,14 +167,6 @@ export const enquiryPageAnimation =
 
 export const newsletterSlideInAnimation =
     trigger('newsletterSlideInAnimation', [
-        // state('*',
-        //     style({
-        //         position: 'fixed',
-        //         left: '1vw',
-        //         bottom: 0,
-        //         opacity: 1
-        //     })
-        // ),
         transition(':enter', [
             style({
                 opacity: 0,
@@ -263,4 +233,27 @@ export const nextPagePromptAnimation =
             height: '40vh'
         })),
         transition('shrink <=> expand', animate('600ms ease-in-out')),
+    ]);
+
+export const titleStaggerAnimation =
+    trigger('titleStaggerAnimation', [
+        state('*',
+            style({
+                color: '#f5f5f5'
+            })
+        ),
+        transition(':enter', [
+            query('li', style({
+                transform: 'translateY(10%)',
+                opacity: 0,
+            })),
+            query('li',
+                stagger('150ms', [
+                    animate('900ms', style({
+                        transform: 'translateX(0)',
+                        opacity: 1,
+                        color: '#f5f5f5'
+                    }))
+                ]))
+        ])
     ]);

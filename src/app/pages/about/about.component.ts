@@ -1,8 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import {
   contentLeftSlideAnimation,
-  contentRightSlideAnimation,
-  titleHighlightAnimation
+  contentRightSlideAnimation
 } from '../../animations';
 import { NEWSARTICLE } from '../../class/NewsArticle';
 import { newsArticle } from '../../data/news-articles';
@@ -16,8 +15,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./about.component.scss'],
   animations: [
     contentLeftSlideAnimation,
-    contentRightSlideAnimation,
-    titleHighlightAnimation
+    contentRightSlideAnimation
   ]
 })
 export class AboutComponent implements OnInit {
