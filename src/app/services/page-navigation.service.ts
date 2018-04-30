@@ -32,8 +32,9 @@ export class PageNavigationService implements AppSubject {
   }
 
   switchPage(page: string) {
-    const url = this.url.slice(1);
-    if (url !== page) {
+    if (this.url.includes(page)) {
+
+    } else {
       this.navigateToPage(page);
     }
     this.url = page;

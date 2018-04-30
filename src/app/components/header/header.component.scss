@@ -69,6 +69,8 @@ section.all-modals {
                 font-weight: 100;
                 text-transform: uppercase;
                 position: relative;
+                background: transparent;
+                border: none;
                 $hamburgerColor: white;
                 $hamburgerSize: 1.5px;
                 .hamburger {

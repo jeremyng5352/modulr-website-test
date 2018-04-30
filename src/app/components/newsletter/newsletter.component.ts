@@ -1,14 +1,10 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Http, RequestOptions, Headers } from '@angular/http';
-import { newsletterSlideInAnimation } from '../../animations';
 @Component({
   selector: 'app-newsletter',
   templateUrl: './newsletter.component.html',
   styleUrls: ['./newsletter.component.scss'],
-  animations: [
-    newsletterSlideInAnimation
-  ]
 })
 export class NewsletterComponent implements OnInit {
   @Output() isCloseButtonClicked = new EventEmitter<boolean>();

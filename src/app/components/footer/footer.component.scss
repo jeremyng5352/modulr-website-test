@@ -139,4 +139,8 @@ app-newsletter {
     position: fixed;
     bottom: 0;
     left: 1vw;
+    z-index: 10;
+    @include media(mobile) {
+        left: 5vw;
+    }
 }
