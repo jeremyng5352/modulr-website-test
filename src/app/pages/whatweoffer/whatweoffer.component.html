@@ -36,7 +36,7 @@
                 <div class="article-action">
                     <span *ngIf="!showContent[content.title]" (click)="toggleReadButton(content.title)">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
                     <span *ngIf="showContent[content.title]" (click)="toggleReadButton(content.title)"><i class="fas fa-arrow-left"></i>&nbsp; Read Less</span>
-                    <button class="enquire-button" name="enquire button" routerLink="/enquiry">ENQUIRE</button>
+                    <button class="enquire-button button-animation" name="enquire button" routerLink="/enquiry">ENQUIRE</button>
                 </div>
             </div>
             <div class="article-video"></div>
@@ -181,6 +181,10 @@
                     </div>
                 </div>
             </content>
+        </div>
+        <div class="what-we-offer-get-in-touch">
+            <div> find out what we can do for you</div>
+            <h2 class="button-animation" routerLink="/enquiry">get in touch</h2>
         </div>
         <app-next-page-prompt></app-next-page-prompt>
         <app-footer></app-footer>

@@ -1,42 +1,70 @@
-// for something like buttons 
- .btn {
-    background: blue;
-    color: red;
-    font-size: 12pt;
-    width: 20vw;
-    height: 20vh;
-    text-decoration: underline;
-}
-
-
-// Example one for assigning values to different class
-//
-$color-btn-names: 'default', 'hot', 'cool';
-$color-btn-values: $color-main, $red, $blue;
-
-@each $name in $color-btn-names{
-    // This one is basically a counting function which counts the length of ...-names
-    $i: index($color-btn-names, $name);
-    
-    // This mean $name = 'some' -> .btn-some
-    .btn-#{$name}{
-        @extend .btn;
-        background: nth($color-btn-values, $i);
+.button-animation {
+    border: solid 3px transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+    &::before {
+        content: '';
+        position: absolute;
+        left: -4px;
+        top: -3px;
+        width: 0%;
+        height: 0%;
+        border: solid 3px transparent;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: -4px;
+        top: -3px;
+        width: 0%;
+        height: 0%;
+        border: solid 3px transparent;
+    }
+    &:hover {
+        // color: white !important;
+        background: transparentize($color: $theme-color-sky-blue, $amount: 0.85) !important;
+        &::before {
+            animation: animate 2s forwards;
+        }
+        &::after {
+            animation: animate1 2s forwards;
+        }
     }
 }
 
-// Example two for assigning values to different class
-//
-$color-btns: (
-	default: $color-main,
-	hot: $red,
-	cool: $blue,
-	awesome: $purple
-);
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    50% {
+        width: 100%;
+        height: 0%;
+        border-top-color: $theme-color-sky-blue;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: $theme-color-sky-blue;
+        border-right-color: $theme-color-sky-blue;
+    }
+}
 
-@each $key, $value in $color-btns {
-	.btn-#{$key} {
-		@extend .btn;
-		background-color: $value;
-	}
+@keyframes animate1 {
+    0% {
+        width: 0%;
+        height: 0%;
+    }
+    50% {
+        width: 0%;
+        height: 100%;
+        border-left-color: $theme-color-sky-blue;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-left-color: $theme-color-sky-blue;
+        border-bottom-color: $theme-color-sky-blue;
+    }
 }
