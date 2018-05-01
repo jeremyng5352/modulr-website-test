@@ -34,7 +34,7 @@
                     </p>
                 </content>
                 <div class="article-action">
-                    <span *ngIf="!showContent[content.title]" (click)="toggleReadButton(content.title)">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
+                    <span *ngIf="!showContent[content.title]" (click)="toggleReadButton(content.title)" class="underline-animation">Read More  &nbsp; <i class="fas fa-arrow-right"></i></span>
                     <span *ngIf="showContent[content.title]" (click)="toggleReadButton(content.title)"><i class="fas fa-arrow-left"></i>&nbsp; Read Less</span>
                     <button class="enquire-button button-animation" name="enquire button" routerLink="/enquiry">ENQUIRE</button>
                 </div>

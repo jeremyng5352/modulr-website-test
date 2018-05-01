@@ -326,9 +326,13 @@
                             color: $theme-color-sky-blue;
                             position: relative;
                             cursor: pointer;
+                            &::after {
+                                content: '';
+                                transition: 1s;
+                            }
                             &:hover::after {
                                 content: '';
-                                background-color: $theme-color-pink;
+                                background-color: $theme-color-sky-blue;
                                 opacity: 0.2;
                                 height: 10000px;
                                 left: 0;
