@@ -30,7 +30,7 @@
                 width: 100%;
             }
         }
-        .landing-description {
+        .description {
             width: 100vw;
             height: auto;
             // display: none;
@@ -43,7 +43,7 @@
                 font-weight: bold;
             }
         }
-        .landing-tech {
+        .technology {
             width: 100vw;
             height: auto;
             h2 {
@@ -79,7 +79,7 @@
                 }
             }
         }
-        .landing-supporters {
+        .supporters {
             h2 {
                 font-size: $mobile-font-h2-size;
             }
@@ -115,7 +115,7 @@
                 }
             }
         }
-        .landing-updates {
+        .updates {
             h2 {
                 font-size: $mobile-font-h2-size;
             }
@@ -142,7 +142,7 @@
                     margin-top: $desktop-vertical-margin-sky-blue;
                 }
             }
-            .landing-description {
+            .description {
                 h2 {
                     margin-top: 30vh;
                     font-size: $desktop-font-h1-size;
@@ -151,7 +151,7 @@
                     font-size: $desktop-font-h3-size;
                 }
             }
-            .landing-tech {
+            .technology {
                 h2 {
                     margin-bottom: $desktop-vertical-margin-light-yellow;
                 }
@@ -173,7 +173,7 @@
                     }
                 }
             }
-            .landing-supporters {
+            .supporters {
                 h2 {
                     font-size: $desktop-font-h1-size;
                 }
@@ -205,7 +205,7 @@
                     }
                 }
             }
-            .landing-updates {
+            .updates {
                 h2 {
                     font-size: $desktop-font-h1-size;
                 }
