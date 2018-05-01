@@ -225,25 +225,3 @@ export const mainPageAnimation =
         ]),
     ]);
 
-export const titleStaggerAnimation =
-    trigger('titleStaggerAnimation', [
-        state('*',
-            style({
-                color: '#f5f5f5'
-            })
-        ),
-        transition(':enter', [
-            query('li', style({
-                transform: 'translateY(10%)',
-                opacity: 0,
-            })),
-            query('li',
-                stagger('150ms', [
-                    animate('900ms', style({
-                        transform: 'translateX(0)',
-                        opacity: 1,
-                        color: '#f5f5f5'
-                    }))
-                ]))
-        ])
-    ]);

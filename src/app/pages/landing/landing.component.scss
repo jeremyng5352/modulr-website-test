@@ -130,6 +130,7 @@
         letter-spacing: $desktop-font-standard-spacing;
         .landing-content {
             .landing {
+                opacity: 0;
                 @include column-center;
                 justify-content: flex-start;
                 align-items: flex-start;
