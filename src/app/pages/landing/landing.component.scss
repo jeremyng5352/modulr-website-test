@@ -4,40 +4,15 @@
 @import '../../sass/_base';
 .landing-container {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     color: $theme-color-grey;
     font-family: $theme-font-type-roboto;
-    overflow-y: scroll;
     font-size: $mobile-font-h4-size;
     font-weight: $desktop-font-standard-weight;
     letter-spacing: $desktop-font-standard-spacing;
     @include column-center;
-    .main-title-container {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        text-transform: uppercase;
-        color: white;
-        padding: 0 15vw;
-        .main-title {
-            @include row-center;
-            list-style-type: none;
-            width: 100%;
-            height: 100vh;
-            h1,
-            span {
-                font-weight: bold;
-                height: auto;
-                text-transform: uppercase;
-                font-size: $mobile-font-h1-size;
-                letter-spacing: 4px;
-                line-height: 140%;
-                text-align: left;
-            }
-        }
-    }
     .landing-content {
-        position: absolute;
+        position: relative;
         width: 100vw;
         height: auto;
         background: white;
@@ -153,18 +128,6 @@
         font-size: $desktop-font-h4-size;
         font-weight: $desktop-font-standard-weight;
         letter-spacing: $desktop-font-standard-spacing;
-        .main-title-container {
-            padding: 0 $desktop-horizontal-padding-light-green;
-            .main-title {
-                h1,
-                span {
-                    font-size: $desktop-font-h1-size;
-                    letter-spacing: 7.5px;
-                    line-height: 150%;
-                    text-align: center;
-                }
-            }
-        }
         .landing-content {
             .landing {
                 @include column-center;

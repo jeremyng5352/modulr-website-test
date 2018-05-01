@@ -53,32 +53,6 @@ export const fadeAnimation =
         ]),
     ]);
 
-export const containerSlideUpAnimation =
-    trigger('containerState', [
-        state('*',
-            style({
-                position: 'absolute',
-            })
-        ),
-        state('top', style({
-            // transform: 'translateY(-100%)',
-            top: '-100%',
-            display: 'none',
-            opacity: 0
-        })),
-        state('middle', style({
-            top: 0
-            // transform: 'translateY(0%)'
-        })),
-        state('bottom', style({
-            top: '100%',
-            // transform: 'translateY(100%)',
-            display: 'none'
-        })),
-        transition('middle => top', animate('600ms 500ms cubic-bezier(0.5,0,0,0)')),
-        transition('bottom => middle', animate('600ms 500ms cubic-bezier(0.5,0,0,0)')),
-    ]);
-
 export const menuStaggerAnimation =
     trigger('menuStaggerAnimation', [
         transition(':enter', [
