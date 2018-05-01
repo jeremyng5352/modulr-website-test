@@ -7,6 +7,7 @@ import { LoaderService } from './services/loader.service';
 import { ScrollService } from './services/scroll.service';
 import { PageNavigationService } from './services/page-navigation.service';
 import { mainPageAnimation } from './animations';
+import * as Hammer from 'hammerjs';
 
 // Variables for threejs controller
 let cursorX, cursorY;
@@ -71,14 +72,8 @@ export class AppComponent implements OnInit {
     this.lookCursor(this.model, cursorX, cursorY);
   }
 
-  scrollEvent() {
-    this.scrollBarPosition = window.scrollY;
-    this.scrollService.scrollPosition = this.scrollBarPosition;
-    if (this.scrollBarPosition <= 50) {
-      this.state = 'show';
-    } else {
-      this.state = 'hide';
-    }
+  update() {
+    this.containerSliderTriggered = this.pageNavigationService.containerSliderTriggered;
   }
 
   constructor(
@@ -97,10 +92,20 @@ export class AppComponent implements OnInit {
     });
   }
 
-  update() {
-    this.containerSliderTriggered = this.pageNavigationService.containerSliderTriggered;
+  initScrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 
+  scrollEvent() {
+    this.scrollBarPosition = window.scrollY;
+    this.scrollService.scrollPosition = this.scrollBarPosition;
+    if (this.scrollBarPosition <= 50) {
+      this.state = 'show';
+    } else {
+      this.state = 'hide';
+    }
+  }
 
   ngOnInit() {
     this.loaderService.display(true);
@@ -109,12 +114,18 @@ export class AppComponent implements OnInit {
     this.setup3DVariables();
     this.setupMajorComponentsFor3DScene();
     this.render();
+    // this.setupHammer();
   }
 
-  initScrollToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
+  // setupHammer() {
+  //   const myElement = document.getElementsByClassName('main-container')[0];
+  //   const myOptions = {};
+  //   const hammertime = new Hammer(myElement, { myOptions });
+  //   hammertime.on('pan', (ev) => {
+  //     this.scrollEvent();
+  //   });
+  //   hammertime.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL });
+  // }
 
   // tslint:disable-next-line:use-life-cycle-interface
   ngAfterContentInit() {

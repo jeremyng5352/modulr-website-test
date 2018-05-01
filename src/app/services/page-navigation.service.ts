@@ -52,7 +52,7 @@ export class PageNavigationService implements AppSubject {
       } else if (page === 'contact') {
         this.router.navigate(['/contact']);
       }
-    }, 900);
+    }, 600);
   }
 
   activateContentSlideAnimation() {
@@ -61,7 +61,7 @@ export class PageNavigationService implements AppSubject {
     setTimeout(() => {
       this.containerSliderTriggered = false;
       this.notifyAll();
-    }, 2000);
+    }, 1500);
   }
 
 }

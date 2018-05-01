@@ -243,7 +243,7 @@ export const mainPageAnimation =
             })
         ),
         transition(':enter', [
-            animate('1.75s ease-in-out', keyframes([
+            animate('1.2s ease-in-out', keyframes([
                 style({ transform: 'translateX(-100%)' }),
                 style({ transform: 'translateX(0%)' }),
                 style({ transform: 'translateX(-100%)' }),

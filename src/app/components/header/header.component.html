@@ -13,13 +13,13 @@
         </div>
         <section (click)="isDropdown = !isDropdown" (click)="isModalShown = !isModalShown" class="header-navigation-container mobile" *ngIf="isDropdown" [@slideInAnimation]="enter">
             <div class="header-navigation-content mobile">
-                <nav routerLink="/home"> Home </nav>
-                <nav routerLink="/what-we-offer"> What We Offer</nav>
-                <nav routerLink="/about"> about </nav>
+                <nav (click)="switchPage('home')"> Home </nav>
+                <nav (click)="switchPage('what-we-offer')"> What We Offer</nav>
+                <nav (click)="switchPage('about')"> about </nav>
                 <a href="https://medium.com/@modulr">
                     <nav>blog</nav>
                 </a>
-                <nav routerLink="/contact"> contact</nav>
+                <nav (click)="switchPage('contact')"> contact</nav>
             </div>
             <div class="header-navigation-social-container">
                 <div class="social-icons" (click)="$event.stopPropagation()">
