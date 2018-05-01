@@ -1,5 +1,4 @@
 <div class="main-container" (mousewheel)="scrollEvent()">
-    <section id="modulr-logo-background" (window:resize)="onResize($event)"></section>
     <app-header [@scrollAnimation]="state"></app-header>
     <app-scroll-progress-bar [scrollProgress]="scrollBarPosition"></app-scroll-progress-bar>
     <router-outlet></router-outlet>

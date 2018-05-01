@@ -20,7 +20,7 @@ import {
   ]
 })
 export class HeaderComponent implements OnInit {
-
+  isFilter = false;
   isDropdown = false;
   isModalShown = false;
   isHeaderShown = true;
@@ -39,6 +39,7 @@ export class HeaderComponent implements OnInit {
         this.url = event.url;
         this.toggleMenu();
         this.menu = false;
+        this.navigationTabStyling(this.url);
       }
     });
   }
@@ -46,6 +47,16 @@ export class HeaderComponent implements OnInit {
   toggleMenu() {
     this.menu = !this.menu;
   }
+
+  navigationTabStyling(url: string) {
+    this.isFilter = false;
+    if (url === '/contact') {
+      this.isFilter = true;
+    } else {
+      this.isFilter = false;
+    }
+  }
+
 
   switchPage(page: string) {
     this.pageNavigationService.switchPage(page);

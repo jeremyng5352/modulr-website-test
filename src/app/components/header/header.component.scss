@@ -284,6 +284,10 @@ section.all-modals {
     }
 }
 
+.filter {
+    filter: invert(100%);
+}
+
 .active-link {
     position: relative;
     &::before {

@@ -2,12 +2,12 @@
 </section>
 <div class="header-main-container" *ngIf="isHeaderShown">
     <div class="header-main-container-content">
-        <div class="header-icon" (click)="switchPage('home')">
+        <div class="header-icon" (click)="switchPage('home')" [ngClass]="{'filter': isFilter}">
             <img src="assets/images/modulr/modulr_black.png" alt="modulr logo"> &nbsp;
             <nav class="desktop">MODULR TECH</nav>
         </div>
         <div class="header-navigation-bar mobile">
-            <button class="navigation-btn" [ngClass]="{'grey-font': isDropdown, 'active': menu == true}" (click)="toggleMenu()" (click)="isDropdown = !isDropdown" (click)="isModalShown = !isModalShown">
+            <button class="navigation-btn" [ngClass]="{'grey-font': isDropdown, 'active': menu == true, 'filter': isFilter}" (click)="toggleMenu()" (click)="isDropdown = !isDropdown" (click)="isModalShown = !isModalShown">
                 <span>menu</span> <div class="hamburger"></div>
             </button>
         </div>
@@ -33,7 +33,7 @@
         </section>
         <!-- desktop -->
         <section class="header-navigation-container desktop">
-            <div class="header-navigation-content">
+            <div class="header-navigation-content" [ngClass]="{'filter': isFilter}">
                 <div *ngIf="menu" [@menuStaggerAnimation]="true">
                     <nav (click)="switchPage('home')"> Home </nav>
                     <nav (click)="switchPage('what-we-offer')"> What We Offer </nav>
