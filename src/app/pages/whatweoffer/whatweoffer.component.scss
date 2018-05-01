@@ -116,6 +116,9 @@
             width: 100vw;
             height: auto;
             padding: 0 $desktop-horizontal-padding-light-red;
+            a {
+                text-decoration: none;
+            }
             .overview-item {
                 width: 100%;
                 height: auto;
@@ -320,7 +323,6 @@
                             line-height: 22.5px;
                             font-size: $desktop-font-h4-size + 2px;
                             text-align: center;
-                            vertical-align: middle;
                             width: 20%;
                             padding: 2vh 0;
                             color: $theme-color-sky-blue;
@@ -332,12 +334,13 @@
                             }
                             &:hover::after {
                                 content: '';
+                                position: absolute;
+                                z-index: -1;
                                 background-color: $theme-color-sky-blue;
                                 opacity: 0.2;
-                                height: 10000px;
+                                height: 5000px;
                                 left: 0;
-                                position: absolute;
-                                top: -5000px;
+                                top: -1000px;
                                 width: 100%;
                             }
                         }
