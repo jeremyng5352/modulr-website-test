@@ -25,7 +25,6 @@ export class HeaderComponent implements OnInit {
   isModalShown = false;
   isHeaderShown = true;
   menu = false;
-  needFilter = false;
   url: string;
 
   constructor(
@@ -39,28 +38,9 @@ export class HeaderComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         this.url = event.url;
         this.toggleMenu();
-        this.navigationTabStyling(this.url);
         this.menu = false;
       }
     });
-  }
-
-  navigationTabStyling(url: string) {
-    this.needFilter = false;
-    if (url === '/home') {
-      setTimeout(() => {
-        this.needFilter = true;
-      }, 2600);
-      this.isHeaderShown = true;
-    } else if (url === '/what-we-offer' || url === '/about' || url === '/enquiry') {
-      this.needFilter = true;
-      this.isHeaderShown = true;
-    } else if (url.includes('team')) {
-      this.isHeaderShown = false;
-    } else {
-      this.needFilter = false;
-      this.isHeaderShown = true;
-    }
   }
 
   toggleMenu() {
