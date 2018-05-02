@@ -17,6 +17,9 @@
         height: auto;
         background: white;
         color: $theme-color-grey;
+        .about {
+            opacity: 0;
+        }
         .about-description {
             width: 100vw;
             height: auto;
