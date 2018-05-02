@@ -17,20 +17,22 @@
         height: auto;
         background: white;
         color: $theme-color-grey;
-        .what-we-offer-description {
+        .what-we-offer {
+            opacity: 0;
             width: 100vw;
             height: auto;
             @include column-center;
             justify-content: flex-start;
             align-items: flex-start;
-            padding: $mobile-vertical-margin-green $mobile-horizontal-padding-light-red;
-            // display: none;
-            h2 {
-                font-size: $mobile-font-h1-size;
-            }
             content {
                 width: 100%;
                 font-size: $mobile-font-h3-size;
+            }
+        }
+        .what-we-offer-description {
+            padding: $mobile-vertical-margin-green $mobile-horizontal-padding-light-red;
+            h2 {
+                font-size: $mobile-font-h1-size;
             }
         }
         .what-we-offer-article {
@@ -205,21 +207,22 @@
     .what-we-offer-container {
         font-size: $desktop-font-h4-size;
         .what-we-offer-content {
-            .what-we-offer-description {
-                width: 100vw;
-                height: 100vh;
+            .what-we-offer {
                 @include column-center;
                 justify-content: flex-start;
                 align-items: flex-start;
+                content {
+                    width: 60%;
+                    font-size: $desktop-font-h4-size;
+                }
+            }
+            .what-we-offer-description {
+                height: 100vh;
                 padding: 0 $desktop-horizontal-padding-light-green;
                 // display: none;
                 h2 {
                     margin-top: 30vh;
                     font-size: $desktop-font-h1-size;
-                }
-                content {
-                    width: 60%;
-                    font-size: $desktop-font-h4-size;
                 }
             }
             .what-we-offer-article {
@@ -363,6 +366,7 @@
                     @include row-center;
                     justify-content: space-between;
                     align-items: flex-start;
+                    width: 100%;
                     .assist-content {
                         @include column-center;
                         height: auto;
@@ -384,6 +388,7 @@
                 }
             }
             .what-we-offer-get-in-touch {
+                @include column-center;
                 font-size: $desktop-font-h4-size + 2px;
                 h2 {
                     font-size: $desktop-font-h2-size;

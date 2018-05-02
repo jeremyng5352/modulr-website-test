@@ -52,7 +52,6 @@ export class AppComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         this.initScrollToTop();
         this.scrollEvent();
-        this.scrollService.scrollPosition = window.scrollY;
       }
     });
   }

@@ -7,6 +7,7 @@ import {
 import { WHATWEOFFERCONTENT } from '../../class/WhatWeOfferContent';
 import { whatWeOfferContent } from '../../data/what-we-offer-contents';
 import { Meta } from '@angular/platform-browser';
+import { ScrollService } from '../../services/scroll.service';
 @Component({
   selector: 'app-whatweoffer',
   templateUrl: './whatweoffer.component.html',
@@ -30,14 +31,38 @@ export class WhatweofferComponent implements OnInit {
   isPredictiveModel = false;
   whatWeOfferContent: WHATWEOFFERCONTENT[] = whatWeOfferContent;
   showContent = {};
-  states = {
-    container1: 'middle',
-    container2: 'bottom',
-  };
+  isContainer1Shown = true;
+  isContainer2Shown = false;
+  isContainer3Shown = false;
+  isContainer4Shown = false;
+  isContainer5Shown = false;
   constructor(
-    private meta: Meta
+    private meta: Meta,
+    private scrollService: ScrollService
   ) {
     this.section3Contents = this.whatWeOfferContent[0];
+    this.scrollService.subscribe(this);
+    this.setupMetaTag();
+  }
+
+  update() {
+    const scrollPosition = this.scrollService.scrollPosition;
+    this.initContentAnimation(scrollPosition);
+  }
+
+  initContentAnimation(scrollPosition: number) {
+    if (scrollPosition >= 250 && this.isContainer2Shown === false) {
+      this.isContainer2Shown = true;
+    } else if (scrollPosition >= 3200 && this.isContainer3Shown === false) {
+      this.isContainer3Shown = true;
+    } else if (scrollPosition >= 4100 && this.isContainer4Shown === false) {
+      this.isContainer4Shown = true;
+    } else if (scrollPosition >= 4500 && this.isContainer5Shown === false) {
+      this.isContainer5Shown = true;
+    }
+  }
+
+  setupMetaTag() {
     this.meta.addTag({
       name: 'Digital Solutions',
       // tslint:disable-next-line:max-line-length

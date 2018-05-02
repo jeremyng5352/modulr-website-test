@@ -1,6 +1,6 @@
 <section id="what-we-offer-container" class="what-we-offer-container">
     <section id="what-we-offer-content" class="what-we-offer-content">
-        <div class="what-we-offer-description">
+        <div class="what-we-offer what-we-offer-description" [ngClass]="{'fade-in-effect': isContainer1Shown}">
             <h2>What we offer</h2>
             <content>
                 <p>
@@ -11,7 +11,7 @@
                 </p>
             </content>
         </div>
-        <div class="what-we-offer-article" id="{{content.className}}" *ngFor="let content of whatWeOfferContent">
+        <div class="what-we-offer what-we-offer-article" id="{{content.className}}" *ngFor="let content of whatWeOfferContent" [ngClass]="{'fade-in-effect': isContainer2Shown}">
             <div class="article-text">
                 <h2>
                     {{content.title}}
@@ -41,7 +41,7 @@
             </div>
             <div class="article-video"></div>
         </div>
-        <div class="what-we-offer-overview">
+        <div class="what-we-offer what-we-offer-overview" [ngClass]="{'fade-in-effect': isContainer3Shown}">
             <h2>Service Overview</h2>
             <div class="overview-table mobile">
                 <div class="overview-item">
@@ -167,7 +167,7 @@
                 </table>
             </div>
         </div>
-        <div class="what-we-offer-assist">
+        <div class="what-we-offer what-we-offer-assist" [ngClass]="{'fade-in-effect': isContainer4Shown}">
             <h2>Assisting you in</h2>
             <content>
                 <div class="assist-content">
@@ -196,7 +196,7 @@
                 </div>
             </content>
         </div>
-        <div class="what-we-offer-get-in-touch">
+        <div class="what-we-offer what-we-offer-get-in-touch" [ngClass]="{'fade-in-effect': isContainer5Shown}">
             <div> find out what we can do for you</div>
             <h2 class="button-animation" routerLink="/enquiry">get in touch</h2>
         </div>
