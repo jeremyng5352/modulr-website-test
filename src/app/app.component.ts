@@ -50,6 +50,8 @@ export class AppComponent implements OnInit {
     this.pageNavigationService.subscribe(this);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
+        const url = event.url;
+        // this.stylePageTransitionBlock(url);
         this.initScrollToTop();
         this.scrollEvent();
       }
@@ -90,6 +92,19 @@ export class AppComponent implements OnInit {
   // tslint:disable-next-line:use-life-cycle-interface
   ngAfterContentInit() {
     this.loaderService.display(false);
+  }
+
+  stylePageTransitionBlock(url: string) {
+    const container: HTMLElement = document.getElementById('container-slider');
+    if (url === '/home') {
+      container.style.background = '#69C7C2';
+    } else if (url === '/what-we-offer') {
+      container.style.background = '#EB7C84';
+    } else if (url === '/about') {
+      container.style.background = '#E0AE49';
+    } else if (url === '/contact') {
+      container.style.background = 'black';
+    }
   }
 
 }

@@ -120,7 +120,7 @@
 
 @include media(small) {
     .enquiry-main-container {
-        height: 86vh;
+        height: 100vh;
         padding: $desktop-vertical-margin-dark-green $desktop-horizontal-padding-light-red;
         font-size: $desktop-font-h4-size;
         @include column-center;
