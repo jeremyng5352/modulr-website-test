@@ -119,3 +119,44 @@
         transform: translateY(0%);
     }
 }
+
+.heading-block-transition {
+    position: relative;
+    animation: 1.25s testm forwards;
+    &::before {
+        content: '';
+        background: white;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        animation: 1.25s heading-block-animation ease-in-out;
+        animation-iteration-count: 1;
+        // transform: scaleX(-1);
+    }
+}
+
+@keyframes heading-block-animation {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes testm {
+    0% {
+        opacity: 0;
+        color: transparent;
+    }
+    100% {
+        opacity: 1;
+        color: inherit;
+    }
+}
+
+.animation-delay {
+    opacity: 0;
+    animation-delay: 1s;
+}

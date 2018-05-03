@@ -1,9 +1,9 @@
 <section class="landing-container">
     <section id="landing-content" class="landing-content">
-        <div class="landing description" [ngClass]="{'fade-in-effect': isContainer1Shown}">
-            <h2>What we do</h2>
-            <!-- <h2 class="test">What we do</h2> -->
-            <content>
+        <div class="landing description">
+            <!-- <h2>What we do</h2> -->
+            <h2 class="heading-block-transition">What we do</h2>
+            <content [ngClass]="{'fade-in-effect': isContainer1Shown, 'animation-delay': isContainer1Shown}">
                 <p class="special">
                     Modulr Tech unlocks the commercial value of big data by transforming your existing datasets into user-friendly directions and insights.
                 </p>
@@ -25,7 +25,7 @@
                         By using a distinct combination of machine learning, artificial intelligence and user focused design, we unlock the insight and value otherwise hidden in your existing data.
                     </p>
                 </content>
-                <div class="tech-graphcis">
+                <div class="tech-graphcis" [ngClass]="{'heading-block-transition': isContainer2Shown, 'animation-delay': isContainer2Shown}">
                     <img src="assets/images/graphics/Data_To_Actionable_Insights.png" alt="Data to Insights icon">
                 </div>
             </div>

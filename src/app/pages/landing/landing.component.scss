@@ -130,7 +130,6 @@
         letter-spacing: $desktop-font-standard-spacing;
         .landing-content {
             .landing {
-                opacity: 0;
                 @include column-center;
                 justify-content: flex-start;
                 align-items: flex-start;
@@ -151,7 +150,11 @@
                     font-size: $desktop-font-h3-size;
                 }
             }
+            .why-modulr {
+                opacity: 0;
+            }
             .technology {
+                opacity: 0;
                 h2 {
                     margin-bottom: $desktop-vertical-margin-light-yellow;
                 }
@@ -174,6 +177,7 @@
                 }
             }
             .supporters {
+                opacity: 0;
                 h2 {
                     font-size: $desktop-font-h1-size;
                 }
@@ -206,48 +210,11 @@
                 }
             }
             .updates {
+                opacity: 0;
                 h2 {
                     font-size: $desktop-font-h1-size;
                 }
             }
         }
-    }
-}
-
-.test {
-    position: relative;
-    animation: 1.25s testm;
-    &::before {
-        content: '';
-        background: black;
-        height: 100%;
-        position: absolute;
-        animation: 1.25s testn ease-in-out;
-        animation-iteration-count: 1;
-        transform: scaleX(-1);
-    }
-}
-
-@keyframes testn {
-    0% {
-        width: 0%;
-    }
-    50% {
-        width: 100%;
-    }
-    100% {
-        width: 0%;
-    }
-}
-
-@keyframes testm {
-    0% {
-        color: transparent;
-    }
-    60% {
-        color: transparent;
-    }
-    100% {
-        color: inherit;
     }
 }
