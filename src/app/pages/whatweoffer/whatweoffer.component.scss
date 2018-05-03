@@ -18,7 +18,6 @@
         background: white;
         color: $theme-color-grey;
         .what-we-offer {
-            opacity: 0;
             width: 100vw;
             height: auto;
             @include column-center;
@@ -226,6 +225,7 @@
                 }
             }
             .what-we-offer-article {
+                opacity: 0;
                 width: 100vw;
                 height: 100vh;
                 @include row-center;
@@ -284,6 +284,7 @@
                 }
             }
             .what-we-offer-overview {
+                opacity: 0;
                 margin: $desktop-vertical-margin-sky-blue 0;
                 width: 100vw;
                 height: auto;
@@ -355,6 +356,7 @@
                 }
             }
             .what-we-offer-assist {
+                opacity: 0;
                 margin: $desktop-vertical-margin-sky-blue 0;
                 width: 100vw;
                 height: auto;
@@ -389,6 +391,7 @@
                 }
             }
             .what-we-offer-get-in-touch {
+                opacity: 0;
                 @include column-center;
                 font-size: $desktop-font-h4-size + 2px;
                 h2 {

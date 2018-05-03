@@ -1,8 +1,8 @@
 <section id="what-we-offer-container" class="what-we-offer-container">
     <section id="what-we-offer-content" class="what-we-offer-content">
-        <div class="what-we-offer what-we-offer-description" [ngClass]="{'fade-in-effect': isContainer1Shown}">
-            <h2>What we offer</h2>
-            <content>
+        <div class="what-we-offer what-we-offer-description">
+            <h2 class="heading-block-transition">What we offer</h2>
+            <content [ngClass]="{'fade-in-effect': isContainer1Shown, 'animation-delay': isContainer1Shown}">
                 <p>
                     Our technology is inspired by a true understanding of data transformation and a hunger to develop cross functional software systems.
                 </p>
@@ -198,14 +198,9 @@
         </div>
         <div class="what-we-offer what-we-offer-get-in-touch" [ngClass]="{'fade-in-effect': isContainer5Shown}">
             <div> find out what we can do for you</div>
-            <h2 class="button-animation" routerLink="/enquiry">get in touch</h2>
+            <h2 class="button-animation" routerLink="/enquiry" [ngClass]="{'heading-block-transition': isContainer5Shown}">get in touch</h2>
         </div>
         <app-next-page-prompt></app-next-page-prompt>
         <app-footer></app-footer>
     </section>
-</section>
-
-<section class="content-slider" *ngIf="contentSliderTriggered">
-    <div class="left-slider" [@contentLeftSlideAnimation]="true"></div>
-    <div class="right-slider" [@contentRightSlideAnimation]="true"></div>
 </section>

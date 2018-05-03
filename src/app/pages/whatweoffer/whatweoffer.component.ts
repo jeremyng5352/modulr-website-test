@@ -1,8 +1,6 @@
 import { Component, OnInit, HostBinding, ChangeDetectorRef } from '@angular/core';
 import {
   fadeAnimation,
-  contentLeftSlideAnimation,
-  contentRightSlideAnimation
 } from '../../animations';
 import { WHATWEOFFERCONTENT } from '../../class/WhatWeOfferContent';
 import { whatWeOfferContent } from '../../data/what-we-offer-contents';
@@ -14,8 +12,6 @@ import { ScrollService } from '../../services/scroll.service';
   styleUrls: ['./whatweoffer.component.scss'],
   animations: [
     fadeAnimation,
-    contentLeftSlideAnimation,
-    contentRightSlideAnimation,
   ]
 })
 export class WhatweofferComponent implements OnInit {
