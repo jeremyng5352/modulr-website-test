@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { PageNavigationService } from '../../services/page-navigation.service';
+import { headerSlideDownAnimation } from '../../animations';
 import {
   slideInDownAnimation,
   menuStaggerAnimation,
   fadeAnimation,
-  mainPageAnimation
 } from '../../animations';
 
 @Component({
@@ -16,7 +16,7 @@ import {
     slideInDownAnimation,
     menuStaggerAnimation,
     fadeAnimation,
-    mainPageAnimation
+    headerSlideDownAnimation
   ]
 })
 export class HeaderComponent implements OnInit {

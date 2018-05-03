@@ -68,19 +68,19 @@ export const menuStaggerAnimation =
                     }))
                 ]))
         ]),
-        transition(':leave', [
-            query('nav', style({
-                transform: 'translateX(0%)',
-                opacity: 1
-            })),
-            query('nav',
-                stagger('50ms', [
-                    animate('300ms', style({
-                        transform: 'translateX(10%)',
-                        opacity: 0
-                    }))
-                ]))
-        ])
+        // transition(':leave', [
+        //     query('nav', style({
+        //         transform: 'translateX(0%)',
+        //         opacity: 1
+        //     })),
+        //     query('nav',
+        //         stagger('50ms', [
+        //             animate('300ms', style({
+        //                 transform: 'translateX(10%)',
+        //                 opacity: 0
+        //             }))
+        //         ]))
+        // ])
     ]);
 
 
@@ -222,6 +222,20 @@ export const mainPageAnimation =
                 style({ transform: 'translateX(0%)' }),
                 style({ transform: 'translateX(-100%)' }),
             ]))
+        ]),
+    ]);
+
+export const headerSlideDownAnimation =
+    trigger('headerSlideDownAnimation', [
+        transition(':enter', [
+            style({
+                transform: 'translateY(-200%)',
+                opacity: 0,
+            }),
+            animate('500ms', style({
+                transform: 'translateY(0%)',
+                opacity: 1,
+            }))
         ]),
     ]);
 

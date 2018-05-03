@@ -53,11 +53,11 @@ export class WhatweofferComponent implements OnInit {
   initContentAnimation(scrollPosition: number) {
     if (scrollPosition >= 250 && this.isContainer2Shown === false) {
       this.isContainer2Shown = true;
-    } else if (scrollPosition >= 3200 && this.isContainer3Shown === false) {
+    } else if (scrollPosition >= 2700 && this.isContainer3Shown === false) {
       this.isContainer3Shown = true;
-    } else if (scrollPosition >= 4100 && this.isContainer4Shown === false) {
+    } else if (scrollPosition >= 3300 && this.isContainer4Shown === false) {
       this.isContainer4Shown = true;
-    } else if (scrollPosition >= 4500 && this.isContainer5Shown === false) {
+    } else if (scrollPosition >= 3500 && this.isContainer5Shown === false) {
       this.isContainer5Shown = true;
     }
   }

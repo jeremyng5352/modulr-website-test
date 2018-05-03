@@ -11,6 +11,10 @@ export class ContactComponent implements OnInit {
   constructor(
     private meta: Meta
   ) {
+    this.setupMetaTag();
+  }
+
+  setupMetaTag() {
     this.meta.addTag({
       name: 'Contact US',
       content: 'Get in touch. Registered office level 18, 324 Queen Street, Brisbane QLD 4000.'

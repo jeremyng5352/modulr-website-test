@@ -1,7 +1,7 @@
 <section class="all-modals" (click)="hideModal()" *ngIf="isModalShown" [@slideInAnimation]="enter">
 </section>
 <div class="header-main-container" *ngIf="isHeaderShown">
-    <div class="header-main-container-content">
+    <div class="header-main-container-content" [@headerSlideDownAnimation]="true">
         <div class="header-icon" (click)="switchPage('home')" [ngClass]="{'filter': isFilter}">
             <img src="assets/images/modulr/modulr_black.png" alt="modulr logo"> &nbsp;
             <nav class="desktop">MODULR TECH</nav>
@@ -46,7 +46,7 @@
                     <nav (click)="switchPage('contact')"> contact</nav>
                 </div>
                 <button class="navigation-btn" [ngClass]="{'active': menu == true}" (click)="toggleMenu()">
-                    <div class="hamburger"></div>
+                   <span *ngIf="!menu">menu &nbsp;</span>  &nbsp; <div class="hamburger"></div>
                 </button>
             </div>
         </section>
