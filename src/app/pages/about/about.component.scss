@@ -17,9 +17,6 @@
         height: auto;
         background: white;
         color: $theme-color-grey;
-        .about {
-            opacity: 0;
-        }
         .about-description {
             width: 100vw;
             height: auto;
@@ -186,6 +183,7 @@
                 }
             }
             .about-team {
+                opacity: 0;
                 // display: none;
                 width: 100vw;
                 height: 100vh;
@@ -232,6 +230,7 @@
                 }
             }
             .about-news {
+                opacity: 0;
                 // display: none; 
                 margin: $desktop-vertical-margin-sky-blue 0;
                 width: 100vw;

@@ -1,8 +1,8 @@
 <section class="about-container">
     <section id="about-content" class="about-content">
-        <div class="about about-description" [ngClass]="{'fade-in-effect': isContainer1Shown}">
-            <h2>About</h2>
-            <content>
+        <div class="about about-description">
+            <h2 class="heading-block-transition">About</h2>
+            <content [ngClass]="{'fade-in-effect': isContainer1Shown, 'animation-delay': isContainer1Shown}">
                 <p>
                     We are a data solutions company based in Brisbane, working closely with businesses across the natural resources industry to transform their big data challenges into real-time, actionable insights
                 </p>
@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-            <div class="article-video"></div>
+            <div class="article-video " [ngClass]="{'image-slide-left-animation': isContainer2Shown}"></div>
         </div>
         <div class="about about-news" [ngClass]="{'fade-in-effect': isContainer3Shown}">
             <h2>In the news</h2>

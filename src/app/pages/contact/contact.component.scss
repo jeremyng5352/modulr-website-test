@@ -94,6 +94,7 @@
             margin-top: $desktop-vertical-margin-sky-blue;
             padding-left: $desktop-horizontal-padding-light-green/2;
             h1 {
+                width: fit-content;
                 color: $theme-color-pink;
                 margin-bottom: $desktop-vertical-margin-orange;
             }
@@ -215,5 +216,46 @@
         height: 100%;
         border-left-color: $theme-color-pink;
         border-bottom-color: $theme-color-pink;
+    }
+}
+
+.contact-heading-block-transition {
+    position: relative;
+    animation: 1.25s test forwards;
+    &::before {
+        content: '';
+        background: #2c2c2c;
+        height: 100%;
+        position: absolute;
+        animation: 1.25s heading-block-animation ease-in-out;
+        animation-iteration-count: 1;
+    }
+}
+
+@keyframes heading-block-animation {
+    0% {
+        left: 0;
+        top: 0;
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        right: 0;
+        top: 0;
+        width: 0%;
+    }
+}
+
+@keyframes test {
+    0% {
+        color: transparent;
+    }
+    60% {
+        color: transparent;
+    }
+    100% {
+        color: $theme-color-pink;
     }
 }

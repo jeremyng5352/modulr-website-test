@@ -52,7 +52,7 @@ export class AboutComponent implements OnInit {
   initContentAnimation(scrollPosition: number) {
     if (scrollPosition >= 198 && this.isContainer2Shown === false) {
       this.isContainer2Shown = true;
-    } else if (scrollPosition >= 1435 && this.isContainer3Shown === false) {
+    } else if (scrollPosition >= 1235 && this.isContainer3Shown === false) {
       this.isContainer3Shown = true;
     }
   }
