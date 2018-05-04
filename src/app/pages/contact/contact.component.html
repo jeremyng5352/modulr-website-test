@@ -1,10 +1,10 @@
 <section class="contact-main-container">
     <div class="contact-content">
         <h1 class="contact-heading-block-transition">Get In Touch</h1>
-        <div class="contact-address">
+        <div class="contact-address" [ngClass]="{'fade-in-effect': isContainer1Shown, 'animation-delay': isContainer1Shown}">
             Level 18,<br/> 324 Queen Street,<br/> Brisbane QLD 4000
         </div>
-        <div class="contact-details">
+        <div class="contact-details" [ngClass]="{'fade-in-effect': isContainer1Shown, 'animation-delay': isContainer1Shown}">
             <div class="detail">
                 <span class="name">
                     tech support
@@ -30,11 +30,11 @@
                 </a>
             </div>
         </div>
-        <div class="contact-enquiry ">
+        <div class="contact-enquiry" [ngClass]="{'fade-in-effect': isContainer1Shown, 'animation-delay': isContainer1Shown}">
             Or send us an <span class="highlight enquiry-animation" routerLink="/enquiry">enquiry</span> .
         </div>
     </div>
-    <div class="contact-social-media">
+    <div class="contact-social-media contact-social-block-transition">
         <nav><a href="https://twitter.com/ModulrAU" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></nav>
         <nav><a href="https://www.facebook.com/Modulrtech/" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i></a></nav>
         <nav><a href="https://www.linkedin.com/company/18195994/" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></nav>

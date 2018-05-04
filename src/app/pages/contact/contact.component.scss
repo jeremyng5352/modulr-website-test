@@ -259,3 +259,20 @@
         color: $theme-color-pink;
     }
 }
+
+.contact-social-block-transition {
+    @extend .contact-heading-block-transition;
+    animation: 1.25s testn forwards;
+}
+
+@keyframes testn {
+    0% {
+        color: transparent;
+    }
+    60% {
+        color: transparent;
+    }
+    100% {
+        color: white;
+    }
+}

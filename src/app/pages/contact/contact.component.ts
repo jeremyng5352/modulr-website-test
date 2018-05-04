@@ -8,6 +8,7 @@ import { Meta } from '@angular/platform-browser';
 export class ContactComponent implements OnInit {
   @HostBinding('style.position') position = 'relative';
   @HostBinding('style.display') display = 'block';
+  isContainer1Shown = true;
   constructor(
     private meta: Meta
   ) {
