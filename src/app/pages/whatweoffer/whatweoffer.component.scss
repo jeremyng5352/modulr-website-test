@@ -266,9 +266,9 @@
                         margin-top: 15vh;
                         margin-bottom: $desktop-vertical-margin-light-pink;
                         .enquire-button {
+                            background: transparent;
                             position: relative;
                             color: black;
-                            background: transparent;
                             padding: 10px 20px;
                             border-radius: 5px;
                             font-family: $theme-font-type-roboto-condensed;
@@ -337,17 +337,17 @@
                                 content: '';
                                 transition: 1s;
                             }
-                            &:hover::after {
-                                content: '';
-                                position: absolute;
-                                z-index: -1;
-                                background-color: $theme-color-sky-blue;
-                                opacity: 0.2;
-                                height: 5000px;
-                                left: 0;
-                                top: -1000px;
-                                width: 100%;
-                            }
+                            // &:hover::after {
+                            //     content: '';
+                            //     position: absolute;
+                            //     z-index: -1;
+                            //     background-color: $theme-color-sky-blue;
+                            //     opacity: 0.2;
+                            //     height: 5000px;
+                            //     left: 0;
+                            //     top: -1000px;
+                            //     width: 100%;
+                            // }
                         }
                     }
                     @include media(tablet) {
