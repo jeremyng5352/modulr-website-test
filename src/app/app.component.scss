@@ -1,3 +1,7 @@
+@import 'sass/variables';
+@import 'sass/mixins';
+@import 'sass/reset';
+@import 'sass/base';
 .main-container {
     position: relative;
     #modulr-logo-background {
@@ -21,9 +25,9 @@
 .container-slider {
     width: 100vw;
     height: 100vh;
-    background: black;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
+    // background: black;
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener, OnChanges } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { LoaderService } from './services/loader.service';
 import { ScrollService } from './services/scroll.service';
 import { PageNavigationService } from './services/page-navigation.service';
@@ -39,6 +39,8 @@ export class AppComponent implements OnInit {
 
   update() {
     this.containerSliderTriggered = this.pageNavigationService.containerSliderTriggered;
+    const url = this.router.url;
+    this.stylePageTransitionBlock(url);
   }
 
   constructor(
@@ -49,9 +51,12 @@ export class AppComponent implements OnInit {
   ) {
     this.pageNavigationService.subscribe(this);
     this.router.events.subscribe(event => {
+      // if (event instanceof NavigationStart) {
+      //   const url = event.url;
+      //   this.stylePageTransitionBlock(url);
+      // }
       if (event instanceof NavigationEnd) {
         const url = event.url;
-        // this.stylePageTransitionBlock(url);
         this.initScrollToTop();
         this.scrollEvent();
       }
@@ -96,14 +101,16 @@ export class AppComponent implements OnInit {
 
   stylePageTransitionBlock(url: string) {
     const container: HTMLElement = document.getElementById('container-slider');
-    if (url === '/home') {
-      container.style.background = '#69C7C2';
-    } else if (url === '/what-we-offer') {
-      container.style.background = '#EB7C84';
-    } else if (url === '/about') {
-      container.style.background = '#E0AE49';
-    } else if (url === '/contact') {
-      container.style.background = 'black';
+    if (container) {
+      if (url === '/home') {
+        container.style.background = '#69C7C2';
+      } else if (url === '/what-we-offer') {
+        container.style.background = '#EB7C84';
+      } else if (url === '/about') {
+        container.style.background = '#E0AE49';
+      } else if (url === '/contact') {
+        container.style.background = 'black';
+      }
     }
   }
 
