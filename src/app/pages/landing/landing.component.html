@@ -12,10 +12,10 @@
                 </p>
             </content>
         </div>
-        <div class="landing technology" [ngClass]="{'fade-in-effect': isContainer2Shown}">
-            <h2>Our Core Tech</h2>
+        <div class="landing technology">
+            <h2 [ngClass]="{'fade-in-effect': isContainer2Shown}">Our Core Tech</h2>
             <div class="tech-content">
-                <content>
+                <content [ngClass]="{'fade-in-effect': isContainer2Shown, 'animation-delay': isContainer2Shown}">
                     <p>
                         Our work is powered by our <span class="highlight">Data Processing Engine</span>, which cleans and transforms <span class="highlight">raw data</span> into <span class="highlight">actionable insights</span>. This is central to our
                         suite of Predictive Modelling, Big Data Analytics and Data Visualisation modules.
@@ -24,7 +24,7 @@
                         By using a distinct combination of machine learning, artificial intelligence and user focused design, we unlock the insight and value otherwise hidden in your existing data.
                     </p>
                 </content>
-                <div class="tech-graphcis" [ngClass]="{'heading-block-transition': isContainer2Shown, 'animation-delay': isContainer2Shown}">
+                <div class="tech-graphcis" [ngClass]="{'heading-block-transition': isContainer2Shown}">
                     <img src="assets/images/graphics/Data_To_Actionable_Insights.png" alt="Data to Insights icon">
                 </div>
             </div>

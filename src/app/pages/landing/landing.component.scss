@@ -146,25 +146,27 @@
                     margin-top: 30vh;
                     font-size: $desktop-font-h1-size;
                 }
+                content {
+                    opacity: 0;
+                }
                 .special {
                     font-size: $desktop-font-h3-size;
                 }
             }
-            .why-modulr {
-                opacity: 0;
-            }
             .technology {
-                opacity: 0;
                 h2 {
+                    opacity: 0;
                     margin-bottom: $desktop-vertical-margin-light-yellow;
                 }
                 .tech-content {
                     @include row-center;
                     flex-direction: row;
                     content {
+                        opacity: 0;
                         width: 50%;
                     }
                     .tech-graphcis {
+                        opacity: 0;
                         width: 50%;
                         height: 100%;
                         @include row-center;
@@ -175,6 +177,9 @@
                         }
                     }
                 }
+            }
+            .why-modulr {
+                opacity: 0;
             }
             .supporters {
                 opacity: 0;

@@ -123,12 +123,13 @@
 .heading-block-transition {
     position: relative;
     animation: 1.25s testm forwards;
+    opacity: 1 !important;
     &::before {
         content: '';
         background: #2c2c2c;
         height: 100%;
         position: absolute;
-        animation: 1.25s heading-block-animation ease-in-out;
+        animation: 1.25s heading-block-animation ease-in-out forwards;
         animation-iteration-count: 1;
     }
 }
@@ -152,17 +153,22 @@
 @keyframes testm {
     0% {
         color: transparent;
+        img {
+            display: none;
+        }
     }
     60% {
         color: transparent;
     }
     100% {
         color: black;
+        img {
+            display: block;
+        }
     }
 }
 
 .animation-delay {
-    opacity: 0;
     animation-delay: 1s;
 }
 
