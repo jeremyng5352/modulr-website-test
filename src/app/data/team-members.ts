@@ -30,7 +30,7 @@ export const teamMembers: TEAMMEMBER[] = [
         // tslint:disable-next-line:max-line-length
         description: 'Jeremy joined the Modulr Tech team in October 2017 as a 3D and Web Developer. He holds a Bachelor of Information Technology (Human Computer Interactions), and is responsible for turning concepts into usable interfaces and systems for commercial use.',
         position: 'Lead Web Developer',
-        imgURL: '',
+        imgURL: '/assets/images/team_photos/jeremy.png',
         imgALT: 'Jeremy Ng from Modulr Tech'
     },
     {
