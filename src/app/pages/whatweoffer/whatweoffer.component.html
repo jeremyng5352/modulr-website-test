@@ -39,7 +39,11 @@
                     <button class="enquire-button button-animation" name="enquire button" routerLink="/enquiry"> <span></span> ENQUIRE</button>
                 </div>
             </div>
-            <div class="article-video"></div>
+            <div class="article-video">
+                <video autoplay loop preload>
+                    <source src="{{content.videoURL}}" type="video/mp4">
+                  </video>
+            </div>
         </div>
         <div class="what-we-offer what-we-offer-overview" [ngClass]="{'fade-in-effect': isContainer3Shown}">
             <h2>Service Overview</h2>

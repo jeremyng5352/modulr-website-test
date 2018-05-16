@@ -37,8 +37,7 @@
         .what-we-offer-article {
             width: 100vw;
             height: auto;
-            @include row-center;
-            // display: none;
+            @include row-center; // display: none;
             position: relative;
             h2 {
                 font-size: $mobile-font-h2-size;
@@ -109,7 +108,23 @@
                 z-index: 0;
                 height: 100%;
                 width: 100%;
-                background: rgba(0, 0, 0, 0.4);
+                z-index: -1;
+                overflow: hidden;
+                video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: rgba(0, 0, 0, 0.7);
+                }
             }
         }
         .what-we-offer-overview {
@@ -217,19 +232,20 @@
             }
             .what-we-offer-description {
                 height: 100vh;
-                padding: 0 $desktop-horizontal-padding-light-green;
-                // display: none;
+                padding: 0 $desktop-horizontal-padding-light-green; // display: none;
                 h2 {
                     margin-top: 30vh;
                     font-size: $desktop-font-h1-size;
+                }
+                content {
+                    opacity: 0;
                 }
             }
             .what-we-offer-article {
                 opacity: 0;
                 width: 100vw;
                 height: 100vh;
-                @include row-center;
-                // display: none;
+                @include row-center; // display: none;
                 h2 {
                     font-size: $desktop-font-h2-size;
                     color: $theme-color-pink;
@@ -280,7 +296,9 @@
                     position: relative;
                     height: 100%;
                     width: 50%;
-                    background: #999;
+                    &::after {
+                        opacity: 0;
+                    }
                 }
             }
             .what-we-offer-overview {
@@ -336,8 +354,7 @@
                             &::after {
                                 content: '';
                                 transition: 1s;
-                            }
-                            // &:hover::after {
+                            } // &:hover::after {
                             //     content: '';
                             //     position: absolute;
                             //     z-index: -1;

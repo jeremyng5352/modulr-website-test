@@ -269,26 +269,6 @@
     }
 }
 
-@mixin grid($column: none, $row: none) {
-    @if $column !=none && $row==none {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
-        // Align by the number of columns
-        >.grid-item {
-            width: 100 / $column - 2%;
-        }
-    }
-    @else if $column==none && $row !=none {
-        // Align by the number of rows
-    }
-    @else {
-        // Not sure yet what to do here
-    }
-}
-
 
 /*
  * COMMON EFFECTS

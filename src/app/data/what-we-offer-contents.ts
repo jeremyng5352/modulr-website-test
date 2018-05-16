@@ -14,7 +14,8 @@ export const whatWeOfferContent: WHATWEOFFERCONTENT[] = [
             'With our data processing and visualisation system. we aim to help companies better understand and manage their scattered data all in one convenient place with our cloud-based solution',
             // tslint:disable-next-line:max-line-length
             'The system is designed with the end users in mind. With our extensive knowledge and experience in interactive design, we aim to help enhance user experience and usability to make navigation through data a seamless experience.'
-        ]
+        ],
+        videoURL: 'assets/videos/data-visualisation.mp4'
     },
     {
         className: 'big-data-analytics',
@@ -29,7 +30,8 @@ export const whatWeOfferContent: WHATWEOFFERCONTENT[] = [
             'Our data analytics enable the inspection, cleaning, and transformation of your toughest big data challenges, providing clarity into decision-making insights.',
             // tslint:disable-next-line:max-line-length
             'With an intuitive representation of data, companies are able to uncover deeper information and more meaning patterns to improve the efficiency and effectiveness of their business.'
-        ]
+        ],
+        videoURL: 'assets/videos/big-data-analytics.mp4'
     },
     {
         className: 'predictive-modelling',
@@ -44,7 +46,8 @@ export const whatWeOfferContent: WHATWEOFFERCONTENT[] = [
             'Predictive modelling and analytics will uncover new opportunties for your company, increasing your bottom line and gaining you a competitive advantage in forcasting future outcomes.',
             // tslint:disable-next-line:max-line-length
             'Our cutting edge technologies help companies improve their operations and reduce risks through recommendations and user-friendly, actionable insights.'
-        ]
+        ],
+        videoURL: 'assets/videos/predictive-modelling.mp4'
     }
 ];
 

@@ -7,6 +7,7 @@ export class WHATWEOFFERCONTENT {
     quote: string;
     quoteAuthor: string;
     moreContent: string[];
+    videoURL: string;
 
     constructor(
         className: string,
@@ -16,7 +17,8 @@ export class WHATWEOFFERCONTENT {
         imgALT: string,
         quote: string,
         quoteAuthor: string,
-        moreContent: string[]
+        moreContent: string[],
+        videoURL: string
     ) {
         this.className = className;
        this.title = title;
@@ -26,5 +28,6 @@ export class WHATWEOFFERCONTENT {
        this.quote = quote;
        this.quoteAuthor = quoteAuthor;
        this.moreContent = moreContent;
+       this.videoURL = videoURL;
     }
 }
