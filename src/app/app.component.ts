@@ -6,6 +6,7 @@ import { ScrollService } from './services/scroll.service';
 import { PageNavigationService } from './services/page-navigation.service';
 import { mainPageAnimation } from './animations';
 import * as Hammer from 'hammerjs';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -47,9 +48,11 @@ export class AppComponent implements OnInit {
     private loaderService: LoaderService,
     private scrollService: ScrollService,
     private pageNavigationService: PageNavigationService,
-    private router: Router
+    private router: Router,
+    private meta: Meta
   ) {
     this.pageNavigationService.subscribe(this);
+    this.setupMetaTag();
     this.router.events.subscribe(event => {
       // if (event instanceof NavigationStart) {
       //   const url = event.url;
@@ -60,6 +63,14 @@ export class AppComponent implements OnInit {
         this.initScrollToTop();
         this.scrollEvent();
       }
+    });
+  }
+
+  setupMetaTag() {
+    this.meta.addTag({
+      name: 'Modulr Tech',
+      // tslint:disable-next-line:max-line-length
+      content: 'At Modulr Tech, we specialise in helping businesses make sense of their big data challenges with our advance data processing, analytics and visualisation engines. Start turning your data into actionable insights today with our digital solutions.'
     });
   }
 

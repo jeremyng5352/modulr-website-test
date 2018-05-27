@@ -1,8 +1,8 @@
-import { MousewheelDirective } from './mousewheel.directive';
+import { MouseWheelDirective } from './mousewheel.directive';
 
 describe('MousewheelDirective', () => {
   it('should create an instance', () => {
-    const directive = new MousewheelDirective();
+    const directive = new MouseWheelDirective();
     expect(directive).toBeTruthy();
   });
 });

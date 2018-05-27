@@ -4,6 +4,7 @@ import { Directive, Output, HostListener, EventEmitter } from '@angular/core';
 export class MouseWheelDirective {
   @Output() mouseWheelUp = new EventEmitter();
   @Output() mouseWheelDown = new EventEmitter();
+  isScrolling = false;
 
   @HostListener('mousewheel', ['$event']) onMouseWheelChrome(event: any) {
     this.mouseWheelFunc(event);
@@ -17,27 +18,26 @@ export class MouseWheelDirective {
     this.mouseWheelFunc(event);
   }
 
-  isScrolling: boolean = false
-
   mouseWheelFunc(event: any) {
-    var event = window.event || event; // old IE support
-    var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+    event = window.event || event; // old IE support
+    const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
     if (!this.isScrolling) {
-      if(delta > 0) {
-          this.mouseWheelUp.emit(event);
-      } else if(delta < 0) {
-          this.mouseWheelDown.emit(event);
+      if (delta > 0) {
+        this.mouseWheelUp.emit(event);
+      } else if (delta < 0) {
+        this.mouseWheelDown.emit(event);
       }
       this.isScrolling = true;
       setTimeout(() => {
-        this.isScrolling = false
+        this.isScrolling = false;
       }, 400);
     }
     // for IE
     event.returnValue = false;
     // for Chrome and Firefox
-    if(event.preventDefault) {
-        event.preventDefault();
+    if (event.preventDefault) {
+      event.preventDefault();
     }
   }
 }
+
